@@ -91,7 +91,7 @@ export const getAllQuestionController = async (req, res) => {
         res.status(201).send({
             success: true,
             counTotal: allquestion.length,
-            message: "Product get successfully",
+            message: "Questions get successfully",
             allquestion,
         });
     } catch (error) {

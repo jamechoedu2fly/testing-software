@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from './config/db.js';
 import categoryRoute from "./routes/categoryRoute.js"
 import questionRoute from "./routes/questionRoute.js"
+import authRoute from "./routes/authRoute.js"
 import cors from "cors";
 
 // config
@@ -19,6 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // routers
+app.use("/api/auth", authRoute)
 app.use("/api/category", categoryRoute)
 app.use("/api/question", questionRoute)
 
