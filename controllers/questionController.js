@@ -1,5 +1,6 @@
 import preAssessmentModel from "../models/preAssessmentModel.js";
 import questionModel from "../models/questionModel.js";
+import psychometricquestionModel from "../models/psychometricquestionModel.js";
 
 // create a new question
 export const createQuestionController = async (req, res) => {
@@ -158,3 +159,57 @@ export const getAllpreAssessmentQuestionsController = async (req, res) => {
         });
     }
 }
+
+
+/*```````````````````````````````````````` */
+// RAISEC MODEL
+// create a new question in psychometric test
+export const createPsychometricQuestionController = async (req, res) => {
+    try {
+        const { categoryId, question, option } = req.body;
+        const newQuestion = new psychometricquestionModel({
+            categoryId,
+            question,
+            option
+        })
+        await newQuestion.save();
+        res.status(201).send({
+            success: true,
+            message: "Question created successfully",
+            newQuestion,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in creating question !!!"
+        })
+    }
+}
+
+// get all psychometric Question
+
+export const getAllPsychometricQuestionsController = async (req, res) => {
+    try {
+        const { categoryId } = req.params;
+        const allquestion = await psychometricquestionModel
+            .find({ categoryId })
+            .sort({ createdAt: -1 })
+        res.status(201).send({
+            success: true,
+            counTotal: allquestion.length,
+            message: "Questions get successfully",
+            allquestion,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in getting all questions",
+        });
+    }
+}
+
+

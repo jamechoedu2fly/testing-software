@@ -1,4 +1,4 @@
-import { response } from 'express';
+
 import categoryModel from '../models/categoryModel.js'
 
 export const createCategoryController = async (req, res) => {
@@ -97,4 +97,32 @@ export const deleteCategoryController = async (req, res) => {
 }
 
 
+/*``````````````````````````````````````*/
 
+export const createPsychometricCategoryController = async (req, res) => {
+    // creating new category
+    const { name } = req.body;
+    if (!name) {
+        return res.status(404).send({
+            message: "Name is required for category creation"
+        })
+    }
+    try {
+        const category = await categoryModel({
+            name
+        }).save();
+        res.status(201).send({
+            success: true,
+            message: "Psychometric category created successfully",
+            category
+        })
+    } 
+    catch (error) {
+        console.log(error)
+        res.send(500).send({
+            success: false,
+            error,
+            message: "Error in a creating psychomatric category",
+        });
+    }
+}

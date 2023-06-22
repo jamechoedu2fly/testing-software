@@ -2,6 +2,7 @@ import express from 'express';
 import {
     categoryController,
     createCategoryController,
+    createPsychometricCategoryController,
     deleteCategoryController,
     updateCategoryController
 }
@@ -10,7 +11,6 @@ import {
 const router = express.Router();
 
 // routes
-
 // creating category route
 router.post('/create-category', createCategoryController);
 
@@ -22,5 +22,10 @@ router.get('/get-category', categoryController);
 
 // detete a  category
 router.delete("/delete-category/:id", deleteCategoryController);
+
+/*````````````````````*/
+
+// creating category route
+router.post('/create-psychometric-category', createPsychometricCategoryController);
 
 export default router;

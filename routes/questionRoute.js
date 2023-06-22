@@ -1,7 +1,9 @@
 import express from 'express';
 import {
+    createPsychometricQuestionController,
     createQuestionController,
     deleteQuestionController,
+    getAllPsychometricQuestionsController,
     getAllQuestionController,
     getAllpreAssessmentQuestionsController,
     preAssessmenQuestionController,
@@ -32,4 +34,13 @@ router.post('/create-preAssessment-question', preAssessmenQuestionController);
 router.get("/get-all-preAssessment-question/:categoryId", getAllpreAssessmentQuestionsController);
 
 
+
+/*``````````````````````````````*/
+
+// psychometric Question
+// create a new quesion
+router.post("/create-psychometric-Question", createPsychometricQuestionController)
+
+// get all psychometric questions
+router.get("/get-all-psychometric-question/:categoryId", getAllPsychometricQuestionsController);
 export default router;
