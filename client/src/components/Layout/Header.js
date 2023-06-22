@@ -1,6 +1,19 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
+import { useAuth } from '../../context/auth'
+import { toast } from 'react-hot-toast';
+
 const Header = () => {
+    const [auth, setAuth] = useAuth();
+    const handleLogout = async () => {
+        setAuth({
+            ...auth,
+            user: null,
+            token: "",
+        });
+        localStorage.removeItem("auth");
+        toast.success("Logout Successfully!!!");
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -12,17 +25,31 @@ const Header = () => {
                         id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                < NavLink to="/" className="nav-link active" aria-current="page" href="#">Home</NavLink>
+                                < NavLink to="/" className="nav-link active" aria-current="page" >Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/test" className="nav-link" href="#">Test</NavLink>
+                                <NavLink to="/test" className="nav-link" >Test</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink to="/register" className="nav-link" href="#">Register</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to="/login" className="nav-link" href="#">Login  </NavLink>
-                            </li>
+
+                            {!auth?.user ? (
+                                <> <li className="nav-item">
+                                    <NavLink to="/register" className="nav-link" >Register</NavLink>
+                                </li>
+                                    <li className="nav-item">
+                                        <NavLink to="/login" className="nav-link" >Login  </NavLink>
+                                    </li></>)
+                                : (
+                                    <>
+                                        <li className="nav-item">
+                                            <NavLink to="/login"
+                                                onClick={handleLogout}
+                                                className="nav-link"  >
+                                                Logout
+                                            </NavLink>
+
+                                        </li>
+                                    </>
+                                )}
                         </ul>
                     </div>
                 </div>

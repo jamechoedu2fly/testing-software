@@ -1,0 +1,25 @@
+.section-link {
+    text-decoration: none;
+  }
+  
+  .section-card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .section-card:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .section-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .section-card p {
+    color: #666;
+  }
+  

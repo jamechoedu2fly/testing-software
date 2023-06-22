@@ -1,14 +1,16 @@
+import preAssessmentModel from "../models/preAssessmentModel.js";
 import questionModel from "../models/questionModel.js";
 
 // create a new question
 export const createQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, option, point } = req.body;
+        const { categoryId, question, option, point, correctAnswer } = req.body;
         const newQuestion = new questionModel({
             categoryId,
             question,
             option,
             point,
+            correctAnswer
         })
         await newQuestion.save();
         res.status(201).send({
@@ -85,8 +87,61 @@ export const updateQuestionController = async (req, res) => {
 // getting all questions
 export const getAllQuestionController = async (req, res) => {
     try {
+        const { categoryId } = req.params;
         const allquestion = await questionModel
-            .find({})
+            .find({ categoryId })
+            .sort({ createdAt: -1 })
+        res.status(201).send({
+            success: true,
+            counTotal: allquestion.length,
+            message: "Questions get successfully",
+            allquestion,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in getting all questions",
+        });
+    }
+}
+
+// Pre Asssessment Models
+// create Asssessment question
+export const preAssessmenQuestionController = async (req, res) => {
+    try {
+        const { categoryId, question, activities, interest } = req.body;
+        const newQuestion = new preAssessmentModel({
+            categoryId,
+            question,
+            activities,
+            interest
+        })
+        await newQuestion.save();
+        res.status(201).send({
+            success: true,
+            message: "Question created in preAssesment category successfully",
+            newQuestion,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in creating pre-Assessment questions",
+        });
+    }
+}
+
+
+
+// getting all preAssessment questions
+export const getAllpreAssessmentQuestionsController = async (req, res) => {
+    try {
+        const { categoryId } = req.params;
+        const allquestion = await preAssessmentModel
+            .find({ categoryId })
             .sort({ createdAt: -1 })
         res.status(201).send({
             success: true,

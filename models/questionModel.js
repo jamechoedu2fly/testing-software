@@ -15,9 +15,13 @@ const questionSchema = new mongoose.Schema({
         type: [String],
         required: true,
     },
-    point:{
-        type:Number,
+    point: {
+        type: Number,
         required: true,
+    },
+    correctAnswer: {
+        type: String,
+        required: true
     }
 });
 
