@@ -116,13 +116,81 @@ export const createPsychometricCategoryController = async (req, res) => {
             message: "Psychometric category created successfully",
             category
         })
-    } 
+    }
     catch (error) {
         console.log(error)
         res.send(500).send({
             success: false,
             error,
             message: "Error in a creating psychomatric category",
+        });
+    }
+}
+
+
+// get all psychomatric category
+
+export const psychometricCategoryController = async (req, res) => {
+    try {
+        const category = await categoryModel.find({});
+        res.status(200).send({
+            success: true,
+            message: "All Categories List was successfully",
+            category,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error while getting category",
+        });
+    }
+}
+
+// deleting psychomatric category
+
+export const deletePsychometricCategoryController = async (req, res) => {
+    try {
+        const { id } = req.params
+        await categoryModel.findByIdAndDelete(id);
+        res.status(200).send({
+            success: true,
+            message: "Category deleted successfully"
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error while deleting category",
+        });
+    }
+}
+
+// updating a category controller in psychometric
+
+export const updatePsyschometricCategoryController = async (req,res)=>{
+    try {
+        const { name } = req.body;
+        const { id } = req.params; // getting id from params(url)
+
+        const category = await categoryModel.findByIdAndUpdate(
+            id,
+            { name },
+            { new: true }
+        )
+        res.status(200).send({
+            success: true,
+            message: "Category updated Successfully",
+            category
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error while updating category",
         });
     }
 }

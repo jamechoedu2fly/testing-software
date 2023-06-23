@@ -4,7 +4,10 @@ import {
     createCategoryController,
     createPsychometricCategoryController,
     deleteCategoryController,
-    updateCategoryController
+    deletePsychometricCategoryController,
+    psychometricCategoryController,
+    updateCategoryController,
+    updatePsyschometricCategoryController
 }
     from './../controllers/categoryController.js';
 
@@ -23,9 +26,20 @@ router.get('/get-category', categoryController);
 // detete a  category
 router.delete("/delete-category/:id", deleteCategoryController);
 
-/*````````````````````*/
 
+
+/*````````````````````*/
+//RAISEC MODEL
 // creating category route
 router.post('/create-psychometric-category', createPsychometricCategoryController);
+
+// get all category
+router.get("/get-psychometric-category", psychometricCategoryController);
+
+// delete category
+router.delete("/delete-psychometric-category/:id", deletePsychometricCategoryController);
+
+// update category
+router.put("/update-psychometric-category/:id", updatePsyschometricCategoryController);
 
 export default router;

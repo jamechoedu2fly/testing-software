@@ -81,7 +81,6 @@ export const updateQuestionController = async (req, res) => {
             error,
             message: "Something went wrong in updating the question"
         })
-
     }
 }
 
@@ -213,3 +212,57 @@ export const getAllPsychometricQuestionsController = async (req, res) => {
 }
 
 
+// delete a psychomatric question 
+
+export const deletePsychometricQuestionController = async (req, res) => {
+    try {
+        await psychometricquestionModel.findByIdAndDelete(req.params.qid);
+        res.status(200).send({
+            success: true,
+            message: "Question Deleted successfully from psychomatric test",
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in deleting a questions",
+        });
+    }
+}
+
+// updating a psychomatric question
+
+export const updatePsychometricQuestionController = async (req, res) => {
+    try {
+        const { categoryId, question, option } = req.body;
+        // validate 
+        switch (true) {
+            case !categoryId:
+                return res.status(500).send({ error: "Category is required" })
+            case !question:
+                return res.status(500).send({ error: "Question is Required" })
+            case !option:
+                return res.status(500).send({ error: "Option is Required" })
+        }
+        const Updquestion = await psychometricquestionModel.findByIdAndUpdate(
+            req.params.qid,
+            { ...req.body },
+            { new: true }
+        )
+        await Updquestion.save();
+        
+        res.status(201).send({
+            success: true,
+            message: "Question Updated Successfully",
+            Updquestion
+        })
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Something went wrong in updating the question"
+        })
+    }
+}
