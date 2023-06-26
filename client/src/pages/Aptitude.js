@@ -54,10 +54,10 @@ const Aptitude = () => {
                     </div>
                     <div class="card-body">
                         <form onSubmit={handleSubmit}>
-                            {question?.map((q) => (
+                            {question?.map((q,i) => (
                                 <div class="card mb-4" key={q._id}>
                                     <div class="card-body">
-                                        <h4>{q.question}</h4>
+                                    <h4>{i + 1}. {q.question}</h4>
                                         {q.option?.map((p) => (
                                             <div class="form-check" key={p}>
                                                 <input class="form-check-input"

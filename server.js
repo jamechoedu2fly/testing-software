@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import categoryRoute from "./routes/categoryRoute.js"
 import questionRoute from "./routes/questionRoute.js"
 import authRoute from "./routes/authRoute.js"
+import riaseccategoryroute from "./routes/riaseccategoryroute.js"
 import cors from "cors";
 
 // config
@@ -23,6 +24,9 @@ app.use(express.json());
 app.use("/api/auth", authRoute)
 app.use("/api/category", categoryRoute)
 app.use("/api/question", questionRoute)
+
+// RISSEC MODEL
+app.use("/api/riasec/category", riaseccategoryroute)
 
 // rest api's
 app.get("/", (req, res) => {

@@ -21,13 +21,13 @@ const PreAssessmentTest = () => {
       console.error(error);
     }
   };
-  // const handleAnswerSelection = (questionId, selectedOption) => {
-  //   const selectedQuestion = question.find((question) => question._id === questionId);
-  //   if (selectedQuestion) {
-  //     const optionIndex = selectedQuestion.activities.indexOf(selectedOption);
-  //     setTotalScore((prevScore) => prevScore + optionIndex);
-  //   }
-  // };
+  const handleAnswerSelection = (questionId, selectedOption) => {
+    const selectedQuestion = question.find((question) => question._id === questionId);
+    if (selectedQuestion) {
+      const optionIndex = selectedQuestion.activities.indexOf(selectedOption);
+      setTotalScore((prevScore) => prevScore + optionIndex);
+    }
+  };
 
   return (
     <Layout>
@@ -38,10 +38,10 @@ const PreAssessmentTest = () => {
           </div>
           <div class="card-body">
             <form >
-              {question?.map((q) => (
+              {question?.map((q,i) => (
                 <div className="card mb-4" key={q._id}>
                   <div className="card-body">
-                    <h4>{q.question}</h4>
+                  <h4>{i + 1}. {q.question}</h4>
                     <p className='p-2 ' style={{ color: 'red' }}>Mark only one Option</p>
                     {q.activities?.map((activity, index) => (
                       <div className="form-check" key={index}>
@@ -51,7 +51,7 @@ const PreAssessmentTest = () => {
                           name={`activity_${q._id}`}
                           id={`activity_${q._id}_${index}`}
                           value={activity}
-                        // onChange={() => handleAnswerSelection(q._id, activity)}
+                        onChange={() => handleAnswerSelection(q._id, activity)}
                         />
                         <label
                           className="form-check-label"

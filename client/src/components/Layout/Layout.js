@@ -8,6 +8,10 @@ const Layout = ({ children }) => {
             <main>{children}</main>
             <Toaster />
         </div>
+
+
+
+
     )
 }
 
