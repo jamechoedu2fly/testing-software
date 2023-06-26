@@ -34,7 +34,7 @@ const PreAssessmentTest = () => {
       <div className="container p-4">
         <div class="card">
           <div class="card-header ">
-            <h1 class="text-center">Pre-AssessmentTest Test</h1>
+            <h1 class="text-center">Pre-Assessment Test</h1>
           </div>
           <div class="card-body">
             <form >
