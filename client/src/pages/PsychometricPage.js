@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Layout from '../components/Layout/Layout';
+import { Link } from 'react-router-dom';
 
 const PsychometricPage = () => {
   const [questions, setQuestions] = useState([]);
+  const [categoryScores, setCategoryScores] = useState({});
 
   const getAllPsyQuestion = async () => {
     try {
@@ -33,10 +35,42 @@ const PsychometricPage = () => {
     getAllPsyQuestion();
   }, []);
 
+  const handleOptionChange = (questionId, selectedOption) => {
+    setCategoryScores((prevScores) => ({
+      ...prevScores,
+      [questionId]: parseInt(selectedOption)
+    }));
+  };
+
+  const calculateTotalScore = () => {
+    let scores = {};
+
+    questions.forEach((question) => {
+      if (categoryScores.hasOwnProperty(question._id)) {
+        const categoryId = question.categoryId;
+        const score = categoryScores[question._id];
+
+        if (scores.hasOwnProperty(categoryId)) {
+          scores[categoryId] += score;
+        } else {
+          scores[categoryId] = score;
+        }
+      }
+    });
+
+    return scores;
+  };
+
+  const getTopThreeScores = () => {
+    const scores = calculateTotalScore();
+    const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+
+    return sortedScores.slice(0, 3);
+  };
+
   return (
     <Layout>
       <div class="container p-4">
-
         <div className="card">
           <div className="card-header">
             <h1 className="text-center">Psychometric-Test</h1>
@@ -59,14 +93,15 @@ const PsychometricPage = () => {
                   <div className="card-body">
                     <h4>{i + 1}. {q.question}</h4>
                     <p className='p-2 ' style={{ color: 'red' }}>Mark only one Option</p> <hr />
-                    {q.option.map((p) => (
+                    {q.option.map((p, i) => (
                       <div className="form-check" key={p}>
                         <input
                           className="form-check-input"
                           type="radio"
                           name={q._id}
-                          value={p}
+                          value={i}
                           id={p}
+                          onChange={(e) => handleOptionChange(q._id, e.target.value)}
                         />
                         <label className="form-check-label" htmlFor={p}>
                           {p}
@@ -76,13 +111,29 @@ const PsychometricPage = () => {
                   </div>
                 </div>
               ))}
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <Link to="/result">
+                <button type="submit" className="btn btn-primary">Submit</button>
+              </Link>
             </form>
           </div>
         </div>
       </div>
+      <div className='container'>
+        <div className="mt-4">
+          <h2>Top Three Score Categories</h2>
+          <ul>
+            {getTopThreeScores().map(([categoryId, score]) => (
+              <li key={categoryId}>
+                Category ID: {categoryId}, Score: {score}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
     </Layout>
   );
 };
 
 export default PsychometricPage;
+

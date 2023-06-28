@@ -1,34 +1,36 @@
-import { useState,useEffect, useContext, createContext } from "react"
-import axios from "axios"
+import { useState, useEffect, useContext, createContext } from "react";
+import axios from "axios";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [auth, setAuth] = useState({
-        user: null,
-        token: "",
-    });
+  const [auth, setAuth] = useState({
+    user: null,
+    token: "",
+  });
 
-    // default axios
-    axios.defaults.headers.common["Authorization"] = auth?.token;
+  // default axios
+  axios.defaults.headers.common["Authorization"] = auth?.token;
 
-    useEffect(() => {
-        const data = localStorage.getItem("auth"); // local storage se data uthaya
-        if (data) {
-            const parseData = JSON.parse(data); // usko parse kiya
-            setAuth({
-                ...auth,
-                user: parseData.user,
-                toekn: parseData.token,
-            });
-        }
-        // eslint-disable-next-line
-    }, []);
-    return (
-        <AuthContext.Provider value={[auth, setAuth]}>
-            {children}
-        </AuthContext.Provider>
-    );
+  useEffect(() => {
+    const data = localStorage.getItem("auth"); // local storage se data uthaya
+    if (data) {
+      const parseData = JSON.parse(data); // usko parse kiya
+      setAuth({
+        ...auth,
+        user: parseData.user,
+        toekn: parseData.token,
+      });
+    }
+    // eslint-disable-next-line
+  }, []);
+  return (
+    <AuthContext.Provider value={[auth, setAuth]}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
+// custom hook
 const useAuth = () => useContext(AuthContext);
+
 export { useAuth, AuthProvider };
