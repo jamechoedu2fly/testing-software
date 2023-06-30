@@ -40,7 +40,7 @@ const PreAssessmentTest = () => {
             <form >
               {question?.map((q, i) => (
                 <div className="card mb-4" key={q._id}>
-                  <div className="card-body">
+                  <div className="card-body card-real">
                     <h4>{i + 1}. {q.question}</h4>
                     <p className='p-2 ' style={{ color: 'red' }}>Mark only one Option</p>
                     {q.activities?.map((activity, index) => (

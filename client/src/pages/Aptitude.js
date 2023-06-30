@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
-
 const Aptitude = () => {
+  const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
@@ -15,6 +15,7 @@ const Aptitude = () => {
           `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12`
         );
         setQuestions(data?.allquestion);
+        setQuestionsLoaded(true);
       } catch (error) {
         console.log(error);
       }
@@ -37,12 +38,14 @@ const Aptitude = () => {
         point += q.point;
       }
     });
+    console.log(point)
     setTotalScore(point);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     calculateTotalScore();
+    console.log("hello")
   };
 
   return (
@@ -52,42 +55,48 @@ const Aptitude = () => {
           <div class="card-header ">
             <h1 class="text-center">Aptitude Test</h1>
           </div>
-          <div class="card-body">
-            <form onSubmit={handleSubmit}>
-              {question?.map((q, i) => (
-                <div class="card mb-4" key={q._id}>
-                  <div class="card-body">
-                    <h4>
-                      {i + 1}. {q.question}
-                    </h4>
-                    {q.option?.map((p) => (
-                      <div class="form-check" key={p}>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name={q._id}
-                          value={p}
-                          id={p}
-                          onChange={(e) =>
-                            handleAnswerSelection(q._id, e.target.value)
-                          }
-                        />
-                        <label class="form-check-label" for={p}>
-                          {p}
-                        </label>
-                      </div>
-                    ))}
+          {questionsLoaded ? (
+            <div class="card-body">
+              <form onSubmit={handleSubmit}>
+                {question?.map((q, i) => (
+                  <div class="card mb-4" key={q._id}>
+                    <div class="card-body card-real">
+                      <h4>
+                        {i + 1}. {q.question}
+                      </h4>
+                      {q.option?.map((p) => (
+                        <div class="form-check" key={p}>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name={q._id}
+                            value={p}
+                            id={p}
+                            onChange={(e) =>
+                              handleAnswerSelection(q._id, e.target.value)
+                            }
+                          />
+                          <label class="form-check-label" htmlFor={p}>
+                            {p}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
 
-              <Link to="/test">
                 <button type="submit" class="btn btn-primary">
                   Submit
                 </button>
-              </Link>
-            </form>
-          </div>
+              </form>
+              <br/>
+              <Link to={`/result?score=${totalScore}`} className="btn btn-primary">
+            See Result
+          </Link>
+            </div>
+          ) : (
+            <div class="card-body">Loading questions...</div>
+          )}
           <div class="card-footer bg-light">
             <h3 class="text-center">Total Score: {totalScore}</h3>
           </div>

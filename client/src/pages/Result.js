@@ -1,7 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
-
+import { useLocation } from "react-router-dom";
 const Result = () => {
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const totalScore = searchParams.get("score");
+  
     return (
         <Layout>
             <div className="container p-4">
@@ -12,6 +16,7 @@ const Result = () => {
                                 <h2 className="text-center">Aptitude Test Result</h2>
                             </div>
                             <div className="card-body">
+                            <h3>Total Score: {totalScore}</h3>
                                 {/* Render the aptitude test result data */}
                                 <ul>
                                     {/* {Object.keys(aptitudeResult).map((key) => (

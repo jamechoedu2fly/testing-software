@@ -1,9 +1,13 @@
 .section-link {
     text-decoration: none;
   }
-  
+ .text-center{
+  background: linear-gradient(to right, #686dff, #d700de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ } 
   .section-card {
-    background-color: #f2f2f2;
+    background: linear-gradient(135deg, #686dff, #d700de);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,11 +19,13 @@
   }
   
   .section-card h2 {
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
   }
   
   .section-card p {
-    color: #666;
+    color: #fff;
   }
-  
+  .card-real{
+    background: linear-gradient(135deg, #a7a9f1, #fca4ff);
+  }
