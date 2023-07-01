@@ -2,8 +2,12 @@ import preAssessmentModel from "../models/preAssessmentModel.js";
 import questionModel from "../models/questionModel.js";
 import psychometricquestionModel from "../models/psychometricquestionModel.js";
 import AptituteResult from "../models/AptituteResult.js";
+import userModel from "../models/userModel.js";
 // create a new question
 export const createQuestionController = async (req, res) => {
+
+
+
     try {
         const { categoryId, question, option, point, correctAnswer } = req.body;
         const newQuestion = new questionModel({
@@ -31,12 +35,15 @@ export const createQuestionController = async (req, res) => {
 
 export const showResultController = async (req, res) => {
     try {
-        const { totalScore } = req.body;
-        console.log(req.body)
-        const score= totalScore
+    const { totalScore, userId } = req.body;
+        console.log("user_id::",userId);
+        const score = totalScore;
+        const user = userId;
         const showresult = new AptituteResult({
-           score
-        })
+          score,
+          user,
+          
+        });
         await showresult.save();
         res.status(201).send({
             success: true,
@@ -58,7 +65,7 @@ export const getResultController = async (req, res) => {
   
       res.status(200).json({
         success: true,
-        countTotal: allResults.length,
+    countTotal: allResults.length,
         message: "Aptitude results retrieved successfully",
         allResults,
       });
@@ -309,3 +316,43 @@ export const updatePsychometricQuestionController = async (req, res) => {
         })
     }
 }
+
+
+export const getUserList = async (req, res) => {
+  try {
+    const allResults = await userModel.find().sort({ createdAt: -1 });
+
+    res.status(200).json({
+      success: true,
+      countTotal: allResults.length,
+      message: "User  retrieved successfully",
+      allResults,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      error,
+      message: "Error in retrieving aptitude results",
+    });
+  }
+};
+
+
+export const deleteApti = async (req, res) => {
+  try {
+    const result = await AptituteResult.deleteMany({});
+    console.log("deleteApti");
+    res.status(200).send({
+      success: true,
+      message: "Question Deleted successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error while deleting question",
+      error,
+    });
+  }
+};

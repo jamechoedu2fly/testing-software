@@ -4,13 +4,15 @@ import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../context/auth";
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
-  const navigate = useNavigate();
+    const [auth, setAuth] = useAuth();
 
+  const navigate = useNavigate();
   useEffect(() => {
     const getAllQuestion = async () => {
       try {
@@ -37,25 +39,29 @@ const Aptitude = () => {
   const calculateTotalScore = () => {
     let point = 0;
     question.forEach((q) => {
+
       const selectedAnswer = selectedAnswers[q._id];
       if (selectedAnswer === q.correctAnswer) {
         point += q.point;
+      
       }
     });
-    console.log(point)
-    setTotalScore(point);
+   return point;
   };
 
   const handleSubmit = async (e) => {
     // e.preventDefault();
-    // calculateTotalScore();
-    const totalScore = 6
-    console.log("hello")
+    let totalScore = calculateTotalScore();
+    const userId = auth?.user._id;
+    console.log("total_score::",totalScore)
+    console.log("useR_id:",userId);
     try {
       const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
-        totalScore
+        totalScore,
+        userId
       });
       if (res.data.success) {
+        navigate('/test')
           console.log("sucess")
       }
       else {
@@ -76,7 +82,7 @@ const Aptitude = () => {
           </div>
           {questionsLoaded ? (
             <div class="card-body">
-              <form onSubmit={handleSubmit}>
+              <form>
                 {question?.map((q, i) => (
                   <div class="card mb-4" key={q._id}>
                     <div class="card-body card-real">
@@ -104,21 +110,15 @@ const Aptitude = () => {
                   </div>
                 ))}
 
-                <button type="submit" class="btn btn-primary">
+                <button type="button" onClick={handleSubmit} class="btn btn-primary">
                   Submit
                 </button>
               </form>
               <br/>
-              <Link to={`/result?score=${totalScore}`} className="btn btn-primary">
-            See Result
-          </Link>
             </div>
           ) : (
             <div class="card-body">Loading questions...</div>
           )}
-          <div class="card-footer bg-light">
-            <h3 class="text-center">Total Score: {totalScore}</h3>
-          </div>
         </div>
       </div>
     </Layout>

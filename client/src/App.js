@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
@@ -20,19 +20,22 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard/user" element={<Dashboard />} />
+        <Route path="/dashboard/user/profile" element={< Profile/>} />
+        <Route path="/dashboard/admin" element={<AdminDashboard />} />
+        <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
+        <Route path="/dashboard/admin/create-question" element={<CreateQuestion />} />
 
-        {/* <Route path="/dashboard" element={<PrivateRoute />}> */}
-        <Route path="/dashboard" element={<Dashboard />}>
+        {/* <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>
-        {/* <Route path="/dashboard" element={<AdminRoute />}> */}
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-question" element={<CreateQuestion />} />
           <Route />
-        </Route>
+        </Route> */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 

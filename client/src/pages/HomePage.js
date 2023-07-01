@@ -10,6 +10,7 @@ const HomePage = () => {
       <h1 className='Home-heading'>Home</h1>
       {/* <pre>{JSON.stringify(auth, null, 4)}</pre> */}
       <h2>Welcome  {auth?.user?.name}</h2>
+      {/* <h2>{auth?.user?.role}</h2> */}
       </div>
     </Layout>
   )

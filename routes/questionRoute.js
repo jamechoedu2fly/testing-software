@@ -11,7 +11,9 @@ import {
     updatePsychometricQuestionController,
     updateQuestionController,
     showResultController,
-    getResultController
+    getResultController,
+    getUserList,
+    deleteApti
 }
     from '../controllers/questionController.js';
 
@@ -34,7 +36,8 @@ router.post("/post-apti-score",showResultController);
 
 //get all api
 router.get('/get-apti-score',getResultController)
-
+router.delete("/delete-apti-data", deleteApti);
+router.get('/get-user',getUserList);
 
 // preAssessmen-Question
 // create  question
