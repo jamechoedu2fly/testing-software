@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import { toast } from "react-hot-toast";
-
+import "../../styles/HeaderStyle.css"
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const handleLogout = async () => {

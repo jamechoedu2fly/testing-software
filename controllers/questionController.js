@@ -1,7 +1,7 @@
 import preAssessmentModel from "../models/preAssessmentModel.js";
 import questionModel from "../models/questionModel.js";
 import psychometricquestionModel from "../models/psychometricquestionModel.js";
-
+import AptituteResult from "../models/AptituteResult.js";
 // create a new question
 export const createQuestionController = async (req, res) => {
     try {
@@ -28,6 +28,49 @@ export const createQuestionController = async (req, res) => {
         })
     }
 }
+
+export const showResultController = async (req, res) => {
+    try {
+        const { totalScore } = req.body;
+        console.log(req.body)
+        const score= totalScore
+        const showresult = new AptituteResult({
+           score
+        })
+        await showresult.save();
+        res.status(201).send({
+            success: true,
+            message: "Total found successfully",
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in creating total !!!"
+        })
+    }
+}
+
+export const getResultController = async (req, res) => {
+    try {
+      const allResults = await AptituteResult.find().sort({ createdAt: -1 });
+  
+      res.status(200).json({
+        success: true,
+        countTotal: allResults.length,
+        message: "Aptitude results retrieved successfully",
+        allResults,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        error,
+        message: "Error in retrieving aptitude results",
+      });
+    }
+  };
 
 // delete question
 

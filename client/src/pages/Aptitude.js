@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAllQuestion = async () => {
@@ -22,6 +25,7 @@ const Aptitude = () => {
     };
     getAllQuestion();
   }, []);
+  
 
   const handleAnswerSelection = (qId, selectedOption) => {
     setSelectedAnswers((prevState) => ({
@@ -42,10 +46,25 @@ const Aptitude = () => {
     setTotalScore(point);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    calculateTotalScore();
+  const handleSubmit = async (e) => {
+    // e.preventDefault();
+    // calculateTotalScore();
+    const totalScore = 6
     console.log("hello")
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
+        totalScore
+      });
+      if (res.data.success) {
+          console.log("sucess")
+      }
+      else {
+          console.log("hellojs")
+      }
+  } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+  }
   };
 
   return (

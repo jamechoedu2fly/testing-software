@@ -9,7 +9,9 @@ import {
     getAllpreAssessmentQuestionsController,
     preAssessmenQuestionController,
     updatePsychometricQuestionController,
-    updateQuestionController
+    updateQuestionController,
+    showResultController,
+    getResultController
 }
     from '../controllers/questionController.js';
 
@@ -26,6 +28,12 @@ router.delete("/delete-question/:qid", deleteQuestionController);
 
 // get all questions
 router.get("/get-all-question/:categoryId", getAllQuestionController);
+
+//post all score
+router.post("/post-apti-score",showResultController);
+
+//get all api
+router.get('/get-apti-score',getResultController)
 
 
 // preAssessmen-Question

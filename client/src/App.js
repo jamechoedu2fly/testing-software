@@ -21,11 +21,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        <Route path="/dashboard" element={<PrivateRoute />}>
+        {/* <Route path="/dashboard" element={<PrivateRoute />}> */}
+        <Route path="/dashboard" element={<Dashboard />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>
-        <Route path="/dashboard" element={<AdminRoute />}>
+        {/* <Route path="/dashboard" element={<AdminRoute />}> */}
+        <Route path="/dashboard" element={<Dashboard />}>
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-question" element={<CreateQuestion />} />
