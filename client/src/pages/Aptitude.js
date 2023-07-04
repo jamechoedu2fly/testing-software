@@ -37,17 +37,21 @@ const Aptitude = () => {
   };
 
   const calculateTotalScore = () => {
-    let point = 0;
+    let totalScore = 0;
+    const categoryData = {}; // New object to store category-wise score
     question.forEach((q) => {
-
       const selectedAnswer = selectedAnswers[q._id];
       if (selectedAnswer === q.correctAnswer) {
-        point += q.point;
-      
+        totalScore += q.point;
+        // Increment category-wise score for the corresponding category ID
+        categoryData[q.categoryId] = (categoryData[q.categoryId] || 0) + q.point;
       }
     });
-   return point;
+    setTotalScore(totalScore); // Update the totalScore state for later use
+    return totalScore;
   };
+  
+  
 
   const handleSubmit = async (e) => {
     // e.preventDefault();

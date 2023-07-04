@@ -65,7 +65,7 @@ export const getResultController = async (req, res) => {
   
       res.status(200).json({
         success: true,
-    countTotal: allResults.length,
+        countTotal: allResults.length,
         message: "Aptitude results retrieved successfully",
         allResults,
       });

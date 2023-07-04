@@ -14,19 +14,22 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminRoute from "./components/Routes/AdminRoute";
 import CreateCategory from "./pages/Admin/CreateCategory";
 import CreateQuestion from "./pages/Admin/CreateQuestion";
+import ErrorPage from "./components/Layout/ErrorPage";
+import Chart from 'chart.js/auto';
+
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard/user" element={<Dashboard />} />
+         <Route path="/" element={<HomePage />} />
+        {/* <Route path="/dashboard/user" element={<Dashboard />} />
         <Route path="/dashboard/user/profile" element={< Profile/>} />
         <Route path="/dashboard/admin" element={<AdminDashboard />} />
         <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
-        <Route path="/dashboard/admin/create-question" element={<CreateQuestion />} />
+        <Route path="/dashboard/admin/create-question" element={<CreateQuestion />} /> */}
 
-        {/* <Route path="/dashboard" element={<PrivateRoute />}>
+        <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>
@@ -34,8 +37,9 @@ function App() {
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-question" element={<CreateQuestion />} />
+          <Route path="admin/*" element={<ErrorPage />} />
           <Route />
-        </Route> */}
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 

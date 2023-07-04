@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../../context/auth";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
+import ErrorPage from "../Layout/ErrorPage";
 
 export default function AdminRoute() {
     const [ok, setOk] = useState(false);
@@ -9,16 +10,20 @@ export default function AdminRoute() {
 
     useEffect(() => {
         const authCheck = async () => {
-            const res = await axios.get(
+          if (auth?.token) {
+            try {
+              const res = await axios.get(
                 `${process.env.REACT_APP_API}/api/auth/admin-auth`
-            );
-            if (res.data.ok) {
-                setOk(true);
-            } else {
-                setOk(false);
+              );
+              setOk(res.data.ok);
+            } catch (error) {
+              setOk(false);
             }
+          }
         };
-        if (auth?.token) authCheck();
-    }, [auth?.token]);
-    return ok ? <Outlet /> : "spinner"
-}
+        authCheck();
+      }, [auth?.token]);
+    
+      // If the user is not authorized, show the ErrorPage component
+      return ok ? <Outlet /> : <ErrorPage />;
+    }

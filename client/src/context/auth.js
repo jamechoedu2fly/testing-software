@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
       setAuth({
         ...auth,
         user: parseData.user,
-        toekn: parseData.token,
+        token: parseData.token,
       });
     }
     // eslint-disable-next-line
