@@ -119,7 +119,8 @@ const Aptitude = () => {
     }
   
     setCategoryScores(categoryScores);
-    navigate('/result', { state: { categoryScores } });
+    localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
+    navigate('/test');
   };
   
 

@@ -10,7 +10,9 @@ const Result = () => {
   const [totalScore, setTotalScore] = useState(0);
   const [categoryData, setCategoryData] = useState({});
   const location = useLocation();
-  const categoryScores = location.state?.categoryScores || {};
+  const [categoryScores, setCategoryScores] = useState(
+    JSON.parse(localStorage.getItem('categoryScores')) || {}
+  );
   const data = {
     labels: ['Language and Communication', 'Verbal and Non-verbal', 'Arithmetic'],
     datasets: [
