@@ -2,31 +2,63 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { useAuth } from "../context/auth";
+import { useNavigate } from "react-router-dom"
 const PreAssessmentTest = () => {
+  const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
+  const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
+    const [auth, setAuth] = useAuth();
+    const urls = [
+      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79acd4c21950579a8f9ad`,
+      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79ae44c21950579a8f9af`,
+      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79afb4c21950579a8f9b1`
+    ];
+    const navigate = useNavigate();
+    const getAllQuestion = async () => {
+      try {
+        const allQuestions = [];
+    
+        for (const url of urls) {
+          const { data } = await axios.get(url);
+          allQuestions.push(...data?.allquestion);
+        }
+    
+        setQuestions(allQuestions);
+        setQuestionsLoaded(true);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    useEffect(() => {
+      getAllQuestion();
+    }, []);
 
-  useEffect(() => {
-    getAllPreAssessmentQuestion();
-  }, []);
-
-  const getAllPreAssessmentQuestion = async () => {
-    try {
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221`
-      )
-      setQuestions(data?.allquestion);
-    } catch (error) {
-      console.error(error);
-    }
+  const handleAnswerSelection = (qId, selectedOption) => {
+    setSelectedAnswers((prevState) => ({
+      ...prevState,
+      [qId]: selectedOption,
+    }));
   };
-  const handleAnswerSelection = (questionId, selectedOption) => {
-    const selectedQuestion = question.find((question) => question._id === questionId);
-    if (selectedQuestion) {
-      const optionIndex = selectedQuestion.activities.indexOf(selectedOption);
-      setTotalScore((prevScore) => prevScore + optionIndex);
-    }
+  const calculateTotalScore = () => {
+    let totalScore = 0;
+    const categoryData = {}; // New object to store category-wise score
+    question.forEach((q) => {
+      const selectedAnswer = selectedAnswers[q._id];
+      if (selectedAnswer === q.correctAnswer) {
+        totalScore += q.point;
+        // Increment category-wise score for the corresponding category ID
+        categoryData[q.categoryId] = (categoryData[q.categoryId] || 0) + q.point;
+      }
+    });
+    setTotalScore(totalScore); // Update the totalScore state for later use
+    return totalScore;
+  };
+
+  const handleSubmit = async (e) => {
+    // e.preventDefault();
+        navigate('/test')
   };
 
   return (
@@ -41,33 +73,31 @@ const PreAssessmentTest = () => {
               {question?.map((q, i) => (
                 <div className="card mb-4" key={q._id}>
                   <div className="card-body card-real">
-                    <h4>{i + 1}. {q.question}</h4>
-                    <p className='p-2 ' style={{ color: 'red' }}>Mark only one Option</p>
-                    {q.activities?.map((activity, index) => (
-                      <div className="form-check" key={index}>
+                    <h4>
+                      {i + 1}. {q.question}
+                    </h4>
+                    {q.option?.map((p) => (
+                      <div className="form-check" key={p}>
                         <input
                           className="form-check-input"
                           type="radio"
-                          name={`activity_${q._id}`}
-                          id={`activity_${q._id}_${index}`}
-                          value={activity}
-                          onChange={() => handleAnswerSelection(q._id, activity)}
+                          name={q._id}
+                          id={p}
+                          value={p}
+                          onChange={(e) => handleAnswerSelection(q._id, e.target.value)}
                         />
                         <label
                           className="form-check-label"
-                          htmlFor={`activity_${q._id}_${index}`}
+                          htmlFor={p}
                         >
-                          {activity}
+                          {p}
                         </label>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
-
-              <Link to="psychometric-test">
-                <button type="submit" className="btn btn-primary">Submit</button>
-              </Link>
+                <button type="button" onClick={handleSubmit} class="btn btn-primary">Submit</button>
 
             </form>
             <h3 className="mt-3">Total Score: {totalScore}</h3>

@@ -3,11 +3,36 @@ import Layout from '../components/Layout/Layout';
 import axios from 'axios';
 import { useAuth } from '../context/auth';
 import { Bar } from 'react-chartjs-2';
+import { useLocation } from 'react-router-dom';
 
 const Result = () => {
   const [auth, setAuth] = useAuth();
   const [totalScore, setTotalScore] = useState(0);
   const [categoryData, setCategoryData] = useState({});
+  const location = useLocation();
+  const categoryScores = location.state?.categoryScores || {};
+  const data = {
+    labels: ['Language and Communication', 'Verbal and Non-verbal', 'Arithmetic'],
+    datasets: [
+      {
+        label: 'Scores',
+        data: Object.values(categoryScores),
+        backgroundColor: 'rgba(75,192,192,1)',
+      },
+    ],
+  };
+  
+
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 36,
+        stepSize: 6,
+      },
+    },
+  };
+
 
   useEffect(() => {
     const fetchLatestScore = async () => {
@@ -46,23 +71,7 @@ const Result = () => {
     fetchLatestScore();
   }, [auth]);
 
-  const formatChartData = () => {
-    const labels = Object.keys(categoryData);
-    const data = Object.values(categoryData);
-
-    return {
-      labels: labels,
-      datasets: [
-        {
-          label: 'Scores',
-          data: data,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 1,
-        },
-      ],
-    };
-  };
+  
 
   return (
     <Layout>
@@ -75,7 +84,7 @@ const Result = () => {
               </div>
               <div className="card-body">
                 <h3>Total Score: {totalScore}</h3>
-                <Bar data={formatChartData()} options={{}} />
+                <Bar data={data} options={options} />
               </div>
             </div>
           </div>

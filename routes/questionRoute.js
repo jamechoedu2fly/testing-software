@@ -13,7 +13,8 @@ import {
     showResultController,
     getResultController,
     getUserList,
-    deleteApti
+    deleteApti,
+    deletepreAssessmentQuestionsController
 }
     from '../controllers/questionController.js';
 
@@ -29,7 +30,7 @@ router.put("/update-question/:qid", updateQuestionController);
 router.delete("/delete-question/:qid", deleteQuestionController);
 
 // get all questions
-router.get("/get-all-question/:categoryId", getAllQuestionController);
+router.get("/get-all-question/:categoryId/:subCategoryId", getAllQuestionController);
 
 //post all score
 router.post("/post-apti-score",showResultController);
@@ -44,7 +45,11 @@ router.get('/get-user',getUserList);
 router.post('/create-preAssessment-question', preAssessmenQuestionController);
 
 // get all preAssessment questions
-router.get("/get-all-preAssessment-question/:categoryId", getAllpreAssessmentQuestionsController);
+router.get("/get-all-preAssessment-question/:categoryId/:subCategoryPreAssessmentId", getAllpreAssessmentQuestionsController);
+
+// delete pre assessment questions
+router.delete("/delete-preAssessment-question/:qid", deletepreAssessmentQuestionsController);
+
 
 
 

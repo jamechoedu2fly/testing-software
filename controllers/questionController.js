@@ -5,13 +5,11 @@ import AptituteResult from "../models/AptituteResult.js";
 import userModel from "../models/userModel.js";
 // create a new question
 export const createQuestionController = async (req, res) => {
-
-
-
     try {
-        const { categoryId, question, option, point, correctAnswer } = req.body;
+        const { categoryId, subCategoryId, question, option, point, correctAnswer } = req.body;
         const newQuestion = new questionModel({
             categoryId,
+            subCategoryId,
             question,
             option,
             point,
@@ -35,29 +33,30 @@ export const createQuestionController = async (req, res) => {
 
 export const showResultController = async (req, res) => {
     try {
-    const { totalScore, userId } = req.body;
-        console.log("user_id::",userId);
-        const score = totalScore;
-        const user = userId;
-        const showresult = new AptituteResult({
-          score,
-          user,
-          
-        });
-        await showresult.save();
-        res.status(201).send({
-            success: true,
-            message: "Total found successfully",
-        });
+      const { totalScore, categoryScores, userId } = req.body;
+      console.log("user_id::", userId);
+      const score = totalScore;
+      const user = userId;
+      const showresult = new AptituteResult({
+        score,
+        categoryScores, // Store the subcategory-wise scores
+        user,
+      });
+      await showresult.save();
+      res.status(201).send({
+        success: true,
+        message: "Total found successfully",
+      });
     } catch (error) {
-        console.log(error);
-        res.status(500).send({
-            success: false,
-            error,
-            message: "Error in creating total !!!"
-        })
+      console.log(error);
+      res.status(500).send({
+        success: false,
+        error,
+        message: "Error in creating total !!!",
+      });
     }
-}
+  };
+  
 
 export const getResultController = async (req, res) => {
     try {
@@ -137,9 +136,9 @@ export const updateQuestionController = async (req, res) => {
 // getting all questions
 export const getAllQuestionController = async (req, res) => {
     try {
-        const { categoryId } = req.params;
+        const { subCategoryId } = req.params;
         const allquestion = await questionModel
-            .find({ categoryId })
+            .find({ subCategoryId })
             .sort({ createdAt: -1 })
         res.status(201).send({
             success: true,
@@ -161,12 +160,14 @@ export const getAllQuestionController = async (req, res) => {
 // create Asssessment question
 export const preAssessmenQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, activities, interest } = req.body;
+        const { categoryId, subCategoryPreAssessmentId, question, option, point, correctAnswer } = req.body;
         const newQuestion = new preAssessmentModel({
             categoryId,
+            subCategoryPreAssessmentId,
             question,
-            activities,
-            interest
+            option,
+            point,
+            correctAnswer
         })
         await newQuestion.save();
         res.status(201).send({
@@ -189,9 +190,9 @@ export const preAssessmenQuestionController = async (req, res) => {
 // getting all preAssessment questions
 export const getAllpreAssessmentQuestionsController = async (req, res) => {
     try {
-        const { categoryId } = req.params;
+        const { subCategoryPreAssessmentId } = req.params;
         const allquestion = await preAssessmentModel
-            .find({ categoryId })
+            .find({ subCategoryPreAssessmentId })
             .sort({ createdAt: -1 })
         res.status(201).send({
             success: true,
@@ -208,7 +209,23 @@ export const getAllpreAssessmentQuestionsController = async (req, res) => {
         });
     }
 }
-
+// delete preassessment question
+export const deletepreAssessmentQuestionsController = async (req, res) => {
+    try {
+        await preAssessmentModel.findByIdAndDelete(req.params.qid);
+        res.status(200).send({
+            success: true,
+            message: "PreAssessment Question Deleted successfully",
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Error while deleting question",
+            error,
+        });
+    }
+}
 
 /*```````````````````````````````````````` */
 // RAISEC MODEL

@@ -6,6 +6,11 @@ const questionSchema = new mongoose.Schema({
         ref: 'Category',
         required: true
     },
+    subCategoryId: {
+        type: mongoose.Schema.ObjectId,
+        ref: "subCategory",
+        required: true,
+    },
     question: {
         type: String,
         required: true,

@@ -2,37 +2,58 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
-import toast from "react-hot-toast"
-import { useNavigate } from "react-router-dom"
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
+
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
-    const [auth, setAuth] = useAuth();
+  const [auth, setAuth] = useAuth();
+  const urls = [
+    {
+      url: `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12/64a51d412272419d09e20d36`,
+      categoryName: "Language and Communication"
+    },
+    {
+      url: `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12/64a51d6c2272419d09e20d38`,
+      categoryName: "Verbal and Non-verbal"
+    },
+    {
+      url: `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12/64a51d902272419d09e20d3a`,
+      categoryName: "Arithmatic"
+    }
+  ];
 
   const navigate = useNavigate();
-  useEffect(() => {
-    const getAllQuestion = async () => {
-      try {
-        const { data } = await axios.get(
-          `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12`
-        );
-        setQuestions(data?.allquestion);
-        setQuestionsLoaded(true);
-      } catch (error) {
-        console.log(error);
+  const [categoryScores, setCategoryScores] = useState({});
+
+  const getAllQuestion = async () => {
+    try {
+      const allQuestions = [];
+
+      for (const { url } of urls) {
+        const { data } = await axios.get(url);
+        allQuestions.push(...data?.allquestion);
       }
-    };
+
+      setQuestions(allQuestions);
+      setQuestionsLoaded(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
     getAllQuestion();
   }, []);
-  
 
   const handleAnswerSelection = (qId, selectedOption) => {
     setSelectedAnswers((prevState) => ({
       ...prevState,
-      [qId]: selectedOption,
+      [qId]: selectedOption
     }));
   };
 
@@ -50,51 +71,77 @@ const Aptitude = () => {
     setTotalScore(totalScore); // Update the totalScore state for later use
     return totalScore;
   };
-  
-  
 
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
+  const handleSubmit = async () => {
     let totalScore = calculateTotalScore();
     const userId = auth?.user._id;
-    console.log("total_score::",totalScore)
-    console.log("useR_id:",userId);
+    console.log("total_score::", totalScore);
+    console.log("user_id:", userId);
     try {
       const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
         totalScore,
         userId
       });
       if (res.data.success) {
-        navigate('/test')
-          console.log("sucess")
+        handleCalculateScores(); // Call handleCalculateScores after submitting the form
+        navigate('/test');
+        console.log("success");
+      } else {
+        console.log("hellojs");
       }
-      else {
-          console.log("hellojs")
-      }
-  } catch (error) {
+    } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
-  }
+    }
   };
+  
+  const handleCalculateScores = async () => {
+    const categoryScores = {};
+  
+    for (const { url, categoryName } of urls) {
+      try {
+        const { data } = await axios.get(url);
+        const questions = data?.allquestion || [];
+        let score = 0;
+  
+        questions.forEach((q) => {
+          const selectedAnswer = selectedAnswers[q._id];
+          if (selectedAnswer === q.correctAnswer) {
+            score += q.point;
+          }
+        });
+  
+        categoryScores[categoryName] = score;
+        console.log(`Score for ${categoryName}:`, score);
+      } catch (error) {
+        console.log(`Error fetching data from ${url}:`, error);
+      }
+    }
+  
+    setCategoryScores(categoryScores);
+    navigate('/result', { state: { categoryScores } });
+  };
+  
+
 
   return (
     <Layout>
-      <div class="container p-4">
-        <div class="card">
-          <div class="card-header ">
-            <h1 class="text-center">Aptitude Test</h1>
+      <div className="container p-4">
+        <div className="card">
+          <div className="card-header">
+            <h1 className="text-center">Aptitude Test</h1>
           </div>
           {questionsLoaded ? (
-            <div class="card-body">
+            <div className="card-body">
               <form>
                 {question?.map((q, i) => (
-                  <div class="card mb-4" key={q._id}>
-                    <div class="card-body card-real">
+                  <div className="card mb-4" key={q._id}>
+                    <div className="card-body card-real">
                       <h4>
                         {i + 1}. {q.question}
                       </h4>
                       {q.option?.map((p) => (
-                        <div class="form-check" key={p}>
+                        <div className="form-check" key={p}>
                           <input
                             className="form-check-input"
                             type="radio"
@@ -105,7 +152,7 @@ const Aptitude = () => {
                               handleAnswerSelection(q._id, e.target.value)
                             }
                           />
-                          <label class="form-check-label" htmlFor={p}>
+                          <label className="form-check-label" htmlFor={p}>
                             {p}
                           </label>
                         </div>
@@ -114,14 +161,14 @@ const Aptitude = () => {
                   </div>
                 ))}
 
-                <button type="button" onClick={handleSubmit} class="btn btn-primary">
+                <button type="button" onClick={handleSubmit} className="btn btn-primary">
                   Submit
                 </button>
               </form>
-              <br/>
+              <br />
             </div>
           ) : (
-            <div class="card-body">Loading questions...</div>
+            <div className="card-body">Loading questions...</div>
           )}
         </div>
       </div>

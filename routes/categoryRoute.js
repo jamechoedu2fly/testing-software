@@ -7,7 +7,13 @@ import {
     deletePsychometricCategoryController,
     psychometricCategoryController,
     updateCategoryController,
-    updatePsyschometricCategoryController
+    updatePsyschometricCategoryController,
+    createSubCategoryController,
+    categorySubController,
+    deleteSubCategoryController,
+    createsubcategoryPreAssessmentController,
+    subcategoryPreAssessmentController,
+
 }
     from './../controllers/categoryController.js';
 
@@ -25,6 +31,25 @@ router.get('/get-category', categoryController);
 
 // detete a  category
 router.delete("/delete-category/:id", deleteCategoryController);
+
+
+//create aptitude subcategory
+router.post("/create-subcategory", createSubCategoryController);
+
+//get aptitude subcategory
+router.get("/get-all-subcategory", categorySubController);
+
+// detete a  aptitude category
+router.delete("/delete-subcategory/:id", deleteSubCategoryController);
+
+
+
+// Pre Assessment sub category route
+//create subcategory
+router.post("/create-subcategoryPreAssessment", createsubcategoryPreAssessmentController);
+
+//get subcategory
+router.get("/get-all-subcategoryPreAssessment", subcategoryPreAssessmentController);
 
 
 

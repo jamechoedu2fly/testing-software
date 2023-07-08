@@ -6,17 +6,26 @@ const preAsseessmentSchema = new mongoose.Schema({
         ref: 'Category',
         required: true
     },
+    subCategoryPreAssessmentId: {
+        type: mongoose.Schema.ObjectId,
+        ref: "subCategoryPreAssessment",
+        required: true,
+    },
     question: {
         type: String,
         required: true,
     },
-    activities: {
+    option: {
         type: [String],
         required: true,
     },
-    interest: {
-        type: [String],
+    point: {
+        type: Number,
         required: true,
+    },
+    correctAnswer: {
+        type: String,
+        required: true
     }
 })
 
