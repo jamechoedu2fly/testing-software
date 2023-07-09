@@ -6,6 +6,11 @@ const psychometricQuestionSchema = new mongoose.Schema({
         ref: 'Category',
         required: true
     },
+    subCategoryPsychometricId: {
+        type: mongoose.Schema.ObjectId,
+        ref: "subCategoryPsychometric",
+        required: true,
+    },
     question: {
         type: String,
         required: true,

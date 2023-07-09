@@ -6,6 +6,11 @@ const riasecCategorySchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    subCategoryRaisceId: {
+        type: mongoose.Schema.ObjectId,
+        ref: "subCategoryPreAssessment",
+        required: true,
+    },
     list:{
         type:[String],
         required: true

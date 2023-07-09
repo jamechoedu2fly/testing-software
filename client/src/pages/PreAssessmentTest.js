@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom"
+import toast from "react-hot-toast";
 const PreAssessmentTest = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
@@ -11,16 +12,26 @@ const PreAssessmentTest = () => {
   const [totalScore, setTotalScore] = useState(0);
     const [auth, setAuth] = useAuth();
     const urls = [
-      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79acd4c21950579a8f9ad`,
-      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79ae44c21950579a8f9af`,
-      `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79afb4c21950579a8f9b1`
+      {
+        url: `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79acd4c21950579a8f9ad` ,
+        categoryName: "Commerce"
+      },
+      {
+        url: `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79ae44c21950579a8f9af`,
+        categoryName: "Humanities"
+      },
+      {
+        url:  `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79afb4c21950579a8f9b1`,
+        categoryName: "Science"
+      }
     ];
+    const [categoryScores, setCategoryScores] = useState({});
     const navigate = useNavigate();
     const getAllQuestion = async () => {
       try {
         const allQuestions = [];
     
-        for (const url of urls) {
+        for (const { url } of urls) {
           const { data } = await axios.get(url);
           allQuestions.push(...data?.allquestion);
         }
@@ -56,11 +67,57 @@ const PreAssessmentTest = () => {
     return totalScore;
   };
 
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-        navigate('/test')
+  const handleSubmit = async () => {
+    let totalScore = calculateTotalScore();
+    const userId = auth?.user._id;
+    console.log("total_score::", totalScore);
+    console.log("user_id:", userId);
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
+        totalScore,
+        userId
+      });
+      console.log({totalScore})
+      if (res.data.success) {
+        handleCalculateScores(); // Call handleCalculateScores after submitting the form
+        console.log("success");
+      } else {
+        console.log("hellojs");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
   };
-
+  
+  const handleCalculateScores = async () => {
+    const categoryScores = {};
+  
+    for (const { url, categoryName } of urls) {
+      try {
+        const { data } = await axios.get(url);
+        const questions = data?.allquestion || [];
+        let score = 0;
+  
+        questions.forEach((q) => {
+          const selectedAnswer = selectedAnswers[q._id];
+          if (selectedAnswer === q.correctAnswer) {
+            score += q.point;
+          }
+        });
+  
+        categoryScores[categoryName] = score;
+        console.log(`Score for ${categoryName}:`, score);
+      } catch (error) {
+        console.log(`Error fetching data from ${url}:`, error);
+      }
+    }
+  
+    setCategoryScores(categoryScores);
+    localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
+    navigate('/preassessment/psychometric-test');
+  };
+  
   return (
     <Layout>
       <div className="container p-4">

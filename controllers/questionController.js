@@ -232,9 +232,10 @@ export const deletepreAssessmentQuestionsController = async (req, res) => {
 // create a new question in psychometric test
 export const createPsychometricQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, option } = req.body;
+        const { categoryId, subCategoryPsychometricId, question, option } = req.body;
         const newQuestion = new psychometricquestionModel({
             categoryId,
+            subCategoryPsychometricId,
             question,
             option
         })
@@ -258,9 +259,9 @@ export const createPsychometricQuestionController = async (req, res) => {
 
 export const getAllPsychometricQuestionsController = async (req, res) => {
     try {
-        const { categoryId } = req.params;
+        const { subCategoryPsychometricId } = req.params;
         const allquestion = await psychometricquestionModel
-            .find({ categoryId })
+            .find({ subCategoryPsychometricId })
             .sort({ createdAt: -1 })
         res.status(201).send({
             success: true,
@@ -302,7 +303,7 @@ export const deletePsychometricQuestionController = async (req, res) => {
 
 export const updatePsychometricQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, option } = req.body;
+        const { categoryId, question, option,subCategoryPsychometricId } = req.body;
         // validate 
         switch (true) {
             case !categoryId:
@@ -310,6 +311,8 @@ export const updatePsychometricQuestionController = async (req, res) => {
             case !question:
                 return res.status(500).send({ error: "Question is Required" })
             case !option:
+                return res.status(500).send({ error: "Option is Required" })
+            case !subCategoryPsychometricId:
                 return res.status(500).send({ error: "Option is Required" })
         }
         const Updquestion = await psychometricquestionModel.findByIdAndUpdate(

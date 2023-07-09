@@ -59,11 +59,12 @@ router.delete("/delete-preAssessment-question/:qid", deletepreAssessmentQuestion
 router.post("/create-psychometric-Question", createPsychometricQuestionController)
 
 // get all psychometric questions
-router.get("/get-all-psychometric-question/:categoryId", getAllPsychometricQuestionsController);
-export default router;
+router.get("/get-all-psychometric-question/:categoryId/:subCategoryPsychometricId", getAllPsychometricQuestionsController);
 
 // delete a psychometric question
 router.delete("/delete-psychometric-question/:qid", deletePsychometricQuestionController);
 
 // update questions 
 router.put("/update-psychometric-question/:qid", updatePsychometricQuestionController)
+
+export default router;

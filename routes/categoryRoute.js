@@ -2,17 +2,16 @@ import express from 'express';
 import {
     categoryController,
     createCategoryController,
-    createPsychometricCategoryController,
     deleteCategoryController,
-    deletePsychometricCategoryController,
-    psychometricCategoryController,
     updateCategoryController,
-    updatePsyschometricCategoryController,
     createSubCategoryController,
     categorySubController,
     deleteSubCategoryController,
     createsubcategoryPreAssessmentController,
     subcategoryPreAssessmentController,
+    subcategoryPsychometricController,
+    createsubcategoryPsychometricController,
+    deletesubcategoryPsychometricController
 
 }
     from './../controllers/categoryController.js';
@@ -52,19 +51,19 @@ router.post("/create-subcategoryPreAssessment", createsubcategoryPreAssessmentCo
 router.get("/get-all-subcategoryPreAssessment", subcategoryPreAssessmentController);
 
 
+// Psychometric sub category route
+//create subcategory
+router.post("/create-subcategoryPsychometric", createsubcategoryPsychometricController);
+
+//get subcategory
+router.get("/get-all-subcategoryPsychometric", subcategoryPsychometricController);
+
+// delete category
+router.delete("/delete-psychometric-category/:id", deletesubcategoryPsychometricController);
 
 /*````````````````````*/
 //RAISEC MODEL
-// creating category route
-router.post('/create-psychometric-category', createPsychometricCategoryController);
-
-// get all category
-router.get("/get-psychometric-category", psychometricCategoryController);
 
 // delete category
-router.delete("/delete-psychometric-category/:id", deletePsychometricCategoryController);
-
-// update category
-router.put("/update-psychometric-category/:id", updatePsyschometricCategoryController);
 
 export default router;
