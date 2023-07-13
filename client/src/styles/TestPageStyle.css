@@ -2,12 +2,12 @@
     text-decoration: none;
   }
  .text-center{
-  background: linear-gradient(to right, #686dff, #d700de);
+  background:  black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
  } 
   .section-card {
-    background: linear-gradient(135deg, #686dff, #d700de);
+    background:  hsla(0, 1%, 69%, 0.882);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -19,13 +19,13 @@
   }
   
   .section-card h2 {
-    color: #fff;
+    color: black;
     margin-bottom: 10px;
   }
   
   .section-card p {
-    color: #fff;
+    color: black;
   }
   .card-real{
-    background: linear-gradient(135deg, #a7a9f1, #fca4ff);
+    background:  hsla(0, 1%, 69%, 0.882);
   }

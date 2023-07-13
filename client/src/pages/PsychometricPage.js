@@ -1,145 +1,151 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-
+import { useAuth } from "../context/auth";
+import { useNavigate } from "react-router-dom"
+import toast from "react-hot-toast";
 const PsychometricPage = () => {
-  const [questions, setQuestions] = useState([]);
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
-  
-  const calculateScore = (option) => {
-    if (option === '0') return 0;
-    if (option === '1') return 1;
-    if (option === '2') return 2;
-    if (option === '3') return 3;
-    if (option === '4') return 4;
-    return 0;
-  };  
-
-  const urls = [
+  const [question, setQuestions] = useState([]);
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [totalScore, setTotalScore] = useState(0);
+    const [auth, setAuth] = useAuth();
+    const urls = [
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93abb04ceb32efe9ebbf2`,
-      categoryName: "Realistic"
+      categoryName: "R"
     },
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93ad004ceb32efe9ebbf4`,
-      categoryName: "Artistic"
+      categoryName: "A"
     },
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93adf04ceb32efe9ebbf6`,
-      categoryName: "Investigative"
+      categoryName: "I"
     },
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93ae904ceb32efe9ebbf8`,
-      categoryName: "Social"
+      categoryName: "S"
     },
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93af404ceb32efe9ebbfa`,
-      categoryName: "Enterprising"
+      categoryName: "E"
     },
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-psychometric-question/64a938af3a0d5ef596eede01/64a93b0404ceb32efe9ebbfc`,
-      categoryName: "Conventional"
+      categoryName: "C"
     },
   ];
-  
-  const getAllPsyQuestion = async () => {
-    try {
-      const allQuestions = [];
-
-      for (const { url } of urls) {
-        const { data } = await axios.get(url);
-        allQuestions.push(...data?.allquestion);
-      }
-
-      setQuestions(allQuestions);
-      setQuestionsLoaded(true);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getAllPsyQuestion();
-  }, []);
-
-  const [scores, setScores] = useState({
-    Realistic: 0,
-    Artistic: 0,
-    Investigative: 0,
-    Social: 0,
-    Enterprising: 0,
-    Conventional: 0,
-  });
-
-  const handleOptionChange = (questionId, option) => {
-    setQuestions((prevQuestions) => {
-      const updatedQuestions = prevQuestions.map((q) => {
-        if (q._id === questionId) {
-          return { ...q, selectedOption: option };
+    const [categoryScoresPsycho, setCategoryScoresPsycho] = useState({});
+    const navigate = useNavigate();
+    const getAllQuestion = async () => {
+      try {
+        const allQuestions = [];
+    
+        for (const { url } of urls) {
+          const { data } = await axios.get(url);
+          allQuestions.push(...data?.allquestion);
         }
-        return q;
-      });
-      return updatedQuestions;
-    });
-  
-    const category = urls.map((url) => url.categoryName);
-    console.log(questionId);
-    console.log(category)
-    const score = calculateScore(option);
-  
-    setScores((prevScores) => ({
-      ...prevScores,
-      [category]: prevScores[category] + score,
+    
+        setQuestions(allQuestions);
+        setQuestionsLoaded(true);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    useEffect(() => {
+      getAllQuestion();
+    }, []);
+
+  const handleAnswerSelection = (qId, selectedOption) => {
+    setSelectedAnswers((prevState) => ({
+      ...prevState,
+      [qId]: selectedOption,
     }));
   };
   
-  useEffect(() => {
-    console.log(scores);
-  }, [scores]);
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(scores);
-  };
+  const handleCalculateScores = async () => {
+    const categoryScoresPsycho = {};
+  
+    for (const { url, categoryName } of urls) {
+      try {
+        const { data } = await axios.get(url);
+        const questions = data?.allquestion || [];
+        let score = 0;
+  
+        questions.forEach((q) => {
+          const selectedAnswer = selectedAnswers[q._id];
+          if (selectedAnswer === "1") {
+            score += 1;
+          } else if (selectedAnswer === "2") {
+            score += 2;
+          } else if (selectedAnswer === "3") {
+            score += 3;
+          } else if (selectedAnswer === "4") {
+            score += 4;
+          } else if (selectedAnswer === "5") {
+            score += 5;
+          }
+        });
+        categoryScoresPsycho[categoryName] = score;
+      } catch (error) {
+        console.log(`Error fetching data from ${url}:`, error);
+      }
+    }
+  
+    // Get the top three scores
+    const topScores = Object.entries(categoryScoresPsycho)
+      .sort((a, b) => b[1] - a[1]) // Sort scores in descending order
+      .slice(0, 3); // Get the top three scores
 
+    const topThreeScores = {};
+  topScores.forEach(([categoryName, score]) => {
+    topThreeScores[categoryName] = score;
+    console.log(`Score for ${categoryName}: ${score}`);
+  });
+  const topThreeScoresString = topScores.map(([categoryName, score]) => {
+    return categoryName;
+  }).join('');
+  console.log(`String: ${topThreeScoresString}`);
+
+  localStorage.setItem('categoryScoresPsycho', JSON.stringify(topThreeScores));
+  localStorage.setItem('topThreeScoresString', JSON.stringify(topThreeScoresString));
+  setCategoryScoresPsycho(topThreeScores);
+  navigate('/result');
+  };
+  
+  
   return (
     <Layout>
-      <div class="container p-4">
-        <div className="card">
-          <div className="card-header">
-            <h1 className="text-center">Psychometric-Test</h1>
+      <div className="container p-4">
+        <div class="card">
+          <div class="card-header ">
+            <h1 class="text-center">Psychometric Test</h1>
           </div>
-          <div className='container p-4'>
-            <div className='card p-4'>
-              <h5 style={{ "color": "red" }}>Choose one of these options. There are no wrong answers. All questions are compulsory.
-                The Scores from 0 to 4 indicates the following:</h5> <hr />
-              <li>0- Strongly disagree</li>
-              <li>1-Disagree</li>
-              <li>2-Neutral</li>
-              <li>3-Agree</li>
-              <li>4-Strongly Agree</li>
-            </div>
-          </div>
-          <div className="card-body">
-            <form>
-              {questions?.map((q, i) => (
+          <div class="card-body">
+            <form >
+              {question?.map((q, i) => (
                 <div className="card mb-4" key={q._id}>
-                  <div className="card-body">
-                    <h4>{i + 1}. {q.question}</h4>
-                    <p className='p-2 ' style={{ color: 'red' }}>Mark only one Option</p> <hr />
+                  <div className="card-body card-real">
+                    <h4>
+                      {i + 1}. {q.question}
+                    </h4>
                     {q.option?.map((p) => (
                       <div className="form-check" key={p}>
                         <input
                           className="form-check-input"
                           type="radio"
                           name={q._id}
-                          value={p}
                           id={p}
-                          onChange={(e) => handleOptionChange(q._id, e.target.value)}
+                          value={p}
+                          onChange={(e) => handleAnswerSelection(q._id, e.target.value)}
                         />
-                        <label className="form-check-label" htmlFor={p}>
+                        <label
+                          className="form-check-label"
+                          htmlFor={p}
+                        >
                           {p}
                         </label>
                       </div>
@@ -147,16 +153,11 @@ const PsychometricPage = () => {
                   </div>
                 </div>
               ))}
-             <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
-              Submit
-            </button>
+                <button type="button" onClick={handleCalculateScores} class="btn btn-primary">Submit</button>
 
             </form>
           </div>
-        </div>
-      </div>
-      <div className='container'>
-        <div className="mt-4">
+
         </div>
       </div>
 

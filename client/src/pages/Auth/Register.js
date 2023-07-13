@@ -3,6 +3,8 @@ import Layout from '../../components/Layout/Layout'
 import axios from "axios"
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom"
+import "../../styles/RegisterPage.css"
+import jamechoLogo from "../../styles/jamecho-logo.jpeg"
 const Register = () => {
 
     const [name, setName] = useState("");
@@ -34,7 +36,12 @@ const Register = () => {
     }
     return (
         <Layout>
-            <div className='register'>
+            <div className="register-container">
+        <div className="register-image">
+          <img src={jamechoLogo} />
+        </div>
+
+        <div className='register-card'>
                 <h1>Register Page</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -88,6 +95,7 @@ const Register = () => {
 
             </div>
 
+      </div>
         </Layout>
     )
 }

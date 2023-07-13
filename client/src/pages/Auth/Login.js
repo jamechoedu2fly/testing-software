@@ -4,7 +4,8 @@ import toast from "react-hot-toast"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { useAuth } from '../../context/auth'
-
+import "../../styles/LoginPage.css"
+import jamechoLogo from "../../styles/jamecho-logo.jpeg"
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -41,8 +42,14 @@ const Login = () => {
 
 
         <Layout>
-            <div className='register'>
-                <h1>Login Page</h1>
+            
+            <div className="login-container">
+        <div className="register-image">
+          <img src={jamechoLogo} />
+        </div>
+
+        <div className='login-card'>
+        <h1>Login Page</h1>
                 <form onSubmit={handleSubmit}>
 
 
@@ -73,9 +80,8 @@ const Login = () => {
                         LOGIN
                     </button>
                 </form>
-
-            </div>
-
+      </div>
+      </div>
         </Layout>
     )
 }

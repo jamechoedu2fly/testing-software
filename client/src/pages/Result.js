@@ -3,16 +3,49 @@ import Layout from '../components/Layout/Layout';
 import axios from 'axios';
 import { useAuth } from '../context/auth';
 import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import { useLocation } from 'react-router-dom';
+import careerChoices from '.././careerChoices.json';
+import subjectChoices from '.././subjectChoices.json';
 
 const Result = () => {
   const [auth, setAuth] = useAuth();
   const [totalScore, setTotalScore] = useState(0);
   const [categoryData, setCategoryData] = useState({});
   const location = useLocation();
+  const [careerList, setCareerList] = useState(null);
+  const [subjectList, setSubjectList] = useState(null);
+
   const [categoryScores, setCategoryScores] = useState(
     JSON.parse(localStorage.getItem('categoryScores')) || {}
   );
+  const [categoryScoresPsycho, setCategoryScoresPsycho] = useState(
+    JSON.parse(localStorage.getItem('categoryScoresPsycho')) || {}
+  );
+  const [categoryScoresPre, setCategoryScoresPre] = useState(
+    JSON.parse(localStorage.getItem('categoryScoresPre')) || {}
+  );
+  const [topThreeScoresString, setTopThreeScoresString] = useState(
+    JSON.parse(localStorage.getItem('topThreeScoresString')) || {}
+  );
+  const pieData = {
+    labels: Object.keys(categoryScoresPsycho),
+    datasets: [
+      {
+        data: Object.values(categoryScoresPsycho),
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(54, 162, 235, 0.6)',
+          'rgba(255, 206, 86, 0.6)',
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(153, 102, 255, 0.6)',
+          'rgba(255, 159, 64, 0.6)',
+        ],
+        borderWidth: 5,
+        radius: 100,
+      },
+    ],
+  };
   const data = {
     labels: ['Language and Communication', 'Verbal and Non-verbal', 'Arithmetic'],
     datasets: [
@@ -23,8 +56,6 @@ const Result = () => {
       },
     ],
   };
-  
-
   const options = {
     scales: {
       y: {
@@ -34,7 +65,6 @@ const Result = () => {
       },
     },
   };
-
 
   useEffect(() => {
     const fetchLatestScore = async () => {
@@ -69,11 +99,24 @@ const Result = () => {
         console.log(error);
       }
     };
-
     fetchLatestScore();
   }, [auth]);
 
-  
+  useEffect(() => {
+    const subject = careerChoices.permutations.find(
+      (permutation) => permutation.code === topThreeScoresString
+    )?.subcategories[categoryScoresPre];
+    setCareerList(subject);
+    console.log(subject);
+  }, [topThreeScoresString, categoryScoresPre, careerChoices]);
+
+  useEffect(() => {
+    const ans = subjectChoices.permutations.find(
+      (permutation) => permutation.code === topThreeScoresString
+    )?.subcategories;
+    setSubjectList(ans);
+    console.log(ans);
+  }, [topThreeScoresString, subjectChoices]);
 
   return (
     <Layout>
@@ -89,15 +132,38 @@ const Result = () => {
                 <Bar data={data} options={options} />
               </div>
             </div>
+            <div className="card mb-4">
+              <div className="card-header">
+                <h2 className="text-center">Career Choices</h2>
+              </div>
+              <div className="card-body">
+                <ul>
+                  {careerList && careerList.map((subject, index) => (
+                    <li key={index}>{subject}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="col-md-6">
             <div className="card mb-4">
               <div className="card-header">
                 <h2 className="text-center">Psychometric Test Result</h2>
               </div>
+              <div className="card-body psychometric" style={{ height: '365px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Pie data={pieData} />
+              </div>
+            </div>
+            <div className="card mb-4">
+              <div className="card-header">
+                <h2 className="text-center">Subject Choices</h2>
+              </div>
               <div className="card-body">
-                {/* Render the psychometric test result data */}
-                <ul>{/* Render the psychometric test result data */}</ul>
+                <ul>
+                  {subjectList && subjectList.map((subject, index) => (
+                    <li key={index}>{subject}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -105,6 +171,8 @@ const Result = () => {
       </div>
     </Layout>
   );
+  
+  
 };
 
 export default Result;

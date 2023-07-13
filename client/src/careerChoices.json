@@ -1,0 +1,3182 @@
+{
+  "permutations": [
+    {
+      "code": "RIA",
+      "subcategories": {
+        "commerce": [
+          "Corporate training",
+          "Marketing management",
+          "Purchase management",
+          "Quality assurance management",
+          "E-commerce Manager",
+          "Business Analyst",
+          "Market Research Analyst",
+          "Financial Analyst",
+          "Investment Banker",
+          "Management Consultant"
+        ],
+        "humanities": [
+          "Animation",
+          "Designing/ Graphic designer",
+          "Interior designing",
+          "Anthropologist",
+          "Journalist",
+          "Urban planner",
+          "Social Researcher",
+          "Cultural Heritage Manager",
+          "Art Therapist",
+          "Film and Video Editor"
+        ],
+        "science": [
+          "Architecture",
+          "Industrial Design",
+          "Environmental Science and forestry",
+          "Engineering",
+          "Medical Illustrators",
+          "Geology",
+          "Biotechnology",
+          "Marine Biology",
+          "Archaeology",
+          "Science Journalism"
+        ]
+      }
+    },
+    {
+      "code": "IAR",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Advertising Copywriter",
+          "Brand Manager",
+          "Digital Marketing Specialist",
+          "Management Consultant",
+          "E-commerce Specialist",
+          "Business Development Manager",
+          "Supply Chain Analyst",
+          "Visual Merchandiser",
+          "Data Analyst"
+        ],
+        "humanities": [
+          "Multimedia Journalist",
+          "Art Director",
+          "Social Scientist",
+          "Market Research Analyst",
+          "Policy Analyst",
+          "Multimedia Artist",
+          "Cultural Heritage Manager",
+          "Cultural Anthropologist",
+          "Fine Artist",
+          "User Experience (UX) Researcher"
+        ],
+        "science": [
+          "Biomedical Engineering",
+          "Medical Researcher",
+          "Industrial Design Engineering",
+          "Geographical Information Systems (GIS) Analyst",
+          "Aerospace Engineering",
+          "Biophysics",
+          "Cloud Computing",
+          "Commercial Pilot",
+          "Computer Networking",
+          "Computer system analyst"
+        ]
+      }
+    },
+    {
+      "code": "RAI",
+      "subcategories": {
+        "commerce": [
+          "Operations Analyst",
+          "Retail Merchandiser",
+          "Business Consultant",
+          "Retail Buyer",
+          "Financial Planner",
+          "Market Strategist",
+          "Financial Risk Analyst",
+          "Sales and Marketing Manager",
+          "Supply Chain Manager",
+          "Intellectual Property Lawyer"
+        ],
+        "humanities": [
+          "Graphic Designer",
+          "Photographer",
+          "Historian",
+          "Linguist",
+          "Public Relations Specialist",
+          "Cultural Events Planner",
+          "Human Resources Specialist",
+          "Community Development Officer",
+          "Film and Video Editor",
+          "Researcher"
+        ],
+        "science": [
+          "Space Scientist/Astronomer",
+          "Robotics Engineer",
+          "Science Educator",
+          "Paleontologist",
+          "Biochemist",
+          "Veterinary Technologist",
+          "Forensic Scientist",
+          "Environmental Scientist",
+          "Architect",
+          "Civil Engineer"
+        ]
+      }
+    },
+    {
+      "code": "IRA",
+      "subcategories": {
+        "commerce": [
+          "E-commerce Specialist",
+          "Investment Banker",
+          "Financial Controller",
+          "Digital Content Strategist",
+          "Entrepreneur",
+          "Fashion Merchandiser",
+          "Charted accountant",
+          "Cost accountant",
+          "Certified public accountant",
+          "Actuary"
+        ],
+        "humanities": [
+          "Documentary Filmmaker",
+          "Foreign Service Officer",
+          "Media Producer",
+          "Legal Investigator",
+          "Psychologist",
+          "Academic research",
+          "Journalism",
+          "Editor/Proofreader",
+          "Content writer",
+          "Communication specialist"
+        ],
+        "science": [
+          "Medical Researcher",
+          "Aerospace / Industrial Engineer",
+          "Botanist",
+          "Data Scientist",
+          "Biomedical Engineer",
+          "Astrophysicist",
+          "Nanotechnologist",
+          "Food Scientist",
+          "Cybersecurity",
+          "Computer networking"
+        ]
+      }
+    },
+    {
+      "code": "ARI",
+      "subcategories": {
+        "commerce": [
+          "UX Designer",
+          "Advertising Creative Director",
+          "Management Consultant",
+          "Digital marketing/Marketing",
+          "Product management",
+          "Journalism and mass communication",
+          "Tourism manager",
+          "Event planner",
+          "Social media manager",
+          "Market analyst"
+        ],
+        "humanities": [
+          "Teaching and Education",
+          "Advertising and Marketing (Advertising Executive, Marketing Manager)",
+          "Content Writing and Editing",
+          "Art and Design",
+          "Sociology (Sociologist, Social Researcher)",
+          "Fine Arts (Painter, Sculptor, Visual Artist)",
+          "Music and Performing Arts (Musician, Dancer, Actor)",
+          "Content Writing and Editing",
+          "Furniture and interior designing",
+          "Animator/Cartoonist"
+        ],
+        "science": [
+          "Industrial Designer",
+          "Architect",
+          "Web Designer",
+          "Architect",
+          "Medical Biotechnologist",
+          "Marine Biologist",
+          "Science Filmmaker",
+          "Wildlife Biologist",
+          "Medical Technologist",
+          "Astrophysicist"
+        ]
+      }
+    },
+    {
+      "code": "AIR",
+      "subcategories": {
+        "commerce": [
+          "Store manager",
+          "Advertising executive",
+          "Market research analyst",
+          "Hospitality manager",
+          "Travel and Tourism professional",
+          "Event manager",
+          "Computer applications",
+          "Academics - Research",
+          "Journalism",
+          "Auditors"
+        ],
+        "humanities": [
+          "Legal Researcher",
+          "Multimedia Artist",
+          "Counselor",
+          "Scriptwriter",
+          "Public relations, advertising & marketing",
+          "Criminology specialist",
+          "Hotel operation manager",
+          "Cartoonist",
+          "Philosophy (Philosopher, Ethics Consultant)",
+          "Library Science (Librarian, Library Assistant)"
+        ],
+        "science": [
+          "Medicine (Doctor, Surgeon, Specialist)",
+          "Biotechnology",
+          "Biomedical Science",
+          "Veterinary Science (Veterinarian)",
+          "Biology (Biologist, Microbiologist, Geneticist)",
+          "Forensic Science (Forensic Scientist, Crime Scene Investigator)",
+          "Astronomy (Astronomer, Astrophysicist)",
+          "Research Scientist",
+          "Space Science and Technology",
+          "Chemistry (Chemist, Analytical Chemist)"
+        ]
+      }
+    },
+    {
+      "code": "IAS",
+      "subcategories": {
+        "commerce": [
+          "Real estate agent",
+          "Market Research Analyst",
+          "Auditing and Assurance",
+          "Risk Analyst",
+          "Insurance Agent/Underwriter",
+          "Chartered Accountant",
+          "Company Secretary",
+          "Public Relations Specialist",
+          "Tax consultant",
+          "Business development manager"
+        ],
+        "humanities": [
+          "Civil Services",
+          "Lawyer",
+          "Psychologist/ Counsellor",
+          "Linguistics and language studies",
+          "Animator",
+          "Mass Media Studies",
+          "Textile Design",
+          "Academic research",
+          "Texture Artist",
+          "Beauty therapist"
+        ],
+        "science": [
+          "Environmental Scientist/Conservationist/Geoscientist",
+          "Artificial Intelligence",
+          "Agriculture Scientist",
+          "Environmental Consultant",
+          "Academic Research",
+          "Engineering",
+          "Medical",
+          "Ecotourism Specialist",
+          "Wildlife biologist",
+          "Physicist"
+        ]
+      }
+    },
+    {
+      "code": "ISA",
+      "subcategories": {
+        "commerce": [
+          "Intellectual Property (IP) Consultant",
+          "Mergers and Acquisitions (M&A) Specialist",
+          "Forensic Accountant",
+          "Financial Risk Manager",
+          "Risk Manager",
+          "Banking & Insurance",
+          "FinTech Consultant",
+          "International Trade specialist",
+          "Business Intelligence analyst",
+          "E-commerce entrepreneur"
+        ],
+        "humanities": [
+          "Philosophy",
+          "Film studies/ cinema critic",
+          "Sociologist",
+          "Anthropologist",
+          "Psychologist",
+          "Education/ teaching",
+          "Academic research",
+          "Political Scientist",
+          "Theatre/Film Director or Producer",
+          "Public Policy Analyst"
+        ],
+        "science": [
+          "Veterinary Science (Veterinarian, Animal Researcher)",
+          "Food Technology (Food Technologist, Quality Assurance Manager)",
+          "Science Education (Teacher, Professor)",
+          "Medicine (Doctor, Surgeon, Specialist, Medical Researcher)",
+          "Medical/Healthcare Illustrator",
+          "Artificial Intelligence and Machine Learning",
+          "Cybersecurity",
+          "Environmental Engineering",
+          "Data Science and Analytics",
+          "Dentistry (Dentist, Orthodontist)"
+        ]
+      }
+    },
+    {
+      "code": "SIA",
+      "subcategories": {
+        "commerce": [
+          "Social Entrepreneur",
+          "Corporate Social Responsibility (CSR) Manager",
+          "Market Research Analyst",
+          "Human Resources (HR) Specialist",
+          "Public Relations (PR) Specialist",
+          "Portfolio Manager",
+          "Corporate Trainer",
+          "Entrepreneur",
+          "Sales Manager",
+          "Stockbroker"
+        ],
+        "humanities": [
+          "Research Psychologist",
+          "Anthropologist/ Archaeologist",
+          "Creative Director",
+          "Fashion Designer",
+          "Educator/ Teacher",
+          "Foriegn service officer",
+          "Human Rights advocate",
+          "Public administrator",
+          "Philosopher",
+          "Journalist"
+        ],
+        "science": [
+          "Science Animator/Visual Effects Artist",
+          "Ergonomics Specialist",
+          "Biomedical Engineer",
+          "Genetic Counselor",
+          "Geoscientist",
+          "Medical Researcher",
+          "Science Journalist",
+          "Bioinformatics Specialist",
+          "Forensic Scientist",
+          "Art Conservation Scientist"
+        ]
+      }
+    },
+    {
+      "code": "SAI",
+      "subcategories": {
+        "commerce": [
+          "Banking and Insurance",
+          "Marketing manager",
+          "Digital market specialist",
+          "Business Consultant/ Reporter",
+          "Brand manager",
+          "Sales- Purchase/ Retail buyer",
+          "Media planner",
+          "Financial controller",
+          "Operations research analyst",
+          "Stock marketing and trading"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Political scientist",
+          "Cultural researcher",
+          "Sociologist",
+          "Psychologist",
+          "Historian",
+          "Fashion Designer",
+          "Performing arts",
+          "Language specialist",
+          "Teaching"
+        ],
+        "science": [
+          "Nutritionist/Dietitian",
+          "Science Educator",
+          "Public Health Specialist",
+          "Geoscientist",
+          "Human Factors Engineer",
+          "Science Policy Advocate",
+          "Epidemiologist",
+          "Industrial/Organizational Psychologist",
+          "Conservation Scientist",
+          "Science Filmmaker"
+        ]
+      }
+    },
+    {
+      "code": "ASI",
+      "subcategories": {
+        "commerce": [
+          "Economist",
+          "Retail Management",
+          "Export-Import Manager",
+          "Forensic Accounting and Fraud Examination",
+          "Customs Officer",
+          "Financial Planning and Wealth Management",
+          "Tourism and Hospitality",
+          "Insurance Agent",
+          "Retail Management",
+          "Bank officer"
+        ],
+        "humanities": [
+          "Journalism and Mass Communication",
+          "Public Relations",
+          "Sociology",
+          "Tourism and Travel Management",
+          "Hospitality Management",
+          "Political Science and Public Administration",
+          "Designing Interior",
+          "Visual and performing arts",
+          "Education/ Acdemics",
+          "Creative writing"
+        ],
+        "science": [
+          "Ergonomist",
+          "Biomedical Engineer",
+          "Science Writer/Science Journalist",
+          "Biotechnology Researcher",
+          "Forensic Scientist",
+          "Physiotherapist",
+          "Research Scientist",
+          "Ecologist",
+          "Teaching and Academia",
+          "Defense and Security"
+        ]
+      }
+    },
+    {
+      "code": "AIS",
+      "subcategories": {
+        "commerce": [
+          "Startup Founder/ Business owner",
+          "Logistics and Supply Chain Management",
+          "Tax Consultant",
+          "Financial Advisor",
+          "Company Secretary",
+          "Corporate Law Advisor",
+          "Compliance Officer",
+          "Corporate Governance Executive",
+          "SEO Specialist",
+          "Fraud Investigator"
+        ],
+        "humanities": [
+          "Cultural Studies",
+          "Heritage Management",
+          "Photography",
+          "Political Science",
+          "International Relations",
+          "Advertising",
+          "Media Studies",
+          "Film Studies",
+          "Creative Writing",
+          "Literature"
+        ],
+        "science": [
+          "Biotechnology",
+          "Biomedical Engineering",
+          "Biochemistry",
+          "Microbiology",
+          "Genetics",
+          "Forensic Science",
+          "Ayurveda",
+          "Homeopathy",
+          "Naturopathy",
+          "Agricultural Sciences"
+        ]
+      }
+    },
+    {
+      "code": "SEA",
+      "subcategories": {
+        "commerce": [
+          "Chartered Accountancy",
+          "Retail Management",
+          "Entrepreneurship and Startups",
+          "Marketing and Advertising",
+          "Tourism and Hospitality",
+          "Relationship Manager",
+          "Insurance Consultant",
+          "Risk Analyst",
+          "Equity Research Analyst",
+          "Derivatives Trader"
+        ],
+        "humanities": [
+          "Marriage and Family Therapist",
+          "Human Rights advocate",
+          "ESL Teacher",
+          "Marriage and Family Therapist",
+          "Event Producer",
+          "Legal Advisor",
+          "Voice over artist",
+          "Corporate event manager",
+          "Web Designer",
+          "Wedding Planner"
+        ],
+        "science": [
+          "Operations Research",
+          "Medicine (Doctor, Surgeon, Physician, Specialist)",
+          "Dentistry",
+          "Nursing",
+          "Ayurveda",
+          "Homeopathy",
+          "Architecture",
+          "Physiotherapy",
+          "Occupational Therapy",
+          "Naturopathy"
+        ]
+      }
+    },
+    {
+      "code": "SAE",
+      "subcategories": {
+        "commerce": [
+          "Event Marketing Specialist",
+          "Corporate Lawyer",
+          "Compliance Officer",
+          "Legal Advisor",
+          "Contract Manager",
+          "Intellectual Property Specialist",
+          "Tax Lawyer",
+          "Company Secretary (CS)",
+          "Legal Consultant",
+          "Legal Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Counselor",
+          "Rehabilitation Specialist",
+          "Community Organizer",
+          "Marriage and Family Therapist",
+          "Substance Abuse Counselor",
+          "School Counselor",
+          "Tourism",
+          "Sociologist",
+          "Policy Analyst"
+        ],
+        "science": [
+          "Physiotherapist",
+          "Rehabilitation Specialist",
+          "Sports Physiotherapist",
+          "Pharmacy Management",
+          "Sports Nutritionist",
+          "Health Informatics Specialist",
+          "Biomedical imaging",
+          "Industrial Engineering",
+          "Industrial Chemistry",
+          "Sports Nutritionist"
+        ]
+      }
+    },
+    {
+      "code": "EAS",
+      "subcategories": {
+        "commerce": [
+          "Real Estate Agent",
+          "Leasing Consultant",
+          "Real Estate Investment Analyst",
+          "Property Consultant",
+          "Travel Consultant",
+          "Real Estate Marketing Executive",
+          "Hotel Manager",
+          "Start-up Founder",
+          "Management Consultant",
+          "Business Development Manager"
+        ],
+        "humanities": [
+          "Fashion Designer",
+          "Interior Designer",
+          "Web Designer",
+          "Tourism and Hospitality",
+          "Music Composer",
+          "Voice Over Artist",
+          "Performing Arts Educator",
+          "Screenwriter",
+          "Cinematographer",
+          "Costume Designer"
+        ],
+        "science": [
+          "Veterinarian",
+          "Food Technologist",
+          "Food Safety Officer",
+          "Horticulturist",
+          "Physiotherapist",
+          "Rehabilitation Specialist",
+          "Sports Physiotherapist",
+          "Biomedical Imaging Scientist",
+          "MRI Technologist",
+          "Radiographer"
+        ]
+      }
+    },
+    {
+      "code": "ASE",
+      "subcategories": {
+        "commerce": [
+          "Hotel Manager",
+          "Tourism Officer",
+          "Restaurant Manager",
+          "Curriculum Developer",
+          "Management Trainee",
+          "Business Transformation Consultant",
+          "Commerce Teacher/Professor",
+          "Curriculum Developer",
+          "Academic Advisor",
+          "Online Course Instructor"
+        ],
+        "humanities": [
+          "Music Teacher",
+          "Composer",
+          "Voice Coach",
+          "Film Director",
+          "Cinematographer",
+          "Broadcast News Anchor",
+          "Radio Jockey (RJ)",
+          "Language Translator",
+          "Technical Writer",
+          "Art Director"
+        ],
+        "science": [
+          "Dietitian",
+          "Nutritionist",
+          "Food Scientist",
+          "Robotics Engineer/ Systems designer",
+          "Automation Engineer",
+          "Remote Sensing Scientist",
+          "GIS Specialist",
+          "Cartographer",
+          "Pharmacologist",
+          "Drug Safety Specialist"
+        ]
+      }
+    },
+    {
+      "code": "AES",
+      "subcategories": {
+        "commerce": [
+          "Event Planner/ Production manager",
+          "Wedding Planner",
+          "Exhibition Manager",
+          "Corporate Event Manager",
+          "Venue Manager",
+          "Event Production Manager",
+          "Social Entrepreneur",
+          "E-commerce Entrepreneur",
+          "Financial Modeller",
+          "Claims Adjuster"
+        ],
+        "humanities": [
+          "Film Director/ Critic/ Producer",
+          "Screenwriter",
+          "Exhibition Manager",
+          "Casting Director",
+          "Cinematographer",
+          "Production Designer",
+          "Music Journalist",
+          "Costume Designer",
+          "Voice Coach",
+          "Composer"
+        ],
+        "science": [
+          "Dentist",
+          "Orthodontist",
+          "Planetarium Curator",
+          "Agronomist",
+          "Biotechnologist",
+          "Geneticist",
+          "Park ranger- educational and interpretative",
+          "Crop Protection Specialist",
+          "Cultural Anthropologist",
+          "Sports Nutritionist"
+        ]
+      }
+    },
+    {
+      "code": "ESA",
+      "subcategories": {
+        "commerce": [
+          "Risk Analyst",
+          "Credit Manager",
+          "Loan Officer",
+          "Investment Advisor",
+          "Commercial Banker",
+          "Claims Adjuster",
+          "Equity Trader",
+          "Bank Manager",
+          "Insurance Agent",
+          "Financial Consultant"
+        ],
+        "humanities": [
+          "Author",
+          "Editor",
+          "Content Writer/Freelance Writer",
+          "Technical Writer",
+          "Copywriter",
+          "Proofreader",
+          "Literary Agent",
+          "Publishing Assistant",
+          "Documentary filmaker",
+          "Scriptwriter"
+        ],
+        "science": [
+          "Quality Assurance Officer",
+          "Conservation Scientist",
+          "Occupational Therapist",
+          "Rehabilitation Specialist",
+          "Physiotherapist",
+          "Dietitian",
+          "Nutritionist",
+          "Plant Breeder",
+          "Dentist/ orthodontist/ Periodontist",
+          "Animal Behaviorist"
+        ]
+      }
+    },
+    {
+      "code": "SEC",
+      "subcategories": {
+        "commerce": [
+          "Insurance Agent",
+          "Chartered Accountant (CA)",
+          "Company Secretary (CS)",
+          "Cost and Management Accountant (CMA)",
+          "Tax Consultant",
+          "Auditor",
+          "Treasury Manager",
+          "Claims Adjuster",
+          "Mutual Fund Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Sociologist",
+          "Social Researcher",
+          "Social Justice Advocate",
+          "Urban Planner",
+          "Substance Abuse Counselor",
+          "School Counselor",
+          "Broadcast Journalist",
+          "News Anchor",
+          "News Reporter",
+          "Counseling Psychologist"
+        ],
+        "science": [
+          "Biomedical Imaging Scientist",
+          "MRI Technologist",
+          "Radiographer",
+          "Forester/ forest ecologist/ forest officer",
+          "Anthropologist",
+          "Veterinarian/ Pathologist",
+          "Speech-Language Pathologist",
+          "Genetic Counselor",
+          "Statistician",
+          "Medical Administrator"
+        ]
+      }
+    },
+    {
+      "code": "SCE",
+      "subcategories": {
+        "commerce": [
+          "ERP Consultant",
+          "Legal Consultant",
+          "Business Consultant",
+          "Start-up Founder",
+          "Franchise Consultant",
+          "Strategy Consultant",
+          "Business Development Manager",
+          "Academic Advisor",
+          "Database Administrator",
+          "Online Course Instructor"
+        ],
+        "humanities": [
+          "Teacher/ professor",
+          "News Producer",
+          "Career Counselor",
+          "Librarian",
+          "Education Consultant",
+          "Curriculum Developer",
+          "Education Administrator",
+          "Academic Advisor",
+          "Cross-Cultural Trainer",
+          "Broadcast News Anchor"
+        ],
+        "science": [
+          "Medical Doctor",
+          "Surgeon",
+          "Radiologist",
+          "Psychiatrist",
+          "Anesthesiologist",
+          "Civil Engineer",
+          "Drug Safety Specialist",
+          "Pharmacologist",
+          "Animal Behaviorist",
+          "Dietician/ Nutritionist"
+        ]
+      }
+    },
+    {
+      "code": "ECS",
+      "subcategories": {
+        "commerce": [
+          "Corporate Lawyer",
+          "Compliance Officer",
+          "Legal Advisor",
+          "Contract Manager",
+          "Tax Lawyer",
+          "Company Secretary (CS)",
+          "    Legal Consultant",
+          "Business coach",
+          "Corporate Trainer",
+          "Recruitment Specialist"
+        ],
+        "humanities": [
+          "Public relations specialist",
+          "Film Director",
+          "Cinematographer",
+          "Composer",
+          "Voice Coach",
+          "Music Critic",
+          "Fashion Photographer",
+          "Costume Designer",
+          "Corporate Event Manager",
+          "Wedding Planner"
+        ],
+        "science": [
+          "Biomedical Engineer",
+          "Healthcare IT Specialist",
+          "Science Journalist",
+          "Medical Tourism Coordinator",
+          "Pharmaceutical Manufacturing Manager",
+          "Clinical Psychologist",
+          "Hospital Public Relations Manager",
+          "Regulatory Affairs Specialist in the pharmaceutical industry",
+          "Compliance Officer in the healthcare industry",
+          "Telemedicine specialist"
+        ]
+      }
+    },
+    {
+      "code": "ESC",
+      "subcategories": {
+        "commerce": [
+          "Commerce Teacher/Professor",
+          "Academic Advisor",
+          "Export Manager",
+          "International Business Consultant",
+          "Cross-Cultural Advisor",
+          "Social Entrepreneur",
+          "E-commerce Entrepreneur",
+          "Insurance Agent",
+          "Investment Advisor",
+          "Brand Manager"
+        ],
+        "humanities": [
+          "Event Planner",
+          "Travel Consultant",
+          "Hospitality Sales Manager",
+          "Author",
+          "Editor",
+          "Journalist",
+          "Editor",
+          "Radio Jockey (RJ)",
+          "Child Psychologist",
+          "Industrial-Organizational Psychologist"
+        ],
+        "science": [
+          "Genetic Counselor",
+          "Physiotherapist",
+          "Rehabilitation Specialist",
+          "Sports Physiotherapist",
+          "Occupational Therapist",
+          "Cultural Anthropologist",
+          "Environmental Scientist",
+          "Sustainability Consultant",
+          "Ecologist",
+          "Regulatory Affairs Officer"
+        ]
+      }
+    },
+    {
+      "code": "CES",
+      "subcategories": {
+        "commerce": [
+          "Conference Manager",
+          "Exhibition Manager",
+          "Hotel Manager",
+          "Real Estate Appraiser",
+          "Property Consultant",
+          "Data Analyst",
+          "Financial Systems Analyst",
+          "Cybersecurity Analyst",
+          "Arbitrator",
+          "Privacy Officer"
+        ],
+        "humanities": [
+          "Marriage and Family Therapist",
+          "Substance Abuse Counselor",
+          "Interpreter",
+          "Language Teacher",
+          "News Editor",
+          "Content Writer",
+          "News Anchor",
+          "Media Planner",
+          "Librarian",
+          "Public speaking"
+        ],
+        "science": [
+          "Pharmaceutical Sales Manager",
+          "Family therapist",
+          "Speech-Language Pathologist",
+          "Life coach",
+          "Disease Surveillance Officer",
+          "Medical Writer",
+          "Behavioral Health Specialist",
+          "Immunopathologist",
+          "Ecologist",
+          "Industrial-Organizational Psychologist"
+        ]
+      }
+    },
+    {
+      "code": "CSE",
+      "subcategories": {
+        "commerce": [
+          "International Trade Specialist",
+          "Global Sourcing Manager",
+          "Cross-Cultural Advisor",
+          "Marketing Analytics Specialist",
+          "Data Visualization Specialist",
+          "    Predictive Analyst",
+          "Supply Chain Analytics Specialist",
+          "Education Policy Analyst",
+          "Educational Content Writer",
+          "    Career Counselor"
+        ],
+        "humanities": [
+          "Marketing Manager",
+          "Performing Arts Educator",
+          "Social Researcher",
+          "Documentary Filmmaker",
+          "Heritage Consultant",
+          "Language Teacher",
+          "Cultural Resource Manager",
+          "Policy Researcher",
+          "Fashion Designer",
+          "Interior Designer"
+        ],
+        "science": [
+          "Civil Engineer",
+          "Veterinary Pathologist",
+          "Farm Equipment Designer",
+          "Radiographer",
+          "Environmental Health Specialist",
+          "Cultural Anthropologist",
+          "Archaeologist",
+          "Forest Officer",
+          "Animal Behaviorist",
+          "Clinical Psychologist"
+        ]
+      }
+    },
+    {
+      "code": "ECR",
+      "subcategories": {
+        "commerce": [
+          "Entrepreneur",
+          "Retail Manager",
+          "Supply Chain Manager",
+          "Insurance Agent"
+        ],
+        "humanities": ["Entrepreneur", "Public Relations Specialist"],
+        "science": [
+          "Entrepreneur",
+          "Research Scientist",
+          "Pharmaceutical Sales Representative"
+        ]
+      }
+    },
+    {
+      "code": "ERC",
+      "subcategories": {
+        "commerce": [
+          "Entrepreneur",
+          "Marketing Manager",
+          "Sales Manager",
+          "Retail Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Accountant",
+          "Auditor",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Real Estate Agent"
+        ],
+        "humanities": [
+          "Entrepreneur",
+          "Public Relations Specialist",
+          "Hotel Manager",
+          "Archivist"
+        ],
+        "science": [
+          "Entrepreneur",
+          "Data Analyst",
+          "Quality Control Analyst",
+          "Environmental Scientist",
+          "Biomedical Engineer",
+          "Food Technologist",
+          "Surveyor",
+          "Geologist",
+          "Science Writer",
+          "Patent Analyst"
+        ]
+      }
+    },
+    {
+      "code": "CRE",
+      "subcategories": {
+        "commerce": [
+          "Accountant",
+          "Auditor",
+          "Investment Banker",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Retail Manager",
+          "Sales Manager",
+          "Stockbroker",
+          "Insurance Agent",
+          "Entrepreneur",
+          "Market Research Analyst"
+        ],
+        "humanities": [
+          "Content Writer",
+          "Editor",
+          "Librarian",
+          "Archivist",
+          "Museum Curator",
+          "Market Research Analyst",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Entrepreneur"
+        ],
+        "science": [
+          "Lab Technician",
+          "Quality Control Analyst",
+          "Surveyor",
+          "Geologist",
+          "Data Analyst",
+          "Research Scientist",
+          "Health and Safety Officer",
+          "Biomedical Engineer",
+          "Pharmaceutical Sales Representative",
+          "Science Writer",
+          "Science Communicator"
+        ]
+      }
+    },
+    {
+      "code": "CER",
+      "subcategories": {
+        "commerce": [
+          "Accountant",
+          "Auditor",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Sales Manager",
+          "Retail Manager",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Entrepreneur",
+          "Supply Chain Manager",
+          "Real Estate Agent",
+          "INSURANCE AGENT"
+        ],
+        "humanities": [
+          "Accountant",
+          "Auditor",
+          "Financial Analyst",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Project Manager",
+          "Logistics Manager",
+          "Market Research Analyst",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Entrepreneur",
+          "Event Planner",
+          "Hotel Manager"
+        ],
+        "science": [
+          "Laboratory Technician",
+          "Quality Control Analyst",
+          "Data Analyst",
+          "Environmental Scientist",
+          "Health and Safety Officer",
+          "Surveyor",
+          "Geologist",
+          "Biomedical Engineer",
+          "Pharmaceutical Sales Representative",
+          "Market Research Analyst",
+          "Entrepreneur",
+          "SCIENCE WRITERPATENT ANALYST"
+        ]
+      }
+    },
+    {
+      "code": "REC",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Banker",
+          "Accountant",
+          "Auditor",
+          "Stockbroker",
+          "Insurance Agent",
+          "Entrepreneur",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Retail Manager",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Project Manager",
+          "Logistics Manager"
+        ],
+        "humanities": [
+          "Interior Designer",
+          "Landscape Architect",
+          "Photographer",
+          "Graphic Designer",
+          "Web Developer",
+          "Entrepreneur",
+          "Advertising Executive",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Human Resources Manager",
+          "Project Manager",
+          "Operations Manager"
+        ],
+        "science": [
+          "Civil Engineer",
+          "Mechanical Engineer",
+          "Electrical Engineer",
+          "Environmental Scientist",
+          "Geologist",
+          "Surveyor",
+          "Data Analyst",
+          "Research Scientist",
+          "Quality Control Analyst",
+          "Biotechnologist",
+          "Market Research Analyst",
+          "Entrepreneur",
+          "Pharmaceutical Sales Representative"
+        ]
+      }
+    },
+    {
+      "code": "RCE",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Banker",
+          "Accountant",
+          "Auditor",
+          "Stockbroker",
+          "Insurance Agent",
+          "Entrepreneur",
+          "Operations Manager",
+          "Project Manager",
+          "Human Resources Manager",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Retail Manager",
+          "Supply Chain Manager"
+        ],
+        "humanities": [
+          "Interior Designer",
+          "Fashion Designer",
+          "Architect",
+          "Landscape Architect",
+          "Photographer",
+          "Entrepreneur",
+          "Project Manager",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Human Resources Manager",
+          "Sales Manager",
+          "Retail Manager",
+          "Hotel Manager"
+        ],
+        "science": [
+          "Civil Engineer",
+          "Mechanical Engineer",
+          "Electrical Engineer",
+          "Environmental Scientist",
+          "Geologist",
+          "Surveyor",
+          "Research Scientist",
+          "Laboratory Technician",
+          "Quality Control Analyst",
+          "Biotechnologist",
+          "Entrepreneur",
+          "Sales Manager",
+          "Market Research Analyst",
+          "Pharmaceutical Sales Representative"
+        ]
+      }
+    },
+    {
+      "code": "CRI",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Banker",
+          "Accountant",
+          "Auditor",
+          "Stockbroker",
+          "Insurance Agent",
+          "Entrepreneur",
+          "Operations Manager",
+          "Project Manager",
+          "Human Resources Manager",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Retail Manager",
+          "Supply Chain Manager"
+        ],
+        "humanities": [
+          "Interior Designer",
+          "Fashion Designer",
+          "Architect",
+          "Landscape Architect",
+          "Photographer",
+          "Entrepreneur",
+          "Project Manager",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Human Resources Manager",
+          "Sales Manager",
+          "Retail Manager",
+          "Hotel Manager"
+        ],
+        "science": [
+          "Civil Engineer",
+          "Mechanical Engineer",
+          "Electrical Engineer",
+          "Environmental Scientist",
+          "Geologist",
+          "Surveyor",
+          "Research Scientist",
+          "Laboratory Technician",
+          "Quality Control Analyst",
+          "Biotechnologist",
+          "Entrepreneur",
+          "Sales Manager",
+          "Market Research Analyst",
+          "Pharmaceutical Sales Representative"
+        ]
+      }
+    },
+    {
+      "code": "CIR",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Banker",
+          "Accountant",
+          "Auditor",
+          "Stockbroker",
+          "Insurance Agent",
+          "Entrepreneur",
+          "Operations Manager",
+          "Project Manager",
+          "Human Resources Manager",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Retail Manager",
+          "Supply Chain Manager"
+        ],
+        "humanities": [
+          "Interior Designer",
+          "Fashion Designer",
+          "Photographer",
+          "Entrepreneur",
+          "Project Manager",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Human Resources Manager",
+          "Hotel Manager"
+        ],
+        "science": [
+          "Civil Engineer",
+          "Mechanical Engineer",
+          "Electrical Engineer",
+          "Environmental Scientist",
+          "Geologist",
+          "Surveyor",
+          "Research Scientist",
+          "Laboratory Technician",
+          "Quality Control Analyst",
+          "Biotechnologist",
+          "Entrepreneur",
+          "Sales Manager",
+          "Market Research Analyst",
+          "Pharmaceutical Sales Representative"
+        ]
+      }
+    },
+    {
+      "code": "ICR",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Market Research Analyst",
+          "Accountant",
+          "Auditor",
+          "Operations Research Analyst (I, C)",
+          "Risk Analyst",
+          "Business Analyst",
+          "Actuary",
+          "Insurance Underwriter (C)",
+          "Supply Chain Analyst"
+        ],
+        "humanities": [
+          "Researcher",
+          "Anthropologist",
+          "Historian",
+          "Archivist",
+          "Writer/Author",
+          "Journalist",
+          "Social Worker",
+          "Psychologist",
+          "Translator",
+          "Counselor",
+          "Librarian"
+        ],
+        "science": [
+          "Research Scientist",
+          "Biotechnologist",
+          "Environmental Scientist (I)",
+          "Psychologist",
+          "Mathematician",
+          "Statistician",
+          "Physicist",
+          "Chemist",
+          "Pharmacist",
+          "Engineer",
+          "Data Analyst"
+        ]
+      }
+    },
+    {
+      "code": "IRC",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Market Research Analyst",
+          "Accountant",
+          "Auditor",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Business Analyst",
+          "Actuary",
+          "Insurance Underwriter",
+          "Entrepreneur",
+          "Sales Manager",
+          "Retail Manager",
+          "Supply Chain Analyst"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Historian",
+          "Researcher",
+          "Translator",
+          "Anthropologist",
+          "Psychologist",
+          "Librarian (C)",
+          "Archivist (C)"
+        ],
+        "science": [
+          "Research Scientist",
+          "Biotechnologist",
+          "Environmental Scientist",
+          "Mathematician",
+          "Statistician",
+          "Physicist",
+          "Chemist",
+          "Pharmacist",
+          "Psychologist",
+          "Engineer",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Geneticist",
+          "Marine Biologist"
+        ]
+      }
+    },
+    {
+      "code": "RIC",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Market Research Analyst",
+          "Accountant",
+          "Auditor",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Business Analyst",
+          "Actuary",
+          "Insurance Agent"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Historian",
+          "Anthropologist",
+          "Translator",
+          "Librarian",
+          "Archivist"
+        ],
+        "science": [
+          "Research Scientist",
+          "Biotechnologist",
+          "Environmental Scientist",
+          "Mathematician",
+          "Statistician",
+          "Physicist",
+          "Chemist",
+          "Pharmacist",
+          "Psychologist",
+          "Engineer",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Geneticist",
+          "Marine Biologist"
+        ]
+      }
+    },
+    {
+      "code": "RCI",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Market Research Analyst",
+          "Accountant",
+          "Auditor",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Business Analyst",
+          "Actuary",
+          "Insurance Underwriter"
+        ],
+        "humanities": [
+          "Market Research Analyst",
+          "Psychologist",
+          "Historian",
+          "Anthropologist",
+          "Translator",
+          "Librarian",
+          "Archivist"
+        ],
+        "science": [
+          "Research Scientist",
+          "Biotechnologist",
+          "Environmental Scientist",
+          "Mathematician",
+          "Statistician",
+          "Physicist",
+          "ZOOLOGIST",
+          "Pharmacist",
+          "Psychologist",
+          "Engineer",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Geneticist",
+          "Marine Biologist"
+        ]
+      }
+    },
+    {
+      "code": "RCA",
+      "subcategories": {
+        "commerce": [
+          "Financial Planner",
+          "Risk Analyst",
+          "Insurance Agent",
+          "Investment Analyst",
+          "Bank Officer",
+          "Cost Estimator",
+          "Financial Auditor",
+          "Tax Consultant",
+          "Business Development Manager",
+          "Real Estate Appraiser",
+          "Supply Chain Manager",
+          "Operations Manager"
+        ],
+        "humanities": [
+          "Architect",
+          "Interior Designer",
+          "Museum Curator",
+          "Exhibition Designer",
+          "Art Director",
+          "Graphic Designer",
+          "Photographer",
+          "Multimedia Artist",
+          "Event Planner",
+          "Technical Writer",
+          "Advertising Executive",
+          "Market Research Analyst"
+        ],
+        "science": [
+          "Industrial Designer",
+          "Landscape Architect",
+          "Environmental Engineer",
+          "Surveyor",
+          "Urban Planner",
+          "Technical Illustrator",
+          "Scientific Illustrator",
+          "Medical Illustrator",
+          "Packaging Designer",
+          "Quality Control Analyst",
+          "CAD Technician",
+          "Data Analyst"
+        ]
+      }
+    },
+    {
+      "code": "RAC",
+      "subcategories": {
+        "commerce": [
+          "Financial Planner",
+          "Risk Analyst",
+          "Insurance Agent",
+          "Investment Analyst",
+          "Bank Officer",
+          "Cost Estimator",
+          "Financial Auditor",
+          "Tax Consultant",
+          "Business Development Manager",
+          "Real Estate Appraiser",
+          "Supply Chain Manager",
+          "Operations Manager",
+          "Purchasing Manager"
+        ],
+        "humanities": [
+          "Museum Curator",
+          "Archivist",
+          "Librarian",
+          "Exhibition Designer",
+          "Art Restorer",
+          "Event Planner",
+          "Technical Writer",
+          "Photographer",
+          "Graphic Designer",
+          "Web Designer",
+          "Advertising Executive",
+          "Market Research Analyst",
+          "Copywriter"
+        ],
+        "science": [
+          "Industrial Designer",
+          "Surveyor",
+          "Urban Planner",
+          "Technical Illustrator",
+          "CAD Technician",
+          "Data Analyst",
+          "Quality Control Analyst",
+          "Environmental Engineer",
+          "Packaging Designer",
+          "Biomedical Technician",
+          "Lab Technician",
+          "GIS Specialist",
+          "Product Designer"
+        ]
+      }
+    },
+    {
+      "code": "ACR",
+      "subcategories": {
+        "commerce": [
+          "Financial Planner",
+          "Risk Analyst",
+          "Insurance Agent",
+          "Investment Analyst",
+          "Bank Officer",
+          "Financial Auditor",
+          "Tax Consultant",
+          "Business Development Manager",
+          "Real Estate Appraiser",
+          "Supply Chain Manager",
+          "Operations Manager",
+          "Retail Merchandiser",
+          "Sales Manager"
+        ],
+        "humanities": [
+          "Graphic Designer",
+          "Interior Designer",
+          "Illustrator",
+          "Animator",
+          "Web Designer",
+          "Copywriter",
+          "Art Director",
+          "Exhibition Designer",
+          "Content Writer",
+          "Museum Curator",
+          "Video Editor",
+          "Photographer"
+        ],
+        "science": [
+          "Architect",
+          "Industrial Designer",
+          "Environmental Engineer",
+          "Surveyor",
+          "CAD Technician",
+          "Technical Illustrator",
+          "Data Analyst",
+          "Packaging Designer",
+          "Geospatial Analyst",
+          "Biomedical Technician",
+          "Medical Illustrator",
+          "Scientific Illustrator"
+        ]
+      }
+    },
+    {
+      "code": "ARC",
+      "subcategories": {
+        "commerce": [
+          "Financial Planner",
+          "Risk Analyst",
+          "Insurance Agent",
+          "Investment Analyst",
+          "Bank Officer",
+          "Financial Auditor",
+          "Tax Consultant",
+          "Business Development Manager",
+          "Real Estate Appraiser",
+          "Supply Chain Manager",
+          "Operations Manager",
+          "Retail Merchandiser",
+          "Sales Manager"
+        ],
+        "humanities": [
+          "Interior Designer",
+          "Art Director",
+          "Exhibition Designer",
+          "Illustrator",
+          "Graphic Designer",
+          "Content Writer",
+          "Photographer",
+          "Web Designer",
+          "Copywriter",
+          "Video Editor",
+          "Advertising Executive",
+          "Market Research Analyst"
+        ],
+        "science": [
+          "Architect",
+          "Industrial Designer",
+          "Environmental Engineer",
+          "Surveyor",
+          "CAD Technician",
+          "Technical Illustrator",
+          "Data Analyst",
+          "Packaging Designer",
+          "Biomedical Technician",
+          "Medical Illustrator",
+          "Scientific Illustrator",
+          "Geospatial Analyst"
+        ]
+      }
+    },
+    {
+      "code": "CRA",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Banker",
+          "Risk Manager",
+          "Insurance Underwriter",
+          "Actuary",
+          "Auditor",
+          "Compliance Officer",
+          "Financial Planner",
+          "Tax Consultant",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Purchasing Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Librarian",
+          "Archivist",
+          "Museum Curator",
+          "Event Planner",
+          "Technical Writer",
+          "Content Writer",
+          "Copywriter",
+          "Market Research Analyst",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Journalist",
+          "Media Planner"
+        ],
+        "science": [
+          "Quality Control Analyst",
+          "Lab Technician",
+          "Research Assistant",
+          "Technical Writer",
+          "Data Analyst",
+          "Biomedical Technician",
+          "Clinical Research Associate",
+          "Regulatory Affairs Specialist",
+          "Medical Coder",
+          "Pharmaceutical Sales Representative",
+          "Medical Writer",
+          "Health Information Manager"
+        ]
+      }
+    },
+    {
+      "code": "CAR",
+      "subcategories": {
+        "commerce": [
+          "Accountant",
+          "Auditor",
+          "Financial Analyst",
+          "Tax Consultant",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Purchasing Manager",
+          "Business Analyst",
+          "Compliance Officer",
+          "Investment Banker",
+          "Risk Manager",
+          "Insurance Underwriter"
+        ],
+        "humanities": [
+          "Copywriter",
+          "Content Writer",
+          "Technical Writer",
+          "Editor",
+          "Translator",
+          "Librarian",
+          "Archivist",
+          "Museum Curator",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Market Research Analyst",
+          "Media Planner"
+        ],
+        "science": [
+          "Laboratory Technician",
+          "Quality Control Analyst",
+          "Research Assistant",
+          "Technical Writer",
+          "Data Analyst",
+          "Surveyor",
+          "Environmental Scientist",
+          "Geologist",
+          "CAD Technician",
+          "Industrial Designer",
+          "Packaging Designer",
+          "Regulatory Affairs Specialist"
+        ]
+      }
+    },
+    {
+      "code": "ISC",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Actuary Financial Analyst",
+          "Economist",
+          "Investment Banker",
+          "Actuary",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Compliance Officer",
+          "Human Resources Manager",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Compliance Officer",
+          "Human Resources Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Psychologist",
+          "Sociologist",
+          "Social Worker",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Urban Planner",
+          "Policy Analyst",
+          "Demographer",
+          "Statistician",
+          "Human Resources Manager",
+          "Public Relations Specialist",
+          "Event Planner"
+        ],
+        "science": [
+          "Scientist",
+          "Researcher",
+          "Data Scientist",
+          "Environmental Scientist",
+          "Forensic Scientist",
+          "Biotechnologist",
+          "Statistician",
+          "Laboratory Technician",
+          "Epidemiologist",
+          "Health Policy Analyst",
+          "Technical Writer",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "ICS",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Economist",
+          "Actuary",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Research Analyst",
+          "Risk Analyst",
+          "Compliance Officer",
+          "Human Resources Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Psychologist",
+          "Sociologist",
+          "Social Worker",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Urban Planner",
+          "Policy Analyst",
+          "Statistician",
+          "Human Resources Manager",
+          "Public Relations Specialist",
+          "Event Planner",
+          "Content Writer"
+        ],
+        "science": [
+          "Scientist",
+          "Researcher",
+          "Data Scientist",
+          "Environmental Scientist",
+          "Forensic Scientist",
+          "Biotechnologist",
+          "Statistician",
+          "Laboratory Technician",
+          "Epidemiologist",
+          "Health Policy Analyst",
+          "Technical Writer",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "CIS",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Analyst",
+          "Actuary",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Manager",
+          "Human Resources Manager",
+          "Compliance Officer",
+          "Social Media Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Librarian",
+          "Archivist",
+          "Museum Curator",
+          "Market Research Analyst",
+          "Technical Writer",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Social Media Manager",
+          "Copywriter",
+          "Content Writer",
+          "Translator",
+          "Human Resources Manager"
+        ],
+        "science": [
+          "Data Analyst",
+          "Research Scientist",
+          "Laboratory Technician",
+          "Environmental Scientist",
+          "Quality Control Analyst",
+          "Technical Writer",
+          "Statistician",
+          "Health Educator",
+          "Epidemiologist",
+          "Social Researcher",
+          "Forensic Scientist",
+          "Biostatistician"
+        ]
+      }
+    },
+    {
+      "code": "CSI",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Investment Analyst",
+          "Actuary",
+          "Market Research Analyst",
+          "Data Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Manager",
+          "Human Resources Manager",
+          "Compliance Officer",
+          "Social Media Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Market Research Analyst",
+          "Technical Writer",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Social Media Manager",
+          "Content Writer",
+          "Translator",
+          "Human Resources Manager",
+          "Fundraiser"
+        ],
+        "science": [
+          "Laboratory Technician",
+          "Research Scientist",
+          "Data Analyst",
+          "Quality Control Analyst",
+          "Technical Writer",
+          "Statistician",
+          "Environmental Scientist",
+          "Epidemiologist",
+          "Biotechnologist",
+          "Health Educator",
+          "Forensic Scientist",
+          "Biostatistician"
+        ]
+      }
+    },
+    {
+      "code": "SIC",
+      "subcategories": {
+        "commerce": [
+          "Human Resources Manager",
+          "Market Research Analyst",
+          "Financial Analyst",
+          "Investment Banker",
+          "Actuary",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Manager",
+          "Compliance Officer",
+          "Social Media Manager",
+          "Business Analyst",
+          "Project Manager"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Psychologist",
+          "Counsellor",
+          "Teacher/Professor",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Human Resources Manager",
+          "Market Research Analyst (",
+          "Content Writer",
+          "Journalist",
+          "Community Development Officer",
+          "Non-profit Organization Manager"
+        ],
+        "science": [
+          "Psychologist",
+          "Research Scientist",
+          "Environmental Scientist",
+          "Epidemiologist",
+          "Forensic Scientist",
+          "Biotechnologist",
+          "Laboratory Technician",
+          "Health Educator",
+          "Data Analyst",
+          "Technical Writer",
+          "Quality Control Analyst",
+          "Market Research Analyst"
+        ]
+      }
+    },
+    {
+      "code": "SCI",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Financial Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Human Resources Manager",
+          "Compliance Officer",
+          "Business Analyst",
+          "Operations Manager",
+          "Social Media Manager",
+          "Investment Analyst",
+          "Data Scientist",
+          "Statistician"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Counsellor",
+          "Teacher/Professor",
+          "Content Writer",
+          "Journalist",
+          "Market Research Analyst",
+          "Public Relations Specialist",
+          "Event Planner",
+          "Human Resources Manager",
+          "Community Development Officer",
+          "Non-profit Organization Manager",
+          "Policy Analyst"
+        ],
+        "science": [
+          "Social Researcher",
+          "Data Analyst",
+          "Environmental Scientist (I)",
+          "Health Educator",
+          "Laboratory Technician",
+          "Epidemiologist",
+          "Forensic Scientist",
+          "Biotechnologist",
+          "Technical Writer",
+          "Quality Control Analyst",
+          "Market Research Analyst",
+          "Health Policy Analyisation"
+        ]
+      }
+    },
+    {
+      "code": "AEC",
+      "subcategories": {
+        "commerce": [
+          "Digital Marketing",
+          "Sales Manager",
+          "Entrepreneur",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Market Research Analyst",
+          "Financial Analyst",
+          "Operations Manager",
+          "Human Resources Manager",
+          "Copywriter",
+          "Content Writer",
+          "Social Media Manager"
+        ],
+        "humanities": [
+          "Graphic Designer",
+          "Writer/Author",
+          "Filmmaker",
+          "Actor/Actress",
+          "Musician",
+          "Photographer",
+          "Event Planner",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Market Research Analyst",
+          "Copywriter",
+          "Content Writer"
+        ],
+        "science": [
+          "User Experience (UX) Designer",
+          "Game Developer",
+          "Scientific Illustrator",
+          "Science Communicator",
+          "Entrepreneur",
+          "Marketing Manager",
+          "Data Analyst",
+          "Operations Manager",
+          "Financial Analyst",
+          "Market Research Analyst",
+          "Technical Writer",
+          "Project Manager"
+        ]
+      }
+    },
+    {
+      "code": "ACE",
+      "subcategories": {
+        "commerce": [
+          "Digital Marketer",
+          "Financial Analyst",
+          "Investment Banker",
+          "Market Research Analyst",
+          "Sales Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Operations Manager",
+          "Human Resources Manager",
+          "Compliance Officer",
+          "Social Media Manager",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Graphic Designer",
+          "Filmmaker",
+          "Musician",
+          "Photographer",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Event Planner",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Market Research Analyst"
+        ],
+        "science": [
+          "Scientific Illustrator",
+          "Data Analyst",
+          "User Experience (UX) Designer",
+          "Game Developer",
+          "Entrepreneur",
+          "Research Scientist",
+          "Laboratory Technician",
+          "Technical Writer",
+          "Quality Control Analyst",
+          "Environmental Scientist",
+          "Health Educator",
+          "Epidemiologist"
+        ]
+      }
+    },
+    {
+      "code": "EAC",
+      "subcategories": {
+        "commerce": [
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analyst",
+          "Marketing Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Social Media Manager",
+          "Business Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer"
+        ],
+        "humanities": [
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Event Planner",
+          "Writer/Author",
+          "Graphic Designer",
+          "Content Writer",
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Copywriter",
+          "Journalist",
+          "Human Resources Manager",
+          "Sales Manager"
+        ],
+        "science": [
+          "Entrepreneur",
+          "Data Analyst",
+          "Scientific Illustrator",
+          "User Experience (UX) Designer",
+          "Game Developer",
+          "Research Scientist",
+          "Quality Control Analyst",
+          "Market Research Analyst",
+          "Technical Writer",
+          "Health Educator",
+          "Environmental Scientist",
+          "Operations Manager"
+        ]
+      }
+    },
+    {
+      "code": "ECA",
+      "subcategories": {
+        "commerce": [
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analyst",
+          "Marketing Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Social Media Manager",
+          "Business Analyst",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer"
+        ],
+        "humanities": [
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Event Planner",
+          "Content Writer",
+          "Market Research Analyst",
+          "Copywriter",
+          "Graphic Designer",
+          "Journalist",
+          "Human Resources Manager",
+          "Sales Manager",
+          "Social Media Manager",
+          "Entrepreneur"
+        ],
+        "science": [
+          "Entrepreneur",
+          "Data Analyst",
+          "Research Scientist",
+          "Market Research Analyst",
+          "Technical Writer",
+          "Quality Control Analyst",
+          "User Experience (UX) Designer",
+          "Scientific Illustrator",
+          "Game Developer",
+          "Environmental Scientist",
+          "Health Educator",
+          "Operations Manager"
+        ]
+      }
+    },
+    {
+      "code": "CEA",
+      "subcategories": {
+        "commerce": [
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analyst",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Social Media Manager",
+          "Business Analyst",
+          "Advertising Executive"
+        ],
+        "humanities": [
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Event Planner",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Graphic Designer",
+          "Writer/Author",
+          "Content Writer",
+          "Market Research Analyst",
+          "Copywriter",
+          "Journalist"
+        ],
+        "science": [
+          "Laboratory Technician",
+          "Research Scientist",
+          "Data Analyst",
+          "Entrepreneur",
+          "Marketing Manager",
+          "Technical Writer",
+          "Scientific Illustrator",
+          "User Experience (UX) Designer",
+          "Game Developer",
+          "Market Research Analyst",
+          "Quality Control Analyst",
+          "Operations Manager"
+        ]
+      }
+    },
+    {
+      "code": "CAE",
+      "subcategories": {
+        "commerce": [
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Operations Manager",
+          "Social Media Manager",
+          "Business Analyst",
+          "Sales Manager",
+          "Entrepreneur",
+          "Advertising Executive"
+        ],
+        "humanities": [
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Writer/Author",
+          "Graphic Designer",
+          "Content Writer",
+          "Advertising Executive",
+          "Public Relations Specialist",
+          "Event Planner",
+          "Market Research Analyst",
+          "Copywriter",
+          "Journalist"
+        ],
+        "science": [
+          "Laboratory Technician",
+          "Research Scientist",
+          "Technical Writer",
+          "Scientific Illustrator",
+          "User Experience (UX) Designer",
+          "Game Developer",
+          "Entrepreneur",
+          "Data Analyst",
+          "Market Research Analyst",
+          "Quality Control Analyst",
+          "Operations Manager",
+          "Environmental Scientist"
+        ]
+      }
+    },
+    {
+      "code": "SCR",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Logistics Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Human Resources Manager",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Writer/Author",
+          "Researcher",
+          "Translator/Interpreter",
+          "Event Planner",
+          "Journalist"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Research Scientist",
+          "Quality Control Analyst",
+          "Data Analyst",
+          "Technical Writer",
+          "Information Scientist",
+          "Epidemiologist",
+          "Operations Manager",
+          "Forensic Scientist"
+        ]
+      }
+    },
+    {
+      "code": "SRC",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Writer/Author",
+          "Researcher",
+          "Translator/Interpreter",
+          "Human Resources Manager",
+          "Journalist",
+          "Event Planner"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Research Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Technical Writer",
+          "Information Scientist",
+          "Data Analyst",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "RCS",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Archivist",
+          "tax consultant",
+          "Museum Curator",
+          "Writer/Author",
+          "Researcher",
+          "Translator/Interpreter",
+          "Event Planner",
+          "Journalist",
+          "Human Resources Manager"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Research Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Technical Writer",
+          "Information Scientist",
+          "Data Analyst",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "RSC",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Event Planner",
+          "Public Relations Specialist",
+          "Human Resources Manager",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Writer/Author",
+          "Researcher",
+          "Translator/Interpreter"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Public Health Officer",
+          "Data Analyst",
+          "Technical Writer",
+          "Information Scientist",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "CSR",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Audito",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Writer/Author",
+          "Editor",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Researcher",
+          "Translator/Interpreter",
+          "Human Resources Manager",
+          "Event Planner"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Research Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Technical Writer",
+          "Information Scientist",
+          "Data Analyst",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "CRS",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Social Media Manager",
+          "Human Resources Manager",
+          "Auditor",
+          "Tax Consultant",
+          "Compliance Officer",
+          "Financial Analyst",
+          "Operations Manager",
+          "Project Manager",
+          "Real Estate Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Community Organizer",
+          "Counselor/Therapist",
+          "Writer/Author",
+          "Editor",
+          "Archivist",
+          "Librarian",
+          "Museum Curator",
+          "Researcher",
+          "Translator/Interpreter",
+          "Human Resources Manager",
+          "Event Planner"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Social Researcher",
+          "Laboratory Technician",
+          "Public Health Officer",
+          "Technical Writer",
+          "Information Scientist",
+          "Data Analyst",
+          "Quality Control Analyst"
+        ]
+      }
+    },
+    {
+      "code": "RAE",
+      "subcategories": {
+        "commerce": [
+          "Marketing Manager",
+          "Advertising Executive",
+          "Market Research Analyst",
+          "Brand Manager",
+          "Financial Analys",
+          "Sales Manager",
+          "Entrepreneur",
+          "Business Consultant",
+          "Retail Manager",
+          "Investment Banker",
+          "Operations Manager",
+          "Real Estate Developer"
+        ],
+        "humanities": [
+          "Graphic Designer",
+          "Illustrator",
+          "Photographer",
+          "Interior Designer",
+          "Fashion Designer",
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Social Media Manager",
+          "Entrepreneur",
+          "Media Planner"
+        ],
+        "science": [
+          "Architect",
+          "Industrial Designer",
+          "Animator",
+          "Product Developer",
+          "Environmental Engineer",
+          "Geologist",
+          "Surveyor",
+          "Astronomer",
+          "Sports Scientist",
+          "Business Development Manager",
+          "Project Manager"
+        ]
+      }
+    },
+    {
+      "code": "REA",
+      "subcategories": {
+        "commerce": [
+          "Marketing Manager",
+          "Advertising Executive",
+          "Market Research Analyst",
+          "Brand Manager",
+          "Financial Analyst",
+          "Sales Manager",
+          "Entrepreneur",
+          "Retail Manager",
+          "Financial Planner",
+          "Digital Marketer",
+          "Copywriter",
+          "Visual Merchandiser"
+        ],
+        "humanities": [
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Entrepreneur",
+          "Interior Designer",
+          "Graphic Designer",
+          "Photographer",
+          "Writer/Author",
+          "Filmmaker",
+          "Theatre Director",
+          "Art Therapist"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Business Development Manager",
+          "Project Manager",
+          "Technical Writer",
+          "Scientific Illustrator",
+          "Animator",
+          "Data Analyst",
+          "UX Designer"
+        ]
+      }
+    },
+    {
+      "code": "EAR",
+      "subcategories": {
+        "commerce": [
+          "Marketing Manager",
+          "Advertising Executive )",
+          "Market Research Analyst",
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analyst",
+          "Retail Manager",
+          "Real Estate Developer",
+          "Auditor",
+          "Tax Consultant",
+          "Supply Chain Manager",
+          "Operations Manager"
+        ],
+        "humanities": [
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Entrepreneur",
+          "Writer/Author",
+          "Filmmaker",
+          "Photographer",
+          "Theatre Director",
+          "Art Curator",
+          "Social Worker",
+          "Community Organizer"
+        ],
+        "science": [
+          "Business Development Manager",
+          "Project Manager",
+          "Technical Writer",
+          "Scientific Illustrator",
+          "UX Designer",
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Wildlife Biologist",
+          "Geologist",
+          "Surveyor",
+          "Research Scientist"
+        ]
+      }
+    },
+    {
+      "code": "ERA",
+      "subcategories": {
+        "commerce": [
+          "Marketing Manager",
+          "Advertising Executive",
+          "Market Research Analyst",
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analys",
+          "Auditor",
+          "Tax Consultant",
+          "Retail Manager",
+          "Interior Designer",
+          "Graphic Designer",
+          "Digital Marketer"
+        ],
+        "humanities": [
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Entrepreneur",
+          "Social Worker",
+          "Community Organizer",
+          "Interior Designer",
+          "Graphic Designer",
+          "Photographer",
+          "Writer/Author",
+          "Film Director"
+        ],
+        "science": [
+          "Business Development Manager",
+          "Project Manager",
+          "Environmental Engineer",
+          "Geologist",
+          "Surveyor",
+          "Wildlife Biologist",
+          "Scientific Illustrator",
+          "Animator",
+          "UX Designer",
+          "Technical Writer",
+          "Data Analyst"
+        ]
+      }
+    },
+    {
+      "code": "AER",
+      "subcategories": {
+        "commerce": [
+          "Interior Designer",
+          "Graphic Designer",
+          "Photographer",
+          "Digital Marketer",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Entrepreneur",
+          "Financial Analyst",
+          "Retail Manager",
+          "Auditor (R)",
+          "Supply Chain Manager"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Filmmaker",
+          "Photographer",
+          "Theatre Director",
+          "Art Curator",
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Entrepreneur",
+          "Social Worker",
+          "Community Organizer"
+        ],
+        "science": [
+          "Scientific Illustrator",
+          "Animator",
+          "UX Designer",
+          "Environmental Scientist",
+          "Conservation Scientist",
+          "Wildlife Biologist",
+          "Business Development Manager",
+          "Project Manager",
+          "Technical Writer",
+          "Data Analyst",
+          "Research Scientist"
+        ]
+      }
+    },
+    {
+      "code": "ARE",
+      "subcategories": {
+        "commerce": [
+          "Graphic Designer",
+          "Digital Marketer",
+          "Photographer",
+          "Retail Manager",
+          "Supply Chain Manager",
+          "Auditor",
+          "Marketing Manager",
+          "Advertising Executive",
+          "Sales Manager",
+          "Financial Analyst",
+          "Real Estate Developer"
+        ],
+        "humanities": [
+          "Writer/Author",
+          "Filmmaker",
+          "Photographer",
+          "Theatre Director",
+          "Art Curator",
+          "Interior Designer",
+          "Landscape Architect",
+          "Event Planner",
+          "Marketing Manager",
+          "Public Relations Specialist",
+          "Advertising Executive",
+          "Entrepreneur"
+        ],
+        "science": [
+          "Scientific Illustrator",
+          "Animator",
+          "UX Designer",
+          "Wildlife Biologist",
+          "Environmental Scientist",
+          "Geologist",
+          "Business Development Manager",
+          "Project Manager",
+          "Technical Writer",
+          "Data Analyst",
+          "Research Scientist"
+        ]
+      }
+    },
+    {
+      "code": "SIR",
+      "subcategories": {
+        "commerce": [
+          "Social Media Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Statistician",
+          "Retail Manager",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Real Estate Developer"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Counselor",
+          "Human Resources Manager",
+          "Journalist",
+          "Researcher",
+          "Policy Analyst",
+          "Urban Planner",
+          "Environmental Planner",
+          "Archaeologist",
+          "Tour Guide"
+        ],
+        "science": [
+          "Social Scientist",
+          "Psychologist",
+          "Environmental Scientist",
+          "Data Analyst",
+          "Research Scientist",
+          "Forensic Scientist",
+          "Engineer",
+          "Geologist",
+          "Surveyor",
+          "Wildlife Biologist"
+        ]
+      }
+    },
+    {
+      "code": "SRI",
+      "subcategories": {
+        "commerce": [
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Retail Manager",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Itatistician",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Counselor",
+          "Human Resources Manager",
+          "Urban Planner",
+          "Environmental Planner",
+          "Archaeologist",
+          "Journalist",
+          "Researcher",
+          "Policy Analyst",
+          "Librarian"
+        ],
+        "science": [
+          "Psychologist",
+          "Environmental Scientist",
+          "Engineer",
+          "Surveyor",
+          "Wildlife Biologist",
+          "Data Analyst",
+          "Research Scientist",
+          "Forensic Scientist",
+          "Geneticist"
+        ]
+      }
+    },
+    {
+      "code": "RIS",
+      "subcategories": {
+        "commerce": [
+          "Social Media Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Statistician",
+          "Retail Manager",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Risk Analyst"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Counselor",
+          "Human Resources Manager",
+          "Journalist",
+          "Researcher",
+          "Policy Analyst",
+          "Environmental Planner",
+          "Urban Planner",
+          "Archaeologist",
+          "Community Development Officer"
+        ],
+        "science": [
+          "Environmental Scientist",
+          "Psychologist",
+          "Social Scientist",
+          "Research Scientist",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Engineer",
+          "Geologist",
+          "Wildlife Biologist",
+          "Agronomist"
+        ]
+      }
+    },
+    {
+      "code": "RSI",
+      "subcategories": {
+        "commerce": [
+          "Retail Manager",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Social Media Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Statistician",
+          "Business Analyst"
+        ],
+        "humanities": [
+          "Urban Planner",
+          "Environmental Planner",
+          "Archaeologist",
+          "Social Worker",
+          "Counselor",
+          "Human Resources Manager",
+          "Journalist",
+          "Researcher",
+          "Policy Analyst",
+          "Librarian"
+        ],
+        "science": [
+          "Engineer",
+          "Geologist",
+          "Wildlife Biologist",
+          "Social Scientist",
+          "Psychologist",
+          "Environmental Scientist",
+          "Research Scientist",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Geneticist"
+        ]
+      }
+    },
+    {
+      "code": "ISR",
+      "subcategories": {
+        "commerce": [
+          "Social Scientist",
+          "Psychologist",
+          "Environmental Scientist",
+          "Data Analyst",
+          "Research Scientist",
+          "Forensic Scientist",
+          "Engineer",
+          "Geologist",
+          "Surveyor",
+          "Wildlife Biologist"
+        ],
+        "humanities": [
+          "Social Worker",
+          "Counselor",
+          "Human Resources Manager",
+          "Journalist",
+          "Researcher",
+          "Policy Analyst",
+          "Urban Planner",
+          "Environmental Planner",
+          "Archaeologist",
+          "Tour Guide"
+        ],
+        "science": [
+          "Social Media Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "Financial Analyst",
+          "Investment Banker",
+          "Statistician",
+          "Retail Manager",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Real Estate Developer"
+        ]
+      }
+    },
+    {
+      "code": "IRS",
+      "subcategories": {
+        "commerce": [
+          "Financial Analyst",
+          "Statistician",
+          "Investment Banker",
+          "Operations Manager",
+          "Supply Chain Manager",
+          "Retail Manager",
+          "Social Media Manager",
+          "Market Research Analyst",
+          "Human Resources Manager",
+          "CSR Manager"
+        ],
+        "humanities": [
+          "Researcher",
+          "Policy Analyst",
+          "Archaeologist",
+          "Urban Planner",
+          "Environmental Planner",
+          "Conservationist",
+          "Social Worker",
+          "Counselor",
+          "Human Resources Manager",
+          "NGO Worker"
+        ],
+        "science": [
+          "Research Scientist",
+          "Data Analyst",
+          "Forensic Scientist",
+          "Engineer",
+          "Geologist",
+          "Wildlife Biologist",
+          "Environmental Scientist",
+          "Psychologist",
+          "Social Scientist",
+          "Health Educator"
+        ]
+      }
+    }
+  ]
+}

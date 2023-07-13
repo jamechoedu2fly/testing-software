@@ -14,18 +14,18 @@ const PreAssessmentTest = () => {
     const urls = [
       {
         url: `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79acd4c21950579a8f9ad` ,
-        categoryName: "Commerce"
+        categoryName: "commerce"
       },
       {
         url: `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79ae44c21950579a8f9af`,
-        categoryName: "Humanities"
+        categoryName: "humanities"
       },
       {
         url:  `${process.env.REACT_APP_API}/api/question/get-all-preAssessment-question/6493f53da6affbd5b06da221/64a79afb4c21950579a8f9b1`,
-        categoryName: "Science"
+        categoryName: "science"
       }
     ];
-    const [categoryScores, setCategoryScores] = useState({});
+    const [categoryScoresPre, setCategoryScoresPre] = useState({});
     const navigate = useNavigate();
     const getAllQuestion = async () => {
       try {
@@ -52,46 +52,11 @@ const PreAssessmentTest = () => {
       [qId]: selectedOption,
     }));
   };
-  const calculateTotalScore = () => {
-    let totalScore = 0;
-    const categoryData = {}; // New object to store category-wise score
-    question.forEach((q) => {
-      const selectedAnswer = selectedAnswers[q._id];
-      if (selectedAnswer === q.correctAnswer) {
-        totalScore += q.point;
-        // Increment category-wise score for the corresponding category ID
-        categoryData[q.categoryId] = (categoryData[q.categoryId] || 0) + q.point;
-      }
-    });
-    setTotalScore(totalScore); // Update the totalScore state for later use
-    return totalScore;
-  };
-
-  const handleSubmit = async () => {
-    let totalScore = calculateTotalScore();
-    const userId = auth?.user._id;
-    console.log("total_score::", totalScore);
-    console.log("user_id:", userId);
-    try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
-        totalScore,
-        userId
-      });
-      console.log({totalScore})
-      if (res.data.success) {
-        handleCalculateScores(); // Call handleCalculateScores after submitting the form
-        console.log("success");
-      } else {
-        console.log("hellojs");
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
-    }
-  };
+  
   
   const handleCalculateScores = async () => {
-    const categoryScores = {};
+    let bestScore = 0;
+    let bestCategory = "";
   
     for (const { url, categoryName } of urls) {
       try {
@@ -106,17 +71,24 @@ const PreAssessmentTest = () => {
           }
         });
   
-        categoryScores[categoryName] = score;
+        if (score > bestScore) {
+          bestScore = score;
+          bestCategory = categoryName;
+        }
         console.log(`Score for ${categoryName}:`, score);
       } catch (error) {
         console.log(`Error fetching data from ${url}:`, error);
       }
     }
   
-    setCategoryScores(categoryScores);
-    localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
+    if (bestCategory !== "") {
+      console.log(`Best score: ${bestScore} in ${bestCategory}`);
+    }
+    localStorage.setItem('categoryScoresPre', JSON.stringify(bestCategory));
+    setCategoryScoresPre(categoryScoresPre);
     navigate('/preassessment/psychometric-test');
   };
+  
   
   return (
     <Layout>
@@ -154,7 +126,7 @@ const PreAssessmentTest = () => {
                   </div>
                 </div>
               ))}
-                <button type="button" onClick={handleSubmit} class="btn btn-primary">Submit</button>
+                <button type="button" onClick={handleCalculateScores} class="btn btn-primary">Submit</button>
 
             </form>
             <h3 className="mt-3">Total Score: {totalScore}</h3>
