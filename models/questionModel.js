@@ -12,11 +12,15 @@ const questionSchema = new mongoose.Schema({
         required: true,
     },
     question: {
-        type: String,
-        required: true,
-        unique: true,
+        type: {
+            question_type: String,
+            content: String,
+            contains_image: Boolean,
+            image: String
+        },
+        required: true
     },
-    option: {
+    options: {
         type: [String],
         required: true,
     },

@@ -3,33 +3,117 @@ import questionModel from "../models/questionModel.js";
 import psychometricquestionModel from "../models/psychometricquestionModel.js";
 import AptituteResult from "../models/AptituteResult.js";
 import userModel from "../models/userModel.js";
+import multiparty from "multiparty";
+import fs from "fs";
 // create a new question
+// export const createQuestionController = async (req, res) => {
+//     try {
+//         const { categoryId, subCategoryId, question, option, point, correctAnswer } = req.body;
+//         const newQuestion = new questionModel({
+//             categoryId,
+//             subCategoryId,
+//             question,
+//             option,
+//             point,
+//             correctAnswer
+//         })
+//         await newQuestion.save();
+//         res.status(201).send({
+//             success: true,
+//             message: "Question created successfully",
+//             newQuestion,
+//         });
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).send({
+//             success: false,
+//             error,
+//             message: "Error in creating question !!!"
+//         })
+//     }
+// }
+
 export const createQuestionController = async (req, res) => {
     try {
-        const { categoryId, subCategoryId, question, option, point, correctAnswer } = req.body;
-        const newQuestion = new questionModel({
-            categoryId,
-            subCategoryId,
-            question,
-            option,
-            point,
-            correctAnswer
-        })
-        await newQuestion.save();
-        res.status(201).send({
-            success: true,
-            message: "Question created successfully",
-            newQuestion,
-        });
-    } catch (error) {
-        console.log(error);
-        res.status(500).send({
+      const form = new multiparty.Form();
+      form.parse(req, async (err, fields, files) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send({
             success: false,
-            error,
-            message: "Error in creating question !!!"
-        })
+            error: err,
+            message: "Error in parsing form data!",
+          });
+          return;
+        }
+  
+        const { categoryId, subCategoryId, question, options } = fields;
+  
+        const point = parseInt(fields.point[0]);
+        const correctAnswer = fields.correctAnswer[0]
+          .toString()
+          .replace(/"/g, "");
+  
+        const [questionData] = question;
+        const { question_type, content } = JSON.parse(questionData);
+        const { question_image } = files;
+  
+        let questionContent = null;
+        let questionImageContent = null;
+  
+        if (question_type === "image") {
+          if (question_image) {
+            // Move the uploaded image file to the server's storage location
+            const questionImagePath = `uploads/${question_image[0].originalFilename}`;
+            fs.renameSync(question_image[0].path, questionImagePath);
+            questionImageContent = questionImagePath;
+            console.log("on 48");
+          }
+          questionContent = content;
+        } else if (question_type === "text") {
+          questionContent = content;
+        }
+  
+        const parsedOptions = JSON.parse(options);
+  
+        const modifiedOptions = parsedOptions.map((option) => {
+          return option;
+        });
+  
+        const updatedQuestion = {
+          question_type,
+          content: questionContent,
+          // contains_image: question_type === "image",
+          image: questionImageContent,
+        };
+  
+        // Create the new question object
+        const newQuestion = new questionModel({
+          categoryId,
+          subCategoryId,
+          question: updatedQuestion,
+          options: modifiedOptions,
+          point,
+          correctAnswer,
+        });
+  
+        const createdQuestion = await newQuestion.save();
+  
+        res.status(201).send({
+          success: true,
+          message: "Question created successfully",
+          createdQuestion,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({
+        success: false,
+        error,
+        message: "Error in creating question!",
+      });
     }
-}
+  };
 
 export const showResultController = async (req, res) => {
     try {

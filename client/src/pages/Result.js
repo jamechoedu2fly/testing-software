@@ -125,7 +125,7 @@ const Result = () => {
           <div className="col-md-6 result-col">
             <div className="card result-card mb-4">
               <div className="card-header">
-                <h2 className="text-center">Aptitude Test Result</h2>
+                <h4 className="text-center">APTITUDE TEST RESULT</h4>
               </div>
               <div className="card-body">
                 <h3>Total Score: {totalScore}</h3>
@@ -134,7 +134,7 @@ const Result = () => {
             </div>
             <div className="card result-card mb-4">
               <div className="card-header">
-                <h2 className="text-center">Career Choices</h2>
+                <h4 className="text-center">CAREER CHOICES</h4>
               </div>
               <div className="card-body">
                 <ul>
@@ -148,7 +148,7 @@ const Result = () => {
           <div className="col-md-6 result-col">
             <div className="card result-card mb-4">
               <div className="card-header">
-                <h2 className="text-center">Psychometric Test Result</h2>
+                <h4 className="text-center">PSYCHOMETRIC TEST RESULT</h4>
               </div>
               <div className="card-body psychometric" style={{ height: '365px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Pie data={pieData} />
@@ -156,7 +156,7 @@ const Result = () => {
             </div>
             <div className="card result-card mb-4">
               <div className="card-header">
-                <h2 className="text-center">Subject Choices</h2>
+                <h4 className="text-center">SUBJECT CHOICES</h4>
               </div>
               <div className="card-body">
                 <ul>

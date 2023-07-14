@@ -102,9 +102,9 @@ const PreAssessmentTest = () => {
               {question?.map((q, i) => (
                 <div className="card mb-4" key={q._id}>
                   <div className="card-body card-real">
-                    <h4>
+                    <h6>
                       {i + 1}. {q.question}
-                    </h4>
+                    </h6>
                     {q.option?.map((p) => (
                       <div className="form-check" key={p}>
                         <input

@@ -135,32 +135,37 @@ const Aptitude = () => {
           {questionsLoaded ? (
             <div className="card-body">
               <form>
-                {question?.map((q, i) => (
-                  <div className="card mb-4" key={q._id}>
-                    <div className="card-body card-real">
-                      <h4>
-                        {i + 1}. {q.question}
-                      </h4>
-                      {q.option?.map((p) => (
-                        <div className="form-check" key={p}>
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name={q._id}
-                            value={p}
-                            id={p}
-                            onChange={(e) =>
-                              handleAnswerSelection(q._id, e.target.value)
-                            }
-                          />
-                          <label className="form-check-label" htmlFor={p}>
-                            {p}
-                          </label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              {question?.map((q, i) => (
+  <div className="card mb-4" key={q._id}>
+    <div className="card-body card-real">
+      {q.question && q.question.question_type === "image" && q.question.contains_image ? (
+        <img src={q.question.image} alt={`Question ${i + 1}`} />
+      ) : (
+        <h6>
+          {i + 1}. {q.question && q.question.content}
+        </h6>
+      )}
+      {q.options?.map((p) => (
+        <div className="form-check" key={p}>
+          <input
+            className="form-check-input"
+            type="radio"
+            name={q._id}
+            value={p}
+            id={p}
+            onChange={(e) =>
+              handleAnswerSelection(q._id, e.target.value)
+            }
+          />
+          <label className="form-check-label" htmlFor={p}>
+            {p}
+          </label>
+        </div>
+      ))}
+    </div>
+  </div>
+))}
+
 
                 <button type="button" onClick={handleSubmit} className="btn btn-primary">
                   Submit
