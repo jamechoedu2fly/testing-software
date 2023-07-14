@@ -6,12 +6,14 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 
+
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
   const [auth, setAuth] = useAuth();
+  const [timer, setTimer] = useState(1 * 60);
   const urls = [
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12/64a51d412272419d09e20d36`,
@@ -49,6 +51,21 @@ const Aptitude = () => {
   useEffect(() => {
     getAllQuestion();
   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      handleSubmit();
+    }
+  }, [timer]);
 
   const handleAnswerSelection = (qId, selectedOption) => {
     setSelectedAnswers((prevState) => ({
@@ -60,6 +77,7 @@ const Aptitude = () => {
   const calculateTotalScore = () => {
     let totalScore = 0;
     const categoryData = {}; // New object to store category-wise score
+    
     question.forEach((q) => {
       const selectedAnswer = selectedAnswers[q._id];
       if (selectedAnswer === q.correctAnswer) {
@@ -103,7 +121,7 @@ const Aptitude = () => {
         const { data } = await axios.get(url);
         const questions = data?.allquestion || [];
         let score = 0;
-  
+      
         questions.forEach((q) => {
           const selectedAnswer = selectedAnswers[q._id];
           if (selectedAnswer === q.correctAnswer) {
@@ -123,7 +141,11 @@ const Aptitude = () => {
     navigate('/test');
   };
   
-
+ const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
 
   return (
     <Layout>
@@ -134,40 +156,48 @@ const Aptitude = () => {
           </div>
           {questionsLoaded ? (
             <div className="card-body">
+              <div className="timer">Time Remaining: {formatTime(timer)}</div>
               <form>
-              {question?.map((q, i) => (
-  <div className="card mb-4" key={q._id}>
-    <div className="card-body card-real">
-      {q.question && q.question.question_type === "image" && q.question.contains_image ? (
-        <img src={q.question.image} alt={`Question ${i + 1}`} />
-      ) : (
-        <h6>
-          {i + 1}. {q.question && q.question.content}
-        </h6>
-      )}
-      {q.options?.map((p) => (
-        <div className="form-check" key={p}>
-          <input
-            className="form-check-input"
-            type="radio"
-            name={q._id}
-            value={p}
-            id={p}
-            onChange={(e) =>
-              handleAnswerSelection(q._id, e.target.value)
-            }
-          />
-          <label className="form-check-label" htmlFor={p}>
-            {p}
-          </label>
-        </div>
-      ))}
-    </div>
-  </div>
-))}
+                {question?.map((q, i) => (
+                  <div className="card mb-4" key={q._id}>
+                    <div className="card-body card-real">
+                      {q.question && q.question.image != null ? (
+                        <img
+                          src={`http://localhost:8080/${q.question.image}`}
+                          alt={`Question ${i + 1}`}
+                          style={{ width: "1000px", height: "200px" }}
+                        />
+                      ) : (
+                        <h6>
+                          {i + 1}. {q.question && q.question.content}
+                        </h6>
+                      )}
+                      {q.options?.map((p) => (
+                        <div className="form-check" key={p}>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name={q._id}
+                            value={p}
+                            id={p}
+                            onChange={(e) =>
+                              handleAnswerSelection(q._id, e.target.value)
+                            }
+                          />
+                          <label className="form-check-label" htmlFor={p}>
+                            {p}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
 
-
-                <button type="button" onClick={handleSubmit} className="btn btn-primary">
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className="btn btn-primary"
+                >
                   Submit
                 </button>
               </form>

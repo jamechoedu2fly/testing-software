@@ -10,6 +10,7 @@ const PsychometricPage = () => {
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
+  const [timer, setTimer] = useState(1 * 60);
     const [auth, setAuth] = useAuth();
     const urls = [
     {
@@ -64,7 +65,22 @@ const PsychometricPage = () => {
       [qId]: selectedOption,
     }));
   };
-  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      handleCalculateScores();
+    }
+  }, [timer]);
+
   
   const handleCalculateScores = async () => {
     const categoryScoresPsycho = {};
@@ -116,7 +132,12 @@ const PsychometricPage = () => {
   navigate('/result');
   };
   
-  
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   return (
     <Layout>
       <div className="container p-4">
@@ -125,6 +146,7 @@ const PsychometricPage = () => {
             <h1 class="text-center">Psychometric Test</h1>
           </div>
           <div class="card-body">
+          <div className="timer">Time Remaining: {formatTime(timer)}</div>
             <form >
               {question?.map((q, i) => (
                 <div className="card mb-4" key={q._id}>
