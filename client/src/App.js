@@ -16,19 +16,14 @@ import CreateCategory from "./pages/Admin/CreateCategory";
 import CreateQuestion from "./pages/Admin/CreateQuestion";
 import ErrorPage from "./components/Layout/ErrorPage";
 import Chart from 'chart.js/auto';
-
+import {useAuth} from "./context/auth"
 
 function App() {
+  const [auth] = useAuth();
   return (
     <>
       <Routes>
          <Route path="/" element={<HomePage />} />
-        {/* <Route path="/dashboard/user" element={<Dashboard />} />
-        <Route path="/dashboard/user/profile" element={< Profile/>} />
-        <Route path="/dashboard/admin" element={<AdminDashboard />} />
-        <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
-        <Route path="/dashboard/admin/create-question" element={<CreateQuestion />} /> */}
-
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/profile" element={<Profile />} />
@@ -40,9 +35,14 @@ function App() {
           <Route path="admin/*" element={<ErrorPage />} />
           <Route />
         </Route>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-
+        {!auth?.user && (
+          <>
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </>
+        )}
+        {auth?.user && (
+          <>
         <Route path="/test" element={<TestPage />} />
         <Route path="/aptitude/:categoryId" element={<Aptitude />} />
         <Route path="/preassessment" element={<PreAssessmentTest />} />
@@ -51,6 +51,8 @@ function App() {
           element={<PsychometricPage />}
         />
         <Route path="/result" element={<Result />} />
+        </>
+        )}
       </Routes>
     </>
   );

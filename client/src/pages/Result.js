@@ -7,7 +7,7 @@ import { Pie } from 'react-chartjs-2';
 import { useLocation } from 'react-router-dom';
 import careerChoices from '.././careerChoices.json';
 import subjectChoices from '.././subjectChoices.json';
-
+import "../styles/ResultStyle.css"
 const Result = () => {
   const [auth, setAuth] = useAuth();
   const [totalScore, setTotalScore] = useState(0);
@@ -121,9 +121,9 @@ const Result = () => {
   return (
     <Layout>
       <div className="container p-4">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="card mb-4">
+        <div className="row result-row">
+          <div className="col-md-6 result-col">
+            <div className="card result-card mb-4">
               <div className="card-header">
                 <h2 className="text-center">Aptitude Test Result</h2>
               </div>
@@ -132,7 +132,7 @@ const Result = () => {
                 <Bar data={data} options={options} />
               </div>
             </div>
-            <div className="card mb-4">
+            <div className="card result-card mb-4">
               <div className="card-header">
                 <h2 className="text-center">Career Choices</h2>
               </div>
@@ -145,8 +145,8 @@ const Result = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="card mb-4">
+          <div className="col-md-6 result-col">
+            <div className="card result-card mb-4">
               <div className="card-header">
                 <h2 className="text-center">Psychometric Test Result</h2>
               </div>
@@ -154,7 +154,7 @@ const Result = () => {
                 <Pie data={pieData} />
               </div>
             </div>
-            <div className="card mb-4">
+            <div className="card result-card mb-4">
               <div className="card-header">
                 <h2 className="text-center">Subject Choices</h2>
               </div>

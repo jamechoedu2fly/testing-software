@@ -42,8 +42,8 @@ const Register = () => {
         </div>
 
         <div className='register-card'>
-                <h1>Register Page</h1>
                 <form onSubmit={handleSubmit}>
+                <h1>REGISTER</h1>
                     <div className="mb-3">
                         <input
                             type="text"

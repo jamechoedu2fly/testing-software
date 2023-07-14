@@ -39,49 +39,42 @@ const Login = () => {
         }
     }
     return (
-
-
         <Layout>
-            
-            <div className="login-container">
-        <div className="register-image">
-          <img src={jamechoLogo} />
-        </div>
-
+        <div className="login-container">
+            <div className="register-image">
+                <img src={jamechoLogo} />
+            </div>
         <div className='login-card'>
-        <h1>Login Page</h1>
-                <form onSubmit={handleSubmit}>
-
-
-                    <div className="mb-3">
-                        <input type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                            placeholder='Enter email address'
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <input type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                            placeholder='Enter your password'
-                        />
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="btn btn-primary">
-                        LOGIN
-                    </button>
-                </form>
-      </div>
-      </div>
+        <h1>LOGIN</h1>
+            <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                    <input type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder='Enter email address'
+                    />
+                </div>
+                <div className="mb-3">
+                    <input type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder='Enter your password'
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="btn btn-primary">
+                    LOGIN
+                </button>
+            </form>
+        </div>
+        </div>
         </Layout>
     )
 }
