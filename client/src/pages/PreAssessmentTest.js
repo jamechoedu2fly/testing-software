@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-
+import "../styles/psychoStyles.css"
 const PreAssessmentTest = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
-  const [timer, setTimer] = useState(1 * 60); // 15 minutes in seconds
+  const [timer, setTimer] = useState(15 * 60); // 15 minutes in seconds
   const [auth, setAuth] = useAuth();
   const urls = [
     {
@@ -116,8 +116,8 @@ const PreAssessmentTest = () => {
 
   return (
     <Layout>
+      <div className="pre-page">
       <div className="container p-4">
-        <div className="card">
           <div className="card-header">
             <h1 className="text-center">Pre-Assessment Test</h1>
           </div>
@@ -152,10 +152,9 @@ const PreAssessmentTest = () => {
                 Submit
               </button>
             </form>
-            <h3 className="mt-3">Total Score: {totalScore}</h3>
           </div>
         </div>
-      </div>
+        </div>
     </Layout>
   );
 };

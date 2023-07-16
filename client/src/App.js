@@ -17,7 +17,7 @@ import CreateQuestion from "./pages/Admin/CreateQuestion";
 import ErrorPage from "./components/Layout/ErrorPage";
 import Chart from 'chart.js/auto';
 import {useAuth} from "./context/auth"
-
+import Sidebar from "./components/Layout/Sidebar";
 function App() {
   const [auth] = useAuth();
   return (
@@ -44,6 +44,7 @@ function App() {
         {auth?.user && (
           <>
         <Route path="/test" element={<TestPage />} />
+        <Route path="/sidebar" element={< Sidebar/>} />
         <Route path="/aptitude/:categoryId" element={<Aptitude />} />
         <Route path="/preassessment" element={<PreAssessmentTest />} />
         <Route

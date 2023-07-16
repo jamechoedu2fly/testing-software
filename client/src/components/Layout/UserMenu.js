@@ -1,23 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import "../../styles/UserProfile.css";
 
 const UserMenu = () => {
     return (
-        <div>
-            <div className="text-center mt-4">
-                <div className="list-group">
-                    <h4>User Panel</h4>
-                    <NavLink
-                        to="/dashboard/user/profile"
-                        className="list-group-item list-group-item-action"
-                    >
-                        Profile
-                    </NavLink>
-
-                </div>
+        <div className="text-center mt-4">
+            <div className="list-group user-menu-container">
+                <NavLink
+                    to="/dashboard/user/profile"
+                    className="list-group-item list-group-item-action user-bttn"
+                >
+                    Update Profile
+                </NavLink>
+                <NavLink
+                    to="/test"
+                    className="list-group-item list-group-item-action user-bttn"
+                >
+                    Start Test
+                </NavLink>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default UserMenu
+export default UserMenu;

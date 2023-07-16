@@ -19,7 +19,9 @@
   flex-direction: column;
   height: 70vh;
 }
-
-body {
-  background: linear-gradient(to right, #FFDE59, #FF914D);
-}
+/* 
+body{
+  background-image: url('./styles/home-imgg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

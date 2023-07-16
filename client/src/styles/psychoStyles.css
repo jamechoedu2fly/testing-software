@@ -1,0 +1,21 @@
+
+.timer{
+    font-weight: bold;
+    font-size:x-large;
+    margin-bottom: 25px;
+}
+.apti-page{
+    background-color: #D6E2E6;
+    min-height: 670vh;
+    background-size: cover;
+}
+.pre-page{
+    background-color: #D6E2E6;
+    min-height: 285vh;
+    background-size: cover;
+}
+.psycho-page{
+    background-color: #D6E2E6;
+    min-height: 1300vh;
+    background-size: cover;
+}

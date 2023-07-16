@@ -37,19 +37,15 @@ const Register = () => {
     return (
         <Layout>
             <div className="register-container">
-        <div className="register-image">
-          <img src={jamechoLogo} />
-        </div>
-
-        <div className='register-card'>
+            <div className='register-card'>
+            <h1>REGISTER</h1>
                 <form onSubmit={handleSubmit}>
-                <h1>REGISTER</h1>
                     <div className="mb-3">
                         <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="form-control"
+                            className="form-control signup-form"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             placeholder='Enter your name'
@@ -60,7 +56,7 @@ const Register = () => {
                         <input type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="form-control"
+                            className="form-control signup-form"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             placeholder='Enter email address'
@@ -70,7 +66,7 @@ const Register = () => {
                         <input type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="form-control"
+                            className="form-control signup-form"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             placeholder='Enter your password'
@@ -80,7 +76,7 @@ const Register = () => {
                         <input type="text"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="form-control"
+                            className="form-control signup-form"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
                             placeholder='Enter your phone number'
@@ -88,7 +84,7 @@ const Register = () => {
                     </div>
                     <button
                         type="submit"
-                        className="btn btn-primary">
+                        className="btn btn-primary submit-signup-button">
                         REGISTER
                     </button>
                 </form>

@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast";
+import "../styles/psychoStyles.css"
 const PsychometricPage = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
-  const [timer, setTimer] = useState(1 * 60);
+  const [timer, setTimer] = useState(30 * 60);
     const [auth, setAuth] = useAuth();
     const urls = [
     {
@@ -116,10 +117,24 @@ const PsychometricPage = () => {
       .sort((a, b) => b[1] - a[1]) // Sort scores in descending order
       .slice(0, 3); // Get the top three scores
 
+
+    const allTopScores = Object.entries(categoryScoresPsycho)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,6)
+
+    allTopScores.forEach(([categoryName,score])=>{
+      console.log(`${categoryName}`)
+      localStorage.setItem('categoryName', JSON.stringify(categoryName));
+      console.log(typeof(categoryName))
+    })
+
+     
+
     const topThreeScores = {};
   topScores.forEach(([categoryName, score]) => {
     topThreeScores[categoryName] = score;
     console.log(`Score for ${categoryName}: ${score}`);
+
   });
   const topThreeScoresString = topScores.map(([categoryName, score]) => {
     return categoryName;
@@ -140,9 +155,9 @@ const PsychometricPage = () => {
 
   return (
     <Layout>
+      <div className="psycho-page">
       <div className="container p-4">
-        <div class="card">
-          <div class="card-header ">
+          <div class="card-header-psycho">
             <h1 class="text-center">Psychometric Test</h1>
           </div>
           <div class="card-body">
@@ -180,9 +195,9 @@ const PsychometricPage = () => {
             </form>
           </div>
 
-        </div>
+      
       </div>
-
+      </div>
     </Layout>
   );
 };

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
-
+import "../styles/psychoStyles.css"
 
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
@@ -13,7 +13,7 @@ const Aptitude = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
   const [auth, setAuth] = useAuth();
-  const [timer, setTimer] = useState(1 * 60);
+  const [timer, setTimer] = useState(30 * 60);
   const urls = [
     {
       url: `${process.env.REACT_APP_API}/api/question/get-all-question/648c7c9c9aee6736740e6a12/64a51d412272419d09e20d36`,
@@ -149,8 +149,8 @@ const Aptitude = () => {
 
   return (
     <Layout>
+      <div className="apti-page">
       <div className="container p-4">
-        <div className="card">
           <div className="card-header">
             <h1 className="text-center">Aptitude Test</h1>
           </div>
@@ -207,7 +207,7 @@ const Aptitude = () => {
             <div className="card-body">Loading questions...</div>
           )}
         </div>
-      </div>
+        </div>
     </Layout>
   );
 };
