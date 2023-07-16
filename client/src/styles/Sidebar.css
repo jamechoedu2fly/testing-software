@@ -1,3 +1,4 @@
+/* Styles for larger screens */
 .land-cont {
   display: flex;
 }
@@ -51,25 +52,25 @@
 }
 
 .square-card {
-  /* Additional styles for the square card if needed */
   width: 500px;
   height: 400px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 5px;
   margin-top: -80px;
+  text-align: left;
+  padding: 20px;
 }
-.square-card h2{
-  text-align: center;
-}
-.square-card h3{
-  text-align: center;
+
+
+.square-card h3 {
   margin-top: 10px;
 }
-.square-card h6{
-  text-align: center;
+
+.square-card h6 {
   margin-top: 20px;
 }
+
 .vertical-card {
   width: 250px;
   height: 70vh;
@@ -78,35 +79,74 @@
   border-radius: 10px;
   padding: 30px;
   box-shadow:
-  inset 0 -3em 3em rgba(140, 139, 139, 0.1),
-  0 0 0 2px #888f8f,
-  0.3em 0.3em 1em rgba(60, 57, 57, 0.3);
+    inset 0 -3em 3em rgba(140, 139, 139, 0.1),
+    0 0 0 2px #888f8f,
+    0.3em 0.3em 1em rgba(60, 57, 57, 0.3);
   margin-top: -100px;
   margin-right: -100px;
-  /* Additional styles for the vertical card if needed */
 }
-.vertical-card p{
-  text-align:center;
+
+.vertical-card p {
+  text-align: center;
   line-height: 1.2;
   margin-top: 30px;
-  font-family:'Roboto';
+  font-family: 'Roboto';
 }
-.vertical-card h4{
+
+.vertical-card h4 {
   text-align: center;
 }
+
 .land-logo {
   border-radius: 50%;
   width: 100px;
   margin-top: -150px;
 }
-.land-p{
+
+.land-p {
   color: white;
 }
-.land-test-btn{
+
+.land-test-btn {
   background-color: #103755;
   width: 70%;
   margin-left: 30px;
   height: 40px;
   border-radius: 5px;
   color: white;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .land-cont {
+    flex-direction: column;
+  }
+
+  .side-land {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .content-land {
+    padding: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .square-card {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .vertical-card {
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 20px;
+  }
 }

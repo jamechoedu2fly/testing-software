@@ -4,7 +4,8 @@ import "../styles/HomeStyle.css";
 import { useNavigate } from 'react-router-dom';
 import '../styles/TestPageStyle.css';
 import apti from "../styles/apti.png";
-import psycho from "../styles/psycho.png"
+import psycho from "../styles/psycho.png";
+
 const HomePage = () => {
   const navigate = useNavigate();
 
@@ -30,22 +31,21 @@ const HomePage = () => {
         </p>
         <hr />
         <div className='main-color'>
-        <div className="cards-container">
-          {/* Aptitude Section */}
-          <div className="section-card-apti">
-            <img src={apti} alt="Aptitude test" className='circle-img' />
+          <div className="cards-container">
+            {/* Aptitude Section */}
+            <div className="section-card-apti">
+              <img src={apti} alt="Aptitude test" className='circle-img' />
               <h2>Aptitude test</h2>
-              <p>It is a test of cognitive abilities, such as mathematical, logical, verbal and non verbal reasoning to assess the logical thinking and problem-solving skills.</p>
-          </div>
+              <p>It is a test of cognitive abilities, such as mathematical, logical, verbal and nonverbal reasoning to assess the logical thinking and problem-solving skills.</p>
+            </div>
 
-          {/* Psychometric Test Section */}
-          <div className="section-card-psycho">
-           
-            <img src={psycho} alt="Aptitude test" className='circle-img'/>
+            {/* Psychometric Test Section */}
+            <div className="section-card-psycho">
+              <img src={psycho} alt="Aptitude test" className='circle-img' />
               <h2>Psychometric test</h2>
-             <p>Psychometric test helps you in identifying your personality traits which in turn will help you in selecting the right career options for yourself.</p>
+              <p>Psychometric test helps you in identifying your personality traits which in turn will help you in selecting the right career options for yourself.</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </Layout>

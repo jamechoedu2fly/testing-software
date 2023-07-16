@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
-import "../styles/psychoStyles.css"
+import "../styles/psychoStyles.css";
 
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
@@ -77,7 +77,7 @@ const Aptitude = () => {
   const calculateTotalScore = () => {
     let totalScore = 0;
     const categoryData = {}; // New object to store category-wise score
-    
+
     question.forEach((q) => {
       const selectedAnswer = selectedAnswers[q._id];
       if (selectedAnswer === q.correctAnswer) {
@@ -112,36 +112,36 @@ const Aptitude = () => {
       toast.error("Something went wrong");
     }
   };
-  
+
   const handleCalculateScores = async () => {
     const categoryScores = {};
-  
+
     for (const { url, categoryName } of urls) {
       try {
         const { data } = await axios.get(url);
         const questions = data?.allquestion || [];
         let score = 0;
-      
+
         questions.forEach((q) => {
           const selectedAnswer = selectedAnswers[q._id];
           if (selectedAnswer === q.correctAnswer) {
             score += q.point;
           }
         });
-  
+
         categoryScores[categoryName] = score;
         console.log(`Score for ${categoryName}:`, score);
       } catch (error) {
         console.log(`Error fetching data from ${url}:`, error);
       }
     }
-  
+
     setCategoryScores(categoryScores);
     localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
     navigate('/test');
   };
-  
- const formatTime = (time) => {
+
+  const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
@@ -150,7 +150,7 @@ const Aptitude = () => {
   return (
     <Layout>
       <div className="apti-page">
-      <div className="container p-4">
+        <div className="container p-4">
           <div className="card-header">
             <h1 className="text-center">Aptitude Test</h1>
           </div>
@@ -165,7 +165,7 @@ const Aptitude = () => {
                         <img
                           src={`http://localhost:8080/${q.question.image}`}
                           alt={`Question ${i + 1}`}
-                          style={{ width: "1000px", height: "200px" }}
+                          className="question-image"
                         />
                       ) : (
                         <h6>
@@ -207,7 +207,7 @@ const Aptitude = () => {
             <div className="card-body">Loading questions...</div>
           )}
         </div>
-        </div>
+      </div>
     </Layout>
   );
 };
