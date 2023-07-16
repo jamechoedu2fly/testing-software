@@ -8,7 +8,6 @@ import { useLocation } from 'react-router-dom';
 import careerChoices from '.././careerChoices.json';
 import subjectChoices from '.././subjectChoices.json';
 import "../styles/ResultStyle.css"
-
 const Result = () => {
   const [auth, setAuth] = useAuth();
   const [totalScore, setTotalScore] = useState(0);
@@ -16,7 +15,7 @@ const Result = () => {
   const location = useLocation();
   const [careerList, setCareerList] = useState(null);
   const [subjectList, setSubjectList] = useState(null);
-  
+
   const [categoryScores, setCategoryScores] = useState(
     JSON.parse(localStorage.getItem('categoryScores')) || {}
   );
@@ -32,13 +31,7 @@ const Result = () => {
   const [FourthScore, setFourthScore] = useState(
     JSON.parse(localStorage.getItem('FourthScore')) || {}
   );
-  const categoryScoreValues = Object.values(categoryScores);
-const sumOfCategoryScores = categoryScoreValues.reduce((acc, score) => acc + score, 0);
-const percentage = (sumOfCategoryScores / 108) * 100; // Assuming the maximum score is 108
-const formattedPercentage = percentage.toFixed(2); // Format the percentage to two decimal places
-
-
-
+  const updatedTopThreeScoresString = topThreeScoresString.slice(0, -1) + FourthScore;
   const pieData = {
     labels: Object.keys(categoryScoresPsycho),
     datasets: [
@@ -114,36 +107,46 @@ const formattedPercentage = percentage.toFixed(2); // Format the percentage to t
   }, [auth]);
 
   useEffect(() => {
-  let updatedTopThreeScoresString = topThreeScoresString;
-  if (updatedTopThreeScoresString === undefined) {
-    const topThreeScoresArray = Object.values(categoryScores).slice(0, 3);
-    topThreeScoresArray.pop();
-    topThreeScoresArray.push(FourthScore);
-    updatedTopThreeScoresString = topThreeScoresArray.join('');
-  }
+  const fetchSubject = () => {
+    const subject = careerChoices.permutations.find(
+      (permutation) => permutation.code === topThreeScoresString
+    )?.subcategories[categoryScoresPre];
 
-  const subject = careerChoices.permutations.find(
-    (permutation) => permutation.code === updatedTopThreeScoresString
-  )?.subcategories[categoryScoresPre];
-  setCareerList(subject);
-  console.log(subject);
-}, [topThreeScoresString, categoryScoresPre, careerChoices, FourthScore]);
+    // Check if subject is undefined
+    if (subject === undefined) {
+      const updatedSubject = careerChoices.permutations.find(
+        (permutation) => permutation.code === updatedTopThreeScoresString
+      )?.subcategories[categoryScoresPre];
+      setCareerList(updatedSubject);
+      console.log(updatedSubject);
+    } else {
+      setCareerList(subject);
+      console.log(subject);
+    }
+  };
+
+  fetchSubject();
+}, [topThreeScoresString, categoryScoresPre, careerChoices, updatedTopThreeScoresString]);
+
+  
 
 useEffect(() => {
-  let updatedTopThreeScoresString = topThreeScoresString;
-  if (updatedTopThreeScoresString === undefined) {
-    const topThreeScoresArray = Object.values(categoryScores).slice(0, 3);
-    topThreeScoresArray.pop();
-    topThreeScoresArray.push(FourthScore);
-    updatedTopThreeScoresString = topThreeScoresArray.join('');
-  }
-
   const ans = subjectChoices.permutations.find(
-    (permutation) => permutation.code === updatedTopThreeScoresString
+    (permutation) => permutation.code === topThreeScoresString
   )?.subcategories;
-  setSubjectList(ans);
-  console.log(ans);
-}, [topThreeScoresString, subjectChoices, FourthScore]);
+
+  if (ans === undefined) {
+    const updatedAns = subjectChoices.permutations.find(
+      (permutation) => permutation.code === updatedTopThreeScoresString
+    )?.subcategories;
+    setSubjectList(updatedAns);
+    console.log(updatedAns);
+  } else {
+    setSubjectList(ans);
+    console.log(ans);
+  }
+}, [topThreeScoresString, updatedTopThreeScoresString, subjectChoices]);
+
 
   return (
     <Layout>
@@ -155,7 +158,7 @@ useEffect(() => {
                 <h4 className="text-center">APTITUDE TEST RESULT</h4>
               </div>
               <div className="card-body">
-              <h3>Total Score: {formattedPercentage}%</h3>
+                <h3>Total Score: {totalScore}</h3>
                 <Bar data={data} options={options} />
               </div>
             </div>
@@ -198,6 +201,8 @@ useEffect(() => {
       </div>
     </Layout>
   );
+  
+  
 };
 
 export default Result;
