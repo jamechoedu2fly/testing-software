@@ -163,7 +163,7 @@ const Aptitude = () => {
                     <div className="card-body card-real">
                       {q.question && q.question.image != null ? (
                         <img
-                          src={`http://localhost:8080/${q.question.image}`}
+                          src={`https://jtat.onrender.com/${q.question.image}`}
                           alt={`Question ${i + 1}`}
                           className="question-image"
                         />
