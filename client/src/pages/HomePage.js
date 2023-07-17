@@ -14,7 +14,7 @@ const HomePage = () => {
       <div className='background-image'>
         <div className='content-container'>
           <h1 className='home-header'>
-            Jamecho's Talentasses <br /> Test
+            Jamecho TalentAssess <br /> Test
           </h1>
           <p className='home-para'>Shaping Your Future.</p>
         </div>
@@ -22,12 +22,9 @@ const HomePage = () => {
       <div className="container test-cont">
         <h1 className="heading">What is JTAT</h1>
         <p className='jtat-p'>
-          <span>The JAMECHO TALENT ASSESS TEST is a psychometric test that comes</span><br />
-          <span>evaluates a range of personality dimensions such as Realistic,</span><br />
-          <span>Investigative, Artistic, Social, Enterprising, and Conventional skills along</span><br />
-          <span>with aptitude check. The scores of the test are then evaluated</span><br />
-          <span>comprehensively to provide you with the career options that are best</span><br />
-          <span>suited to your results.</span>
+          <span>JTAT offers a scientific way of assessment that</span><br />
+          <span>evaluates a range of personality dimensions along with</span><br />
+          <span>an aptitude analysis</span><br />
         </p>
         <hr />
         <div className='main-color'>

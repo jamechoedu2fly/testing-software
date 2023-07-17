@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/TestPageStyle.css';
 import apti from "../styles/apti.png";
 import psycho from "../styles/psycho.png"
-import testLogo from "../styles/testlogo.png"
+import testLogo from "../styles/bg-logo.jpeg"
 import { useNavigate } from 'react-router-dom';
 const TestPage = () => {
   const navigate= useNavigate();
@@ -27,11 +27,11 @@ const TestPage = () => {
       <div className="content">
         <div className="card-apti">
           <h3>Aptitude test</h3>
-          <button className='btn-testing' onClick={openApti}>Start aptitude test</button>
+          <button className='btn btn-primary btn-testing' onClick={openApti}>Start aptitude test</button>
         </div>
         <div className="card-psycho">
           <h3>Psychometric test</h3>
-          <button className='btn-testing' onClick={openPsycho}>Start psychometric test</button>
+          <button className='btn btn-primary btn-testing' onClick={openPsycho}>Start psychometric test</button>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@
   margin-bottom: 10px;
   color: white;
   background-color: #467599;
-  width: 200%;
+  width: 250%;
   border-radius: 5px;
   height: 38px;
 }
@@ -100,11 +100,12 @@
 .land-logo {
   border-radius: 50%;
   width: 100px;
-  margin-top: -150px;
+  margin-top: 10px;
 }
 
 .land-p {
   color: white;
+  margin-top: 330px;
 }
 
 .land-test-btn {

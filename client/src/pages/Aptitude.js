@@ -138,7 +138,7 @@ const Aptitude = () => {
 
     setCategoryScores(categoryScores);
     localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
-    navigate('/test');
+    navigate('/preassessment');
   };
 
   const formatTime = (time) => {

@@ -35,11 +35,13 @@
   inset 0 -3em 3em rgba(140, 139, 139, 0.1),
   0 0 0 2px #ced5d6,
   0.3em 0.3em 1em rgba(190, 190, 190, 0.3);
+  text-align: center;
 
 }
 .card-apti{
   background-color: #f2f2f2;
   border-radius: 5px;
+  text-align: center;
   padding: 10px;
   margin-bottom: 10px;
   width: 80%; /* Set a fixed width for both cards */
@@ -50,10 +52,16 @@
   0.3em 0.3em 1em rgba(190, 190, 190, 0.3);
 }
 .btn-testing{
-  border: none;
-  color: black
+  background-color: #467599;
+  color: white;
+  margin-top: 15px;
 }
-
+.card-apti h3{
+  margin-top: 25px;
+}
+.card-psycho h3{
+  margin-top: 25px;
+}
 .test-cont {
   display: flex;
   flex-direction: column;

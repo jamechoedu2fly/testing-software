@@ -118,12 +118,27 @@ const PsychometricPage = () => {
       .slice(0, 3); // Get the top three scores
 
 
-    const TopFourScores = Object.entries(categoryScoresPsycho)
+      const TopFourScores = Object.entries(categoryScoresPsycho)
+      .sort((a,b)=>b[1]-a[1])
+      .slice(0,4)
+      const  fourthans=TopFourScores[3][0]
+    console.log(fourthans)
+    localStorage.setItem('FourthScore', JSON.stringify(fourthans));
+
+    const TopFiveScores = Object.entries(categoryScoresPsycho)
     .sort((a,b)=>b[1]-a[1])
-    .slice(0,4)
-    const  ans=TopFourScores[3][0]
-console.log(ans)
-localStorage.setItem('FourthScore', JSON.stringify(ans));
+    .slice(0,5)
+    const  fifthans=TopFiveScores[4][0]
+  console.log(fifthans)
+  localStorage.setItem('FifthScore', JSON.stringify(fifthans));
+
+  const TopSixScores = Object.entries(categoryScoresPsycho)
+  .sort((a,b)=>b[1]-a[1])
+  .slice(0,6)
+  const  sixthans=TopSixScores[5][0]
+console.log(sixthans)
+localStorage.setItem('SixthScore', JSON.stringify(sixthans));
+
     // TopFourScores.forEach(([categoryName,score])=>{
     //   console.log(`${categoryName}`)
     //   localStorage.setItem('categoryName', JSON.stringify(categoryName));

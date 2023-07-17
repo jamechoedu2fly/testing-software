@@ -31,7 +31,15 @@ const Result = () => {
   const [FourthScore, setFourthScore] = useState(
     JSON.parse(localStorage.getItem('FourthScore')) || {}
   );
+  const [FifthScore, setFifthScore] = useState(
+    JSON.parse(localStorage.getItem('FifthScore')) || {}
+  );
+  const [SixthScore, setSixthScore] = useState(
+    JSON.parse(localStorage.getItem('SixthScore')) || {}
+  );
   const updatedTopThreeScoresString = topThreeScoresString.slice(0, -1) + FourthScore;
+  const updatedTopThreeScoresString2 = updatedTopThreeScoresString.slice(0, -1) + FifthScore;
+  const updatedTopThreeScoresString3 = updatedTopThreeScoresString2.slice(0, -1) + SixthScore;
   const pieData = {
     labels: Object.keys(categoryScoresPsycho),
     datasets: [
@@ -113,22 +121,39 @@ const Result = () => {
     )?.subcategories[categoryScoresPre];
 
     // Check if subject is undefined
-    if (subject === undefined) {
+if (subject === undefined) {
       const updatedSubject = careerChoices.permutations.find(
         (permutation) => permutation.code === updatedTopThreeScoresString
       )?.subcategories[categoryScoresPre];
-      setCareerList(updatedSubject);
-      console.log(updatedSubject);
-    } else {
+
+if (updatedSubject===undefined){
+  const updatedSubject2= careerChoices.permutations.find(
+    (permutation)=> permutation.code=== updatedTopThreeScoresString2
+  )?.subcategories[categoryScoresPre];
+
+  if (updatedSubject2===undefined){
+    const updatedSubject3= careerChoices.permutations.find(
+      (permutation)=>permutation.code===updatedTopThreeScoresString3
+    )?.subcategories[categoryScoresPre];
+    setCareerList(updatedSubject3);
+    console.log(updatedSubject3);
+  }else{
+    setCareerList(updatedSubject2);
+    console.log(updatedSubject2);
+  }
+}else{
+  setCareerList(updatedSubject);
+  console.log(updatedSubject);
+}
+    } else{
       setCareerList(subject);
       console.log(subject);
     }
   };
 
   fetchSubject();
-}, [topThreeScoresString, categoryScoresPre, careerChoices, updatedTopThreeScoresString]);
+}, [topThreeScoresString, categoryScoresPre, careerChoices, updatedTopThreeScoresString,updatedTopThreeScoresString2,updatedTopThreeScoresString3]);
 
-  
 
 useEffect(() => {
   const ans = subjectChoices.permutations.find(
@@ -139,13 +164,31 @@ useEffect(() => {
     const updatedAns = subjectChoices.permutations.find(
       (permutation) => permutation.code === updatedTopThreeScoresString
     )?.subcategories;
-    setSubjectList(updatedAns);
+
+    if(updatedAns===undefined){
+      const updatedAns2 = subjectChoices.permutations.find(
+        (permutation) => permutation.code === updatedTopThreeScoresString2
+      )?.subcategories;
+
+      if(updatedAns2===undefined){
+        const updatedAns3= subjectChoices.permutations.find(
+          (permutation) => permutation.code === updatedTopThreeScoresString3
+        )?.subcategories;
+        setSubjectList(updatedAns3);
+    console.log(updatedAns3);
+      }else{
+        setSubjectList(updatedAns2);
+    console.log(updatedAns2);
+      }
+    }else{
+      setSubjectList(updatedAns);
     console.log(updatedAns);
-  } else {
+    }
+  } else{
     setSubjectList(ans);
     console.log(ans);
   }
-}, [topThreeScoresString, updatedTopThreeScoresString, subjectChoices]);
+}, [topThreeScoresString, updatedTopThreeScoresString, subjectChoices,updatedTopThreeScoresString2,updatedTopThreeScoresString3]);
 
 
   return (
@@ -158,7 +201,7 @@ useEffect(() => {
                 <h4 className="text-center">APTITUDE TEST RESULT</h4>
               </div>
               <div className="card-body">
-                <h3>Total Score: {totalScore}</h3>
+                <h3>Score: {totalScore}</h3>
                 <Bar data={data} options={options} />
               </div>
             </div>
