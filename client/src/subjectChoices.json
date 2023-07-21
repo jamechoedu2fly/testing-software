@@ -46,7 +46,7 @@
     },
     {
       "code": "AIS",
-      "subcategories":["language", "IP", "Fine arts", "biology", "pol science", "history", "economics", "psychology", "homescience"]
+      "subcategories":["language", "IP", "Fine arts", "biology", "politicalscience", "history", "economics", "psychology", "homescience"]
     },
     {
       "code": "RCI",
@@ -102,7 +102,7 @@
     },
     {
       "code": "AES",
-      "subcategories":["ENGLISH", "HINDI", "MUSIC", "HISTORY", "FINE ARTS", "POL SCIENCE", "eco", "bst"]
+      "subcategories":["ENGLISH", "HINDI", "MUSIC", "HISTORY", "FINE ARTS", "politicalSCIENCE", "eco", "bst"]
     },
     {
       "code": "SAE",
@@ -110,11 +110,11 @@
     },
     {
       "code": "EAS",
-      "subcategories":["POL SCIENCE" , "HISTORY", "HINDI", "ENGLISH", "FINANCE", "maths", "eco", "business studies"]
+      "subcategories":["politicalSCIENCE" , "HISTORY", "HINDI", "ENGLISH", "FINANCE", "maths", "eco", "business studies"]
     },
     {
       "code": "SEA",
-      "subcategories":["POL SCIENCE", "BIOLOGY", "ACCOUNTS", "MATHS", "ECO"]
+      "subcategories":["politicalSCIENCE", "BIOLOGY", "ACCOUNTS", "MATHS", "ECO"]
     },
     {
       "code": "ESA",
@@ -226,31 +226,31 @@
     },
     {
       "code": "RSC",
-      "subcategories":["english","B.ST","history", "pol science", "eco","chemistry", "engineering drawing" ,"physics", "maths" ,"psychology", "sociology"]
+      "subcategories":["english","B.ST","history", "politicalscience", "eco","chemistry", "engineering drawing" ,"physics", "maths" ,"psychology", "sociology"]
     },
     {
       "code": "CSR",
-      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","pol science" ,"psychology", "sociology"]
+      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","politicalscience" ,"psychology", "sociology"]
     },
     {
       "code": "CRS",
-      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","pol science"]
+      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","politicalscience"]
     },
     {
       "code": "RAE",
-      "subcategories":["engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "pol science" , "home science", "engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "pol science" , "home science"]
+      "subcategories":["engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "politicalscience" , "home science", "engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "home science"]
     },
     {
       "code": "REA",
-      "subcategories":["engineering drawing" , "fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "pol science" , "home science", "B.ST","finance"]
+      "subcategories":["engineering drawing" , "fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "politicalscience" , "home science", "B.ST","finance"]
     },
     {
       "code": "EAR",
-      "subcategories":["fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "pol science" , "home science", "B.ST","finance"]
+      "subcategories":["fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "home science", "B.ST","finance"]
     },
     {
       "code": "ERA",
-      "subcategories":["english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "pol science" , "B.ST" , "finance"]
+      "subcategories":["english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "B.ST" , "finance"]
     },
     {
       "code": "AER",
@@ -262,27 +262,27 @@
     },
     {
       "code": "SIR",
-      "subcategories":["sociology", "psychology", "history", "pol science", "biology", "chemistry", "physics", "eco", "b.st", "ip","anthropology"]
+      "subcategories":["sociology", "psychology", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st", "ip","anthropology"]
     },
     {
       "code": "SRI",
-      "subcategories":["sociology", "psychology", "English", "history", "pol science", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
+      "subcategories":["sociology", "psychology", "English", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
     },
     {
       "code": "RIS",
-      "subcategories":["english", "psychology", "history", "pol science", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
+      "subcategories":["english", "psychology", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
     },
     {
       "code": "RSI",
-      "subcategories":["english", "psychology", "history", "pol science", "biology", "chemistry", "eco", "b.st", "ip"]
+      "subcategories":["english", "psychology", "history", "politicalscience", "biology", "chemistry", "eco", "b.st", "ip"]
     },
     {
       "code": "ISR",
-      "subcategories":["bio", "bio info", "biotech","physics" ,"chemistry" ,"bst", "eco", "acc", "pol sc", "history","maths"]
+      "subcategories":["bio", "bio info", "biotech","physics" ,"chemistry" ,"bst", "eco", "acc", "politicalsc", "history","maths"]
     },
     {
       "code": "IRS",
-      "subcategories":["bio", "bio info", "biotech","physics", "chemistry", "bst", "eco", "acc", "pol sc", "history","maths"]
+      "subcategories":["bio", "bio info", "biotech","physics", "chemistry", "bst", "eco", "acc", "politicalscience", "history","maths"]
     }
   ]
 }

@@ -6,6 +6,7 @@ import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast";
 import "../styles/psychoStyles.css"
+import CircularLoader from "./CircularLoader";
 const PsychometricPage = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
@@ -65,6 +66,7 @@ const PsychometricPage = () => {
       ...prevState,
       [qId]: selectedOption,
     }));
+    console.log(selectedOption);
   };
   useEffect(() => {
     const interval = setInterval(() => {
@@ -94,18 +96,19 @@ const PsychometricPage = () => {
   
         questions.forEach((q) => {
           const selectedAnswer = selectedAnswers[q._id];
-          if (selectedAnswer === "1") {
+          if (selectedAnswer === "Strongly disagree / पूरी तरह असहमत") {
+            score += 0;
+          } else if (selectedAnswer === "Disagree / असहमत") {
             score += 1;
-          } else if (selectedAnswer === "2") {
+          } else if (selectedAnswer === "Neutral / तटस्थ") {
             score += 2;
-          } else if (selectedAnswer === "3") {
+          } else if (selectedAnswer === "Agree / सहमत") {
             score += 3;
-          } else if (selectedAnswer === "4") {
+          } else if (selectedAnswer === "Strongly Agree / पूर्णतः सहमत") {
             score += 4;
-          } else if (selectedAnswer === "5") {
-            score += 5;
           }
         });
+        console.log(selectedAnswers)
         categoryScoresPsycho[categoryName] = score;
       } catch (error) {
         console.log(`Error fetching data from ${url}:`, error);
@@ -177,6 +180,7 @@ localStorage.setItem('SixthScore', JSON.stringify(sixthans));
           <div class="card-header-psycho">
             <h1 class="text-center">Psychometric Test</h1>
           </div>
+          {questionsLoaded ? (
           <div class="card-body">
           <div className="timer">Time Remaining: {formatTime(timer)}</div>
             <form >
@@ -211,9 +215,10 @@ localStorage.setItem('SixthScore', JSON.stringify(sixthans));
 
             </form>
           </div>
-
-      
-      </div>
+          ) : (
+          <CircularLoader />
+          )}
+          </div>
       </div>
     </Layout>
   );

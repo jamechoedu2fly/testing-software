@@ -28,6 +28,10 @@
 
 .submit-signup-button {
   width: 100%;
-  background-color: rgb(15, 15, 93);
+  background-color: #467599;
   border: none;
+}
+
+.error-message{
+  color: red;
 }

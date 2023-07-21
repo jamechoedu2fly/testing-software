@@ -6,6 +6,7 @@ import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../styles/psychoStyles.css"
+import CircularLoader from "./CircularLoader";
 const PreAssessmentTest = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
@@ -121,6 +122,7 @@ const PreAssessmentTest = () => {
           <div className="card-header">
             <h1 className="text-center">Pre-Assessment Test</h1>
           </div>
+          {questionsLoaded ? (
           <div className="card-body">
             <div className="timer">Time Remaining: {formatTime(timer)}</div>
             <form>
@@ -153,6 +155,9 @@ const PreAssessmentTest = () => {
               </button>
             </form>
           </div>
+          ) : (
+            <CircularLoader />
+          )}
         </div>
         </div>
     </Layout>

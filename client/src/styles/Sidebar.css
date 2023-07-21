@@ -4,15 +4,15 @@
 }
 
 .side-land {
-  width: 280px;
+  width: 1500px;
   background-color: rgb(49, 47, 47);
   border-radius: 20px;
-  height: 87vh;
   display: flex;
   flex-direction: column;
+  margin-left: -132px;
   align-items: center;
-  justify-content: center;
-  margin-left: -120px;
+  justify-content: flex-start; /* Align items from the top */
+  padding-top: 20px; /* Add padding to the top of the sidebar */
 }
 
 .sidebar-content {
@@ -32,10 +32,11 @@
   margin-bottom: 10px;
   color: white;
   background-color: #467599;
-  width: 250%;
+  width: 190%; /* Use 100% width to fill the sidebar */
   border-radius: 5px;
   height: 38px;
 }
+
 
 .content-land {
   display: flex;

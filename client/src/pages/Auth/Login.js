@@ -10,12 +10,24 @@ import signup from "../../styles/signup-image.jpg"
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [emailError, setEmailError] = useState('');
     const navigate = useNavigate();
     const [auth, setAuth] = useAuth()
+
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      };
 
     // handle submit
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email address');
+            return;
+          } else {
+            setEmailError('');
+          }
         try {
             const res = await axios.post(`${process.env.REACT_APP_API}/api/auth/login`, {
                 email,
@@ -29,7 +41,12 @@ const Login = () => {
                     token:res.data.token
                 })
                 localStorage.setItem('auth', JSON.stringify(res.data))
-                navigate('/sidebar') // test page
+                console.log(res.data)
+                if (res.data.user.role === 1) {
+                    navigate('/dashboard/admin');
+                  } else {
+                    navigate('/home-page');
+                  }
             }
             else {
                 toast.error(res.data.message);
@@ -59,6 +76,7 @@ const Login = () => {
                                 aria-describedby="emailHelp"
                                 placeholder='Your email address'
                             />
+                             {emailError && <p className="error-message">{emailError}</p>}
                         </div>
                         <div className="mb-3">
                             <input

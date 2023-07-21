@@ -22,6 +22,11 @@
   background-size: cover;
 }
 
+.question-image{
+  width: 80%; /* Image takes the full width of the question card */
+  height: auto;
+}
+
 /* Media query for smaller screen sizes */
 @media (max-width: 767px) {
   .question-image {
@@ -29,4 +34,13 @@
     height: auto; /* Maintain aspect ratio */
   }
 }
+
+/* Media query for smaller screen sizes */
+@media (max-width: 1000px) {
+  .question-image {
+    width: 100%; /* Image takes the full width of the question card */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
 

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import "../styles/psychoStyles.css";
-
+import CircularLoader from "./CircularLoader";
 const Aptitude = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
   const [question, setQuestions] = useState([]);
@@ -163,7 +163,7 @@ const Aptitude = () => {
                     <div className="card-body card-real">
                       {q.question && q.question.image != null ? (
                         <img
-                          src={`https://jtat.onrender.com/${q.question.image}`}
+                          src={`http://localhost:8080/${q.question.image}`}
                           alt={`Question ${i + 1}`}
                           className="question-image"
                         />
@@ -204,7 +204,7 @@ const Aptitude = () => {
               <br />
             </div>
           ) : (
-            <div className="card-body">Loading questions...</div>
+            <CircularLoader />
           )}
         </div>
       </div>

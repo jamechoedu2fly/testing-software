@@ -14,6 +14,7 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminRoute from "./components/Routes/AdminRoute";
 import CreateCategory from "./pages/Admin/CreateCategory";
 import CreateQuestion from "./pages/Admin/CreateQuestion";
+import CreateSubCategory from "./pages/Admin/CreateSubCategory"
 import ErrorPage from "./components/Layout/ErrorPage";
 import Chart from 'chart.js/auto';
 import {useAuth} from "./context/auth"
@@ -32,6 +33,7 @@ function App() {
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-question" element={<CreateQuestion />} />
+          <Route path="admin/create-subcategory" element={<CreateSubCategory />} />
           <Route path="admin/*" element={<ErrorPage />} />
           <Route />
         </Route>
@@ -44,7 +46,7 @@ function App() {
         {auth?.user && (
           <>
         <Route path="/test" element={<TestPage />} />
-        <Route path="/sidebar" element={< Sidebar/>} />
+        <Route path="/home-page" element={< Sidebar/>} />
         <Route path="/aptitude/:categoryId" element={<Aptitude />} />
         <Route path="/preassessment" element={<PreAssessmentTest />} />
         <Route
