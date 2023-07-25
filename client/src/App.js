@@ -12,9 +12,9 @@ import Result from "./pages/Result";
 import Profile from "./pages/User/Profile";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminRoute from "./components/Routes/AdminRoute";
-import CreateCategory from "./pages/Admin/CreateCategory";
-import CreateQuestion from "./pages/Admin/CreateQuestion";
-import CreateSubCategory from "./pages/Admin/CreateSubCategory"
+import CreateAptitude from "./pages/Admin/CreateAptitude";
+import CreatePreassessment from "./pages/Admin/CreatePreassessment";
+import CreatePsycho from "./pages/Admin/CreatePsycho"
 import ErrorPage from "./components/Layout/ErrorPage";
 import Chart from 'chart.js/auto';
 import {useAuth} from "./context/auth"
@@ -31,10 +31,9 @@ function App() {
         </Route>
         <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
-          <Route path="admin/create-category" element={<CreateCategory />} />
-          <Route path="admin/create-question" element={<CreateQuestion />} />
-          <Route path="admin/create-subcategory" element={<CreateSubCategory />} />
-          <Route path="admin/*" element={<ErrorPage />} />
+          <Route path="admin/create-aptitude" element={<CreateAptitude />} />
+          <Route path="admin/create-preassessment" element={<CreatePreassessment />} />
+          <Route path="admin/create-psycho" element={<CreatePsycho />} />
           <Route />
         </Route>
         {!auth?.user && (

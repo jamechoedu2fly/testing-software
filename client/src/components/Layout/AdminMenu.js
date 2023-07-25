@@ -7,22 +7,22 @@ const AdminMenu = () => {
         <div className="list-group">
           <h4>Admin Panel</h4>
           <NavLink
-            to="/dashboard/admin/create-category"
+            to="/dashboard/admin/create-aptitude"
             className="list-group-item list-group-item-action"
           >
-            Create Category
+            Create Aptitude Question
           </NavLink>
           <NavLink
-            to="/dashboard/admin/create-subcategory"
+            to="/dashboard/admin/create-preassessment"
             className="list-group-item list-group-item-action"
           >
-            Create Sub-Category
+            Create Pre-assessment Question
           </NavLink>
           <NavLink
-            to="/dashboard/admin/create-question"
+            to="/dashboard/admin/create-psycho"
             className="list-group-item list-group-item-action"
           >
-            Create Question
+            Create Psychometric Question
           </NavLink>
         </div>
       </div>

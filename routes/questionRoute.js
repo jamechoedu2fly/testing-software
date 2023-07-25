@@ -14,7 +14,8 @@ import {
     getResultController,
     getUserList,
     deleteApti,
-    deletepreAssessmentQuestionsController
+    deletepreAssessmentQuestionsController,
+    updatePreassessmentQuestionController
 }
     from '../controllers/questionController.js';
 
@@ -51,7 +52,7 @@ router.get("/get-all-preAssessment-question/:categoryId/:subCategoryPreAssessmen
 router.delete("/delete-preAssessment-question/:qid", deletepreAssessmentQuestionsController);
 
 
-
+router.put("/update-preassessment-question/:qid", updatePreassessmentQuestionController)
 
 /*``````````````````````````````*/
 // psychometric Question

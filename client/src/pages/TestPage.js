@@ -26,13 +26,13 @@ const TestPage = () => {
       </div>
       <div className="content">
         <div className="card-apti">
-          <h3>Aptitude test</h3>
-          <button className='btn btn-primary btn-testing' onClick={openApti}>Start aptitude test</button>
+          <h3>Aptitude and Psychometric test</h3>
+          <button className='btn btn-primary btn-testing' onClick={openApti}>Start test</button>
         </div>
-        <div className="card-psycho">
+        {/* <div className="card-psycho">
           <h3>Psychometric test</h3>
           <button className='btn btn-primary btn-testing' onClick={openPsycho}>Start psychometric test</button>
-        </div>
+        </div> */}
       </div>
     </div>
     </Layout>

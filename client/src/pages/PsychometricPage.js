@@ -119,52 +119,52 @@ const PsychometricPage = () => {
     const topScores = Object.entries(categoryScoresPsycho)
       .sort((a, b) => b[1] - a[1]) // Sort scores in descending order
       .slice(0, 3); // Get the top three scores
+      console.log(topScores[0][1])
+      console.log(topScores[1][1])
+      console.log(topScores[2][1])
+      const firstt=topScores[0][1]
+      const secondd=topScores[1][1]
+      const thirdd= topScores[2][1]
 
 
-      const TopFourScores = Object.entries(categoryScoresPsycho)
-      .sort((a,b)=>b[1]-a[1])
-      .slice(0,4)
-      const  fourthans=TopFourScores[3][0]
-    console.log(fourthans)
-    localStorage.setItem('FourthScore', JSON.stringify(fourthans));
-
-    const TopFiveScores = Object.entries(categoryScoresPsycho)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,5)
-    const  fifthans=TopFiveScores[4][0]
-  console.log(fifthans)
-  localStorage.setItem('FifthScore', JSON.stringify(fifthans));
-
-  const TopSixScores = Object.entries(categoryScoresPsycho)
-  .sort((a,b)=>b[1]-a[1])
-  .slice(0,6)
-  const  sixthans=TopSixScores[5][0]
-console.log(sixthans)
-localStorage.setItem('SixthScore', JSON.stringify(sixthans));
-
-    // TopFourScores.forEach(([categoryName,score])=>{
-    //   console.log(`${categoryName}`)
-    //   localStorage.setItem('categoryName', JSON.stringify(categoryName));
-    //   console.log(typeof(categoryName))
-    // })
-
-     
-
-    const topThreeScores = {};
-  topScores.forEach(([categoryName, score]) => {
-    topThreeScores[categoryName] = score;
-    console.log(`Score for ${categoryName}: ${score}`);
-
-  });
-  const topThreeScoresString = topScores.map(([categoryName, score]) => {
-    return categoryName;
-  }).join('');
-  console.log(`String: ${topThreeScoresString}`);
-
-  localStorage.setItem('categoryScoresPsycho', JSON.stringify(topThreeScores));
-  localStorage.setItem('topThreeScoresString', JSON.stringify(topThreeScoresString));
-  setCategoryScoresPsycho(topThreeScores);
-  navigate('/result');
+      if (firstt === 0 && secondd === 0 && thirdd === 0) {
+        console.log("Top three scores are 0. Data will not be saved in local storage.");
+        navigate('/result');
+      } else {
+        const TopFourScores = Object.entries(categoryScoresPsycho)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 4);
+        const fourthans = TopFourScores[3][0];
+        localStorage.setItem('FourthScore', JSON.stringify(fourthans));
+    
+        const TopFiveScores = Object.entries(categoryScoresPsycho)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 5);
+        const fifthans = TopFiveScores[4][0];
+        localStorage.setItem('FifthScore', JSON.stringify(fifthans));
+    
+        const TopSixScores = Object.entries(categoryScoresPsycho)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 6);
+        const sixthans = TopSixScores[5][0];
+        localStorage.setItem('SixthScore', JSON.stringify(sixthans));
+    
+        const topThreeScores = {};
+        topScores.forEach(([categoryName, score]) => {
+          topThreeScores[categoryName] = score;
+          console.log(`Score for ${categoryName}: ${score}`);
+        });
+    
+        const topThreeScoresString = topScores.map(([categoryName, score]) => {
+          return categoryName;
+        }).join('');
+        console.log(`String: ${topThreeScoresString}`);
+    
+        localStorage.setItem('categoryScoresPsycho', JSON.stringify(topThreeScores));
+        localStorage.setItem('topThreeScoresString', JSON.stringify(topThreeScoresString));
+        setCategoryScoresPsycho(topThreeScores);
+        navigate('/result');
+      }
   };
   
   const formatTime = (time) => {

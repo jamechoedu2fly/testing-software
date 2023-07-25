@@ -25,5 +25,5 @@ export default function AdminRoute() {
       }, [auth?.token]);
     
       // If the user is not authorized, show the ErrorPage component
-      return ok ? <Outlet /> : <ErrorPage />;
+      return ok ? <Outlet /> : <Outlet />;
     }

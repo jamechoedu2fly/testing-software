@@ -184,14 +184,14 @@ export const deleteQuestionController = async (req, res) => {
 // update question
 export const updateQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, option, point } = req.body;
+        const { categoryId, question, options, point } = req.body;
         // validate 
         switch (true) {
             case !categoryId:
                 return res.status(500).send({ error: "Category is required" })
             case !question:
                 return res.status(500).send({ error: "Question is Required" })
-            case !option:
+            case !options:
                 return res.status(500).send({ error: "Option is Required" })
             case !point:
                 return res.status(500).send({ error: "Point is Required" })
@@ -269,7 +269,42 @@ export const preAssessmenQuestionController = async (req, res) => {
     }
 }
 
-
+export const updatePreassessmentQuestionController = async (req, res) => {
+  try {
+      const { categoryId, question, option, point, correctAnswer } = req.body;
+      // validate 
+      switch (true) {
+          case !categoryId:
+              return res.status(500).send({ error: "Category is required" })
+          case !question:
+              return res.status(500).send({ error: "Question is Required" })
+          case !option:
+              return res.status(500).send({ error: "Option is Required" })
+          case !point:
+              return res.status(500).send({ error: "Point is Required" })
+          case !correctAnswer:
+            return res.status(500).send({ error: "Correct answer is Required" })
+      }
+      const Updquestion = await preAssessmentModel.findByIdAndUpdate(
+          req.params.qid,
+          { ...req.body },
+          { new: true }
+      )
+      await Updquestion.save();
+      res.status(201).send({
+          success: true,
+          message: "Question Updated Successfully",
+          Updquestion
+      })
+  } catch (error) {
+      console.error(error);
+      res.status(500).send({
+          success: false,
+          error,
+          message: "Something went wrong in updating the question"
+      })
+  }
+}
 
 // getting all preAssessment questions
 export const getAllpreAssessmentQuestionsController = async (req, res) => {
@@ -387,7 +422,7 @@ export const deletePsychometricQuestionController = async (req, res) => {
 
 export const updatePsychometricQuestionController = async (req, res) => {
     try {
-        const { categoryId, question, option,subCategoryPsychometricId } = req.body;
+        const { categoryId, question, option } = req.body;
         // validate 
         switch (true) {
             case !categoryId:
@@ -395,8 +430,6 @@ export const updatePsychometricQuestionController = async (req, res) => {
             case !question:
                 return res.status(500).send({ error: "Question is Required" })
             case !option:
-                return res.status(500).send({ error: "Option is Required" })
-            case !subCategoryPsychometricId:
                 return res.status(500).send({ error: "Option is Required" })
         }
         const Updquestion = await psychometricquestionModel.findByIdAndUpdate(

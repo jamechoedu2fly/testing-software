@@ -26,7 +26,7 @@ const Result = () => {
     JSON.parse(localStorage.getItem('categoryScoresPre')) || {}
   );
   const [topThreeScoresString, setTopThreeScoresString] = useState(
-    JSON.parse(localStorage.getItem('topThreeScoresString')) || {}
+    JSON.parse(localStorage.getItem('topThreeScoresString')) || ""
   );
   const [FourthScore, setFourthScore] = useState(
     JSON.parse(localStorage.getItem('FourthScore')) || {}
@@ -77,6 +77,23 @@ const Result = () => {
       },
     },
   };
+
+  const clearLocalStorage = () => {
+    localStorage.removeItem('categoryScores');
+    localStorage.removeItem('categoryScoresPsycho');
+    localStorage.removeItem('categoryScoresPre');
+    localStorage.removeItem('topThreeScoresString');
+    localStorage.removeItem('FourthScore');
+    localStorage.removeItem('FifthScore');
+    localStorage.removeItem('SixthScore');
+  };
+
+  useEffect(() => {
+    return () => {
+      clearLocalStorage();
+    };
+  }, []);
+
 
   useEffect(() => {
     const fetchLatestScore = async () => {
@@ -201,7 +218,6 @@ useEffect(() => {
                 <h4 className="text-center">APTITUDE TEST RESULT</h4>
               </div>
               <div className="card-body">
-                <h3>Score: {totalScore}</h3>
                 <Bar data={data} options={options} />
               </div>
             </div>
