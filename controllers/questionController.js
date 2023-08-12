@@ -5,6 +5,8 @@ import AptituteResult from "../models/AptituteResult.js";
 import userModel from "../models/userModel.js";
 import multiparty from "multiparty";
 import fs from "fs";
+import PreassessmentResult from "../models/PreassessmentResult.js";
+import PsychomtericResult from "../models/PsychomtericResult.js";
 // create a new question
 // export const createQuestionController = async (req, res) => {
 //     try {
@@ -115,52 +117,213 @@ export const createQuestionController = async (req, res) => {
     }
   };
 
-export const showResultController = async (req, res) => {
+
+
+// Aptitude result post
+export const postAptiResultController = async (req, res) => {
+  try {
+      const { score, user,categoryName,userID } = req.body;
+      const aptiResult = new AptituteResult({
+          score,
+          user,
+          categoryName,
+          userID
+      })
+      await aptiResult.save();
+      res.status(201).send({
+          success: true,
+          message: "Apti Result posted",
+          aptiResult,
+      });
+  } catch (error) {
+      console.log(error);
+      res.status(500).send({
+          success: false,
+          error,
+          message: "Error in creating apti questions",
+      });
+  }
+}
+// AptituteResult get
+export const getAptiResultController = async (req, res) => {
+  try {
+    const allResults = await AptituteResult.find().sort({ createdAt: -1 });
+
+    const formattedResults = allResults.reduce((acc, result) => {
+      if (!acc[result.userID]) {
+        acc[result.userID] = {
+          _id: result.userID,
+          categoryNameandScore: {},
+          user: result.user,
+        };
+      }
+
+      for (let i = 0; i < result.categoryName.length; i++) {
+        acc[result.userID].categoryNameandScore[result.categoryName[i]] =
+          result.score[i];
+      }
+
+      return acc;
+    }, {});
+
+    const resultArray = Object.values(formattedResults);
+
+    res.status(200).json({
+      success: true,
+      countTotal: resultArray.length,
+      message: "Aptitude results retrieved successfully",
+      allResults: resultArray,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      error,
+      message: "Error in retrieving aptitude results",
+    });
+  }
+};
+
+  
+
+  // preassessment result post
+  export const postPreassessmentResultController = async (req, res) => {
     try {
-      const { totalScore, categoryScores, userId } = req.body;
-      console.log("user_id::", userId);
-      const score = totalScore;
-      const user = userId;
-      const showresult = new AptituteResult({
-        score,
-        categoryScores, // Store the subcategory-wise scores
+        const { categoryName, score,userID, user } = req.body;
+        const PreResult = new PreassessmentResult({
+            categoryName,
+            score,
+            userID,
+            user
+        })
+        await PreResult.save();
+        res.status(201).send({
+            success: true,
+            message: "Pre Result posted",
+            PreResult,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            error,
+            message: "Error in creating pre-Assessment questions",
+        });
+    }
+  }
+
+
+// pre-result get
+    export const getPreResultController = async (req, res) => {
+        try {
+          const allResults = await PreassessmentResult.find().sort({ createdAt: -1 });
+      
+          const formattedResults = allResults.reduce((acc, result) => {
+            if (!acc[result.userID]) {
+              acc[result.userID] = {
+                _id: result.userID,
+                categoryNameandScore: {},
+                user: result.user,
+              };
+            }
+      
+            for (let i = 0; i < result.categoryName.length; i++) {
+              acc[result.userID].categoryNameandScore[result.categoryName[i]] =
+                result.score[i];
+            }
+      
+            return acc;
+          }, {});
+      
+          const resultArray = Object.values(formattedResults);
+      
+          res.status(200).json({
+            success: true,
+            countTotal: resultArray.length,
+            message: "Pre results retrieved successfully",
+            allResults: resultArray,
+          });
+        } catch (error) {
+          console.error(error);
+          res.status(500).json({
+            success: false,
+            error,
+            message: "Error in retrieving Pre results",
+          });
+        }
+      };
+      
+        
+
+  // psychometric result post
+  export const postPsychoResultController = async (req, res) => {
+    try {
+      const { categoryNameandSCore, userID, user } = req.body;
+      const PsychoResult = new PsychomtericResult({
+        categoryNameandSCore: categoryNameandSCore.length > 0 ? categoryNameandSCore : [], // Set a default value if no questions were attempted
+        userID,
         user,
       });
-      await showresult.save();
+      await PsychoResult.save();
       res.status(201).send({
         success: true,
-        message: "Total found successfully",
+        message: "Psycho Result posted",
+        PsychoResult,
       });
     } catch (error) {
       console.log(error);
       res.status(500).send({
         success: false,
         error,
-        message: "Error in creating total !!!",
+        message: "Error in creating psycho questions",
       });
     }
   };
   
 
-export const getResultController = async (req, res) => {
-    try {
-      const allResults = await AptituteResult.find().sort({ createdAt: -1 });
-  
-      res.status(200).json({
-        success: true,
-        countTotal: allResults.length,
-        message: "Aptitude results retrieved successfully",
-        allResults,
-      });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({
-        success: false,
-        error,
-        message: "Error in retrieving aptitude results",
-      });
-    }
-  };
+
+
+    export const getPsychoResultController = async (req, res) => {
+      try {
+        const allResults = await PsychomtericResult.find().sort({ createdAt: -1 });
+    
+        const formattedResults = allResults.reduce((acc, result) => {
+          if (!acc[result.userID]) {
+            acc[result.userID] = {
+              _id: result.userID,
+              categoryNameandScore: {},
+              user: result.user,
+            };
+          }
+    
+          for (let i = 0; i < result.categoryNameandSCore.length; i++) {
+            // Assuming the categoryNameandSCore field is a nested array of [categoryName, score]
+            acc[result.userID].categoryNameandScore[result.categoryNameandSCore[i][0]] =
+              result.categoryNameandSCore[i][1];
+          }
+    
+          return acc;
+        }, {});
+    
+        const resultArray = Object.values(formattedResults);
+    
+        res.status(200).json({
+          success: true,
+          countTotal: resultArray.length,
+          message: "Psychometric results retrieved successfully",
+          allResults: resultArray,
+        });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({
+          success: false,
+          error,
+          message: "Error in retrieving Psychometric results",
+        });
+      }
+    };
+    
+    
 
 // delete question
 
@@ -455,6 +618,8 @@ export const updatePsychometricQuestionController = async (req, res) => {
 }
 
 
+
+// get user list
 export const getUserList = async (req, res) => {
   try {
     const allResults = await userModel.find().sort({ createdAt: -1 });
@@ -476,9 +641,28 @@ export const getUserList = async (req, res) => {
 };
 
 
+
+// delete user list
+export const deleteUserController = async (req, res) => {
+  try {
+      await userModel.findByIdAndDelete(req.params.USERid);
+      res.status(200).send({
+          success: true,
+          message: "User Deleted successfully",
+      })
+  } catch (error) {
+      console.log(error);
+      res.status(500).send({
+          success: false,
+          message: "Error while deleting user",
+          error,
+      });
+  }
+}
+
 export const deleteApti = async (req, res) => {
   try {
-    const result = await AptituteResult.deleteMany({});
+    const result = await PsychomtericResult.deleteMany({});
     console.log("deleteApti");
     res.status(200).send({
       success: true,

@@ -96,6 +96,12 @@ const PreAssessmentTest = () => {
           bestCategory = categoryName;
         }
         console.log(`Score for ${categoryName}:`, score);
+        await axios.post(`${process.env.REACT_APP_API}/api/question/post-pre-score`,{
+          categoryName:categoryName,
+          score:score,
+          user: auth?.user.email,
+          userID: auth?.user?._id
+        })
       } catch (error) {
         console.log(`Error fetching data from ${url}:`, error);
       }

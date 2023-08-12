@@ -2,287 +2,2447 @@
   "permutations": [
     {
       "code": "RIA",
-      "subcategories":["Physics", "Biology", "Chemistry", "Computers", "Mathematics", "English", "IT"]
-    },
-    {
-      "code": "RAI",
-      "subcategories":["Biology",  "Geography", "Psychology", "Sociology","English", "Economics"]
+      "subcategories": {
+        "commerce": [
+          "Economics",
+          "Psychology",
+          "Business Studies",
+          "Mathematics",
+          "English",
+          "Physical Education"
+        ],
+        "humanities": [
+          "History",
+          "Psychology",
+          "Home Science",
+          "English",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Biology",
+          "Chemistry",
+          "Engineering",
+          "Anthropology",
+          "Computer Science",
+          "Biotechnology",
+          "IT",
+          "Mathematics",
+          "English",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "IAR",
-      "subcategories":[ "Psychology","Anthropology","Chemistry","Biology","Geography","Botany","maths","economics"]
+      "subcategories": {
+        "commerce": [
+          "Economics",
+          "Entrepreneurship",
+          "I.P.",
+          "psychology",
+          "English"
+        ],
+        "humanities": [
+          "Geography",
+          "History",
+          "Fine Arts",
+          "Psychology",
+          "Policy Analyst",
+          "English"
+        ],
+        "science": [
+          "Chemistry",
+          "Biology",
+          "Botany",
+          "Biotechnology",
+          "Anthropology",
+          "Psychology",
+          "English"
+        ]
+      }
+    },
+    {
+      "code": "RAI",
+      "subcategories": {
+        "commerce": [
+          "Economics",
+          "Business Studies",
+          "Psychology",
+          "Mathematics",
+          "Physical Education",
+          "English"
+        ],
+        "humanities": [
+          "Geography",
+          "Economics",
+          "Home Science",
+          "Fine Arts",
+          "Physical Education",
+          "English"
+        ],
+        "science": [
+          "Biology",
+          "Computer Science",
+          "Engineering Drawing",
+          "Biotechnology",
+          "Physical Education",
+          "English"
+        ]
+      }
     },
     {
       "code": "IRA",
-      "subcategories":["Languages", "Chemistry","Biology", "Physics", "Accounting", "Biology", "IT", "Geography", "history","biotechnology", "maths"]
+      "subcategories": {
+        "commerce": [
+          "Accounting",
+          "Psychology",
+          "Entrepreneurship",
+          "Mathematics",
+          "English"
+        ],
+        "humanities": [
+          "Geography",
+          "History",
+          "Home Science",
+          "Mathematics",
+          "English"
+        ],
+        "science": [
+          "Chemistry",
+          "Biology",
+          "Data Scientist",
+          "Anthropology",
+          "Physics",
+          "IT",
+          "Biotechnology",
+          "Mathematics",
+          "English"
+        ]
+      }
     },
     {
       "code": "ARI",
-      "subcategories":["Physics","IT","Engineering","Drawing","Geography","Designing ","Mathematics","finearts","homescience"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Bio-Info",
+          "Bio-Technology"
+        ]
+      }
     },
     {
       "code": "AIR",
-      "subcategories":["Physics","IT","Engineering","Drawing","Graphics","Geography","Designing","Mathematics","GRAPHICS PAINTING","music"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Bio-Info",
+          "Bio-Technology"
+        ]
+      }
     },
     {
       "code": "IAS",
-      "subcategories":["Political science","Psychology","Designing","Geography","biology","physics","chemistry","biotechnology","history","english","finearts"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Psychology",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Bio-Technology",
+          "Enviromental Technology"
+        ]
+      }
     },
     {
       "code": "ISA",
-      "subcategories":["Biology","Sociology","Anthropology","Psychology","History","chemistry","physics","english","additional-language"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Psychology",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Bio-Technology",
+          "Enviromental Technology"
+        ]
+      }
     },
     {
       "code": "SIA",
-      "subcategories":["Geography", "Psychology", "Biology", "english", "sociology", "language", "bio", "physics", "biotechnology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Psychology",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Bio-Technology",
+          "Enviromental Technology"
+        ]
+      }
     },
     {
       "code": "SAI",
-      "subcategories":["Dance", "Music", "HOME SCIENCE", "Painting", "history", "polscience", "biology", "chemistry", "physics", "sociology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Psychology",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Bio-Technology",
+          "Enviromental Technology"
+        ]
+      }
     },
     {
       "code": "ASI",
-      "subcategories":["Beauty and Wellness", "Fashion studies", "graphics", "Designing", "language", "english", "music", "dance"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Bio-Info",
+          "Bio-Technology"
+        ]
+      }
     },
     {
       "code": "AIS",
-      "subcategories":["language", "IP", "Fine arts", "biology", "politicalscience", "history", "economics", "psychology", "homescience"]
-    },
-    {
-      "code": "RCI",
-      "subcategories":["PHYSICS", "COMPUTERS", "MATHS", "ENGLISH", "CHEMISTRY", "I.P", "history", "accounts", "business studies", "geography", "polscience"]
-    },
-    {
-      "code": "IRC",
-      "subcategories":["BIOTECHNOLOGY", "BIO/STATISTICS", "MATHS", "CHEMISTRY", "BIOINFO", "HOME SCIENCE"]
-    },
-    {
-      "code": "CRI",
-      "subcategories":["BIO","ENG","HISTORY","ECOSTAT","GEOGRAPHY","physics","chemistry","biology","bst-Eco","accounts","history","geography","political-science"]
-    },
-    {
-      "code": "CIR",
-      "subcategories":["COMPUTER","MATHS","IP","CODING","AI","physics","chemistry","biology","bst-Eco","accounts","history","geography","pol-science"]
-    },
-    {
-      "code": "RIC",
-      "subcategories":["BIO","HISTORY","GEO","PHOTOGRAPHY","PHYSICS","ENVIROMENT"]
-    },
-    {
-      "code": "ICR",
-      "subcategories":["COMPUTER", "IP","PHYSICS", "BIOINFO", "chemistry","bio", "history", "geography"]
-    },
-    {
-      "code": "ECR",
-      "subcategories":["HOME", "SCIENCE" ,"BIOLOGY" ,"STATS", "english", "business studies", "physics", "maths", "chemistry","accounts"]
-    },
-    {
-      "code": "CER",
-      "subcategories":["ACC", "MATHS", "STATS", "COMPUTER", "HISTORY","POLSCIENCE", "biology", "chemistry", "english"]
-    },
-    {
-      "code": "REC",
-      "subcategories":["ACCOUNTS", "POL-SCIENCE", "STATS", "ECO", "PHYSICAL EDUCATION"]
-    },
-    {
-      "code": "CRE",
-      "subcategories":["STATS", "ACC", "PHYSICAL EDUCATION", "ECO", "MATHS"]
-    },
-    {
-      "code": "ERC",
-      "subcategories":["HOMESCIENCE", "ECO", "STATS", "ACCOUNT", "BIO", "GEOGRAPHY", "COMPUTER SCIENCE"]
-    },
-    {
-      "code": "RCE",
-      "subcategories":["ACC", "MATHS", "STATS", "COMPUTER", "HISTORY", "POLSCIENCE", "economics"]
-    },
-    {
-      "code": "ASE",
-      "subcategories":["ENGLISH", "HINDI", "MUSIC", "HISTORY", "FINE ARTS", "DANCE", "THEATRE", "PSYCHOLOGY"]
-    },
-    {
-      "code": "AES",
-      "subcategories":["ENGLISH", "HINDI", "MUSIC", "HISTORY", "FINE ARTS", "politicalSCIENCE", "eco", "bst"]
-    },
-    {
-      "code": "SAE",
-      "subcategories":["ENGLISH", "HINDI", "PSYCHOLOGY", "POLSCIENCE", "history", "sociology", "economics"]
-    },
-    {
-      "code": "EAS",
-      "subcategories":["politicalSCIENCE" , "HISTORY", "HINDI", "ENGLISH", "FINANCE", "maths", "eco", "business studies"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Bio-Info",
+          "Bio-Technology"
+        ]
+      }
     },
     {
       "code": "SEA",
-      "subcategories":["politicalSCIENCE", "BIOLOGY", "ACCOUNTS", "MATHS", "ECO"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "Psychology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "SAE",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "EAS",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Economics",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "ASE",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "Fashio Studies",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "IT",
+          "Economics",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "AES",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "I.P"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Drama",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Economics",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "ESA",
-      "subcategories":["business studies", "accounts", "economics", "maths", "ip", "sociology", "psychology", "management studies"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "I.P"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Biology",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "SEC",
-      "subcategories":["Psychology","Economics", "Finance","sociology", "english", "physical education", "cs", "ip."]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Geography",
+          "Fine Arts",
+          "Sociology",
+          "History"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "SCE",
-      "subcategories":["History", "Polscience", "geography", "psychology", "english", "homescience", "physics", "chemistry", "biology", "bio info", "biotech"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Geography",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Biology",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "ECS",
-      "subcategories":["Business studies", "accounts", "polscience", "eco", "maths", "chemistry", "physics", "physical ed"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Bio-Technology",
+          "Enviromental Technology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "ESC",
-      "subcategories":["english", "maths", "eco", "b.std", "Home science", "geography", "history"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "Geography",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics",
+          "Enviromental Technology"
+        ]
+      }
+    },
+    {
+      "code": "CES",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Geography",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Psychology",
+          "Biology",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "CSE",
-      "subcategories":["Political science", "History", "computer science", "physics", "maths", "Biology", "chemistry", "english"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Biology",
+          "Psychology",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "ECR",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "ERC",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "CRE",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Physical Education",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "Physical Education",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Physical Education",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "CER",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "REC",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "RCE",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Engineering Drawing",
+          "Computer Science",
+          "Physical Education"
+        ]
+      }
+    },
+    {
+      "code": "CRI",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Psychology",
+          "Sociology",
+          "History",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Psychology",
+          "Physical Education",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "CIR",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ]
+      }
+    },
+    {
+      "code": "ICR",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Anthropology",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "IRC",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Physical Education",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Physical Education",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "RIC",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Physical Education",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Physical Education",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
+    },
+    {
+      "code": "RCI",
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Physical Education",
+          "Psychology"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education",
+          "Home Science"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "IT",
+          "Physical Education",
+          "Engineering Drawing",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "RCA",
-      "subcategories":["Physics","physical education" ,"engineering drawing","chemistry", "biology","history", "political science", "english"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "Physical Education"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "RAC",
-      "subcategories":["Physics","physical education" ,"engineering drawing","chemistry", "biology","history", "political science", "english", "fine arts" ]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "I.P",
+          "Physical Education"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "ACR",
-      "subcategories":["fine arts" , "political science" , "eco" , "bussiness studies" , "accounts" , "physics ", "chemistry", "biology", "english"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "I.P",
+          "Physical Education"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "ARC",
-      "subcategories":["fine arts" , "political science" , "eco" , "bussiness studies" , "accounts", "physics", "chemistry", "biology","maths","english"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "I.P",
+          "Physical Education"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "CRA",
-      "subcategories":["Physics","physical education" ,"engineering drawing","chemistry", "biology","history", "political science", "english","maths"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Economics",
+          "Psychology",
+          "Physical Education"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Political Science",
+          "Fine Arts",
+          "Sociology",
+          "History",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "English",
+          "Engineering Drawing",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "CAR",
-      "subcategories":["fine arts" , "political science" , "eco ", "bussiness studies" , "accounts" , "physics" , "chemistry", "biology","english"]
+      "subcategories": {
+        "commerce": [
+          "Mathematics",
+          "English",
+          "Accounts",
+          "Enterpreneurship",
+          "Buisness Studies",
+          "Psychology",
+          "Physical Education"
+        ],
+        "humanities": [
+          "Fine Arts",
+          "Political Science",
+          "Economics",
+          "English",
+          "History",
+          "Sociology",
+          "Physical Education"
+        ],
+        "science": [
+          "Physics",
+          "Economics",
+          "Chemistry",
+          "Biology",
+          "English",
+          "Mathematics",
+          "Physical Education"
+        ]
+      }
     },
     {
       "code": "ISC",
-      "subcategories":["chemistry","biology", "physics","history","anthropology","psychology","english","economics" ,"sociology","biotech","bio info","I.P","C.S"]
+      "subcategories": {
+        "commerce": [
+          "Physical Education",
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "Physical Education",
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "ICS",
-      "subcategories":["chemistry","biology", "physics", "history","anthropology","psychology","english","economics","biotech","bio info","I.P","C.S"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Computer Science",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "CIS",
-      "subcategories":["chemistry","biology", "physics", "history","anthropology","psychology","english","economics","biotech","bio info","I.P","C.S"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Computer Science",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "CSI",
-      "subcategories":["chemistry","biology", "physics", "history","anthropology","psychology","english","economics","political science" ]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Computer Science",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "SIC",
-      "subcategories":["psychology","sociology","english","eco","B.ST","biology" , "chemistry", "physics","history", "political science" ]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Computer Science",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "SCI",
-      "subcategories":["psychology","sociology","english","eco","B.ST","biology" , "chemistry", "physics","history", "political science" ,"physical education" ]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "I.P",
+          "Psychology",
+          "Mathematics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Economics",
+          "Psychology",
+          "History",
+          "Sociology",
+          "Fine Arts",
+          "Music"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Psychology",
+          "Economics",
+          "Bio-Technology",
+          "Bio-Info",
+          "Computer Science",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "AEC",
-      "subcategories":["fine arts" , "music" ,"engineering drawing" ,"home science", "B.ST","accounts","finance" , "eco","physics" , "maths" , "chemistry"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "ACE",
-      "subcategories":["fine arts" , "music" ,"engineering drawing" ,"home science", "B.ST","accounts","finance" , "eco","physics" , "maths" , "chemistry"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "EAC",
-      "subcategories":["fine arts"  ,"engineering drawing" ,"home science", "B.ST","accounts","finance" , "eco","physics" , "maths", "chemistry"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "ECA",
-      "subcategories":["home science", "B.ST","accounts","finance" , "eco","physics" , "maths" , "chemistry", "english"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "CEA",
-      "subcategories":["physics" ,"chemistry", "maths" ,"eco","B.ST", "political science", "history", "english"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "CAE",
-      "subcategories":["physics" ,"chemistry", "maths" ,"eco","B.ST", "political science", "history", "english"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Economics",
+          "Buisness Studies",
+          "Accounts",
+          "Finance",
+          "I.P"
+        ],
+        "humanities": [
+          "Fashio Studies",
+          "Economics",
+          "Music",
+          "Fine Arts",
+          "English",
+          "Home Science",
+          "Political Science",
+          "Geography"
+        ],
+        "science": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English",
+          "Computer Science",
+          "Engineering Drawing",
+          "Music",
+          "Fine Arts",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "SCR",
-      "subcategories":["psychology", "sociology","english","B.ST","history", "political science", "eco", "biology", "chemistry"]
+      "subcategories": {
+        "commerce": [
+          "Psychology",
+          "English",
+          "Buisness Studies",
+          "Economics",
+          "Accounts",
+          "I.P",
+          "Enterpreneurship"
+        ],
+        "humanities": [
+          "Economics",
+          "English",
+          "Psychology",
+          "Sociology",
+          "History",
+          "Political Science",
+          "Fine Arts"
+        ],
+        "science": [
+          "English",
+          "Psychology",
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "Economics",
+          "Enviromental Technology"
+        ]
+      }
     },
     {
       "code": "SRC",
-      "subcategories":["psychology", "sociology","english","B.ST","history", "political science", "eco", "biology", "chemistry", "engineering drawing" ]
+      "subcategories": {
+        "commerce": [
+          "Psychology",
+          "English",
+          "Buisness Studies",
+          "Economics",
+          "Accounts",
+          "I.P",
+          "Enterpreneurship"
+        ],
+        "humanities": [
+          "Economics",
+          "English",
+          "Psychology",
+          "Sociology",
+          "History",
+          "Political Science",
+          "Fine Arts"
+        ],
+        "science": [
+          "English",
+          "Psychology",
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+          "Economics",
+          "Enviromental Technology",
+          "Engineering Drawing"
+        ]
+      }
     },
     {
       "code": "RCS",
-      "subcategories":["english","B.ST","history", "political science", "eco","chemistry", "engineering drawing" ,"physics", "maths" ]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "Physical Education",
+          "Mathematics",
+          "Buisness Studies",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "Economics",
+          "History",
+          "Political Science",
+          "Mathematics",
+          "Physical Education",
+          "Fine Arts",
+          "English",
+          "Psychology"
+        ],
+        "science": [
+          "Economics",
+          "Chemistry",
+          "English",
+          "Physics",
+          "Mathematics",
+          "Engineering Drawing",
+          "Physical Education",
+          "Psychology"
+        ]
+      }
     },
     {
       "code": "RSC",
-      "subcategories":["english","B.ST","history", "politicalscience", "eco","chemistry", "engineering drawing" ,"physics", "maths" ,"psychology", "sociology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Economics",
+          "Physical Education",
+          "Mathematics",
+          "Buisness Studies",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology"
+        ],
+        "humanities": [
+          "Economics",
+          "History",
+          "Political Science",
+          "Mathematics",
+          "Physical Education",
+          "Fine Arts",
+          "English",
+          "Psychology"
+        ],
+        "science": [
+          "Economics",
+          "Chemistry",
+          "English",
+          "Physics",
+          "Mathematics",
+          "Engineering Drawing",
+          "Physical Education",
+          "Psychology"
+        ]
+      }
     },
     {
       "code": "CSR",
-      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","politicalscience" ,"psychology", "sociology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Economics",
+          "Psychology",
+          "Buisness Studies",
+          "Accounts",
+          "I.P"
+        ],
+        "humanities": [
+          "Economics",
+          "English",
+          "Psychology",
+          "Political Science",
+          "Mathematics",
+          "History",
+          "Sociology"
+        ],
+        "science": [
+          "Chemistry",
+          "Physics",
+          "Biology",
+          "English",
+          "Mathematics",
+          "Psychology",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "CRS",
-      "subcategories":["biology" ,"physics", "chemistry" , "maths" ,"eco", "B.TS","accounts", "english","history","politicalscience"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Economics",
+          "Psychology",
+          "Buisness Studies",
+          "Accounts",
+          "I.P"
+        ],
+        "humanities": [
+          "Economics",
+          "English",
+          "Psychology",
+          "Political Science",
+          "Mathematics",
+          "History",
+          "Sociology"
+        ],
+        "science": [
+          "Chemistry",
+          "Physics",
+          "Biology",
+          "English",
+          "Mathematics",
+          "Psychology",
+          "Economics"
+        ]
+      }
     },
     {
       "code": "RAE",
-      "subcategories":["engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "politicalscience" , "home science", "engineering drawing" , "fine arts" , "designing music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "home science"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology"
+        ]
+      }
     },
     {
       "code": "REA",
-      "subcategories":["engineering drawing" , "fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "acc" ,"history", "politicalscience" , "home science", "B.ST","finance"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology"
+        ]
+      }
     },
     {
       "code": "EAR",
-      "subcategories":["fine arts" , "designing", "music" ,"english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "home science", "B.ST","finance"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology"
+        ]
+      }
     },
     {
       "code": "ERA",
-      "subcategories":["english","physics", "chemistry" , "maths" , "eco" , "accounts" ,"history", "politicalscience" , "B.ST" , "finance"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology"
+        ]
+      }
     },
     {
       "code": "AER",
-      "subcategories":["fine arts" , "designing", "engineering drawing" , "eco" , "accounts", "IP", "political science" ,"history" , "anthropology", "biology", "physics" , "maths", "english"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies",
+          "I.P"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "ARE",
-      "subcategories":["fine arts" , "designing", "engineering drawing" , "eco" , "accounts", "IP", "political science" ,"history" , "anthropology", "biology", "physics" , "maths", "english"]
+      "subcategories": {
+        "commerce": [
+          "Fine Arts",
+          "Music",
+          "English",
+          "Mathematics",
+          "Economics",
+          "Accounts",
+          "Buisness Studies",
+          "I.P"
+        ],
+        "humanities": [
+          "Music",
+          "Fine Arts",
+          "English",
+          "History",
+          "Political Science",
+          "Home Science",
+          "Drama",
+          "Fashio Studies"
+        ],
+        "science": [
+          "Engineering Drawing",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Music",
+          "Fine Arts",
+          "Biology",
+          "Anthropology"
+        ]
+      }
     },
     {
       "code": "SIR",
-      "subcategories":["sociology", "psychology", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st", "ip","anthropology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Buisness Studies",
+          "Economics"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Bio-Technology",
+          "Bio-Info",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "Psychology",
+          "Computer Science",
+          "English",
+          "Engineering Drawing"
+        ]
+      }
     },
     {
       "code": "SRI",
-      "subcategories":["sociology", "psychology", "English", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Buisness Studies",
+          "Economics"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Bio-Technology",
+          "Bio-Info",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "Psychology",
+          "Computer Science",
+          "English",
+          "Engineering Drawing"
+        ]
+      }
     },
     {
       "code": "RIS",
-      "subcategories":["english", "psychology", "history", "politicalscience", "biology", "chemistry", "physics", "eco", "b.st","ip","anthropology"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Buisness Studies",
+          "Economics"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Bio-Info",
+          "Bio-Technology",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "Psychology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "RSI",
-      "subcategories":["english", "psychology", "history", "politicalscience", "biology", "chemistry", "eco", "b.st", "ip"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Buisness Studies",
+          "Economics"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Biology",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "Psychology",
+          "Computer Science"
+        ]
+      }
     },
     {
       "code": "ISR",
-      "subcategories":["bio", "bio info", "biotech","physics" ,"chemistry" ,"bst", "eco", "acc", "politicalsc", "history","maths"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Mathematics",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Buisness Studies",
+          "Economics"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Bio-Technology",
+          "Bio-Info",
+          "Psychology",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "English"
+        ]
+      }
     },
     {
       "code": "IRS",
-      "subcategories":["bio", "bio info", "biotech","physics", "chemistry", "bst", "eco", "acc", "politicalscience", "history","maths"]
+      "subcategories": {
+        "commerce": [
+          "English",
+          "Maths",
+          "Enterpreneurship",
+          "I.P",
+          "Psychology",
+          "Economics",
+          "Buisness Studies"
+        ],
+        "humanities": [
+          "English",
+          "Psychology",
+          "History",
+          "Political Science",
+          "Sociology",
+          "Fine Arts",
+          "Home Science"
+        ],
+        "science": [
+          "Bio-Info",
+          "Bio-Technology",
+          "English",
+          "Physics",
+          "Chemistry",
+          "Anthropology",
+          "Economics",
+          "Psychology"
+        ]
+      }
     }
   ]
 }

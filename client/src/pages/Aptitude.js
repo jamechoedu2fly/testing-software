@@ -63,7 +63,7 @@ const Aptitude = () => {
 
   useEffect(() => {
     if (timer === 0) {
-      handleSubmit();
+      handleCalculateScores();
     }
   }, [timer]);
 
@@ -72,45 +72,6 @@ const Aptitude = () => {
       ...prevState,
       [qId]: selectedOption
     }));
-  };
-
-  const calculateTotalScore = () => {
-    let totalScore = 0;
-    const categoryData = {}; // New object to store category-wise score
-
-    question.forEach((q) => {
-      const selectedAnswer = selectedAnswers[q._id];
-      if (selectedAnswer === q.correctAnswer) {
-        totalScore += q.point;
-        // Increment category-wise score for the corresponding category ID
-        categoryData[q.categoryId] = (categoryData[q.categoryId] || 0) + q.point;
-      }
-    });
-    setTotalScore(totalScore); // Update the totalScore state for later use
-    return totalScore;
-  };
-
-  const handleSubmit = async () => {
-    let totalScore = calculateTotalScore();
-    const userId = auth?.user._id;
-    console.log("total_score::", totalScore);
-    console.log("user_id:", userId);
-    try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`, {
-        totalScore,
-        userId
-      });
-      if (res.data.success) {
-        handleCalculateScores(); // Call handleCalculateScores after submitting the form
-        navigate('/test');
-        console.log("success");
-      } else {
-        console.log("hellojs");
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
-    }
   };
 
   const handleCalculateScores = async () => {
@@ -129,15 +90,24 @@ const Aptitude = () => {
           }
         });
 
-        categoryScores[categoryName] = score;
+        categoryScores[categoryName] = score; 
+        localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
         console.log(`Score for ${categoryName}:`, score);
+        console.log(categoryName)
+        console.log(score)
+
+        await axios.post(`${process.env.REACT_APP_API}/api/question/post-apti-score`,{
+          categoryName:categoryName,
+          score:score,
+          user: auth?.user.email,
+          userID: auth?.user?._id
+        })
       } catch (error) {
         console.log(`Error fetching data from ${url}:`, error);
       }
     }
 
     setCategoryScores(categoryScores);
-    localStorage.setItem('categoryScores', JSON.stringify(categoryScores));
     navigate('/preassessment');
   };
 
@@ -195,7 +165,7 @@ const Aptitude = () => {
 
                 <button
                   type="button"
-                  onClick={handleSubmit}
+                  onClick={handleCalculateScores}
                   className="btn btn-primary"
                 >
                   Submit

@@ -7,7 +7,9 @@ import { Pie } from 'react-chartjs-2';
 import { useLocation } from 'react-router-dom';
 import careerChoices from '.././careerChoices.json';
 import subjectChoices from '.././subjectChoices.json';
+import ConventionalSubjects from '.././ConventionalSubjects.json'
 import "../styles/ResultStyle.css"
+
 const Result = () => {
   const [auth, setAuth] = useAuth();
   const [totalScore, setTotalScore] = useState(0);
@@ -15,198 +17,215 @@ const Result = () => {
   const location = useLocation();
   const [careerList, setCareerList] = useState(null);
   const [subjectList, setSubjectList] = useState(null);
+  const [conventionalSubjects, setConventionalSubjects] = useState([]);
+  const [aptitudeResults, setAptitudeResults] = useState([]);
+  const [psychoResults, setPsychoResults] = useState([]);
+  const [topThreeScores, setTopThreeScores] = useState([]);
+  const [PreResults, setPreResults] = useState([]);
 
-  const [categoryScores, setCategoryScores] = useState(
-    JSON.parse(localStorage.getItem('categoryScores')) || {}
-  );
-  const [categoryScoresPsycho, setCategoryScoresPsycho] = useState(
-    JSON.parse(localStorage.getItem('categoryScoresPsycho')) || {}
-  );
-  const [categoryScoresPre, setCategoryScoresPre] = useState(
-    JSON.parse(localStorage.getItem('categoryScoresPre')) || {}
-  );
-  const [topThreeScoresString, setTopThreeScoresString] = useState(
-    JSON.parse(localStorage.getItem('topThreeScoresString')) || ""
-  );
-  const [FourthScore, setFourthScore] = useState(
-    JSON.parse(localStorage.getItem('FourthScore')) || {}
-  );
-  const [FifthScore, setFifthScore] = useState(
-    JSON.parse(localStorage.getItem('FifthScore')) || {}
-  );
-  const [SixthScore, setSixthScore] = useState(
-    JSON.parse(localStorage.getItem('SixthScore')) || {}
-  );
-  const updatedTopThreeScoresString = topThreeScoresString.slice(0, -1) + FourthScore;
-  const updatedTopThreeScoresString2 = updatedTopThreeScoresString.slice(0, -1) + FifthScore;
-  const updatedTopThreeScoresString3 = updatedTopThreeScoresString2.slice(0, -1) + SixthScore;
-  const pieData = {
-    labels: Object.keys(categoryScoresPsycho),
+  useEffect(() => {
+    // Define a function to fetch aptitude results
+    const fetchPreResults = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_API}/api/question/get-pre-score`);
+        const resultArray = response.data.allResults;
+        const userResultPre = resultArray.find(result => result.user === auth?.user?.email);
+        console.log(userResultPre);
+
+        const preSubject = userResultPre.categoryNameandScore;
+        console.log(preSubject)
+        const scoresArray = Object.entries(preSubject);
+
+        // Sort the scoresArray in descending order based on the scores
+        scoresArray.sort((a, b) => b[1] - a[1]);
+  
+        // Extract the top three elements from the sorted array
+        const topSubject = scoresArray.slice(0, 1);
+        const MaxScoreSub= topSubject[0][0]
+        console.log(MaxScoreSub)
+        setSubjectList(MaxScoreSub);
+        setPreResults(resultArray);
+      } catch (error) {
+        console.error(error);
+        // Handle error if needed
+      }
+    };
+
+    // Call the function to fetch aptitude results
+    fetchPreResults();
+  }, []);
+
+  const [pieData, setPieData] = useState({
+    labels: [],
     datasets: [
       {
-        data: Object.values(categoryScoresPsycho),
+        data: [],
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
           'rgba(255, 206, 86, 0.6)',
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)',
         ],
         borderWidth: 5,
         radius: 100,
       },
     ],
-  };
-  const data = {
-    labels: ['Language and Communication', 'Verbal and Non-verbal', 'Arithmetic'],
-    datasets: [
-      {
-        label: 'Scores',
-        data: Object.values(categoryScores),
-        backgroundColor: 'rgba(75,192,192,1)',
-      },
-    ],
-  };
-  const options = {
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 36,
-        stepSize: 6,
-      },
-    },
-  };
-
-  const clearLocalStorage = () => {
-    localStorage.removeItem('categoryScores');
-    localStorage.removeItem('categoryScoresPsycho');
-    localStorage.removeItem('categoryScoresPre');
-    localStorage.removeItem('topThreeScoresString');
-    localStorage.removeItem('FourthScore');
-    localStorage.removeItem('FifthScore');
-    localStorage.removeItem('SixthScore');
-  };
-
-  useEffect(() => {
-    return () => {
-      clearLocalStorage();
-    };
-  }, []);
+  });
 
 
   useEffect(() => {
-    const fetchLatestScore = async () => {
-      if (!auth?.user?._id) {
-        return;
-      }
-      try {
-        const response = await axios.get(`${process.env.REACT_APP_API}/api/question/get-apti-score`, {
-          params: {
-            userId: auth.user._id,
+  // Define a function to fetch psychometric results
+  const fetchPsychometricResults = async () => {
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_API}/api/question/get-psycho-score`);
+      const resultArray = response.data.allResults;
+      console.log(resultArray);
+
+      // Find the object with user === auth?.user?.email
+      const userResultPsycho = resultArray.find(result => result.user === auth?.user?.email);
+      console.log(userResultPsycho);
+
+      // Extract scores from the userResult.categoryNameandScore object
+      const scores = userResultPsycho.categoryNameandScore;
+
+      // Convert the scores object into an array of key-value pairs
+      const scoresArray = Object.entries(scores);
+
+      // Sort the scoresArray in descending order based on the scores
+      scoresArray.sort((a, b) => b[1] - a[1]);
+
+      // Extract the top three elements from the sorted array
+      const topThreeScores = scoresArray.slice(0, 3);
+      console.log(topThreeScores);
+      const keysOfTopThreeScores = topThreeScores.map(([categoryName, score]) => categoryName).join('');
+      console.log(keysOfTopThreeScores);
+      setCareerList(keysOfTopThreeScores);
+      const topFourthScore = scoresArray[3][0];
+      const topFifthScore = scoresArray[4][0];
+      const topSixthScore = scoresArray[5][0];
+    
+      console.log(topFourthScore);
+      console.log(topFifthScore);
+      console.log(topSixthScore);
+
+      const updatedTopThreeScoresString = keysOfTopThreeScores.slice(0, -1) + topFourthScore;
+      const updatedTopThreeScoresString2 = updatedTopThreeScoresString.slice(0, -1) + topFifthScore;
+      const updatedTopThreeScoresString3 = updatedTopThreeScoresString2.slice(0, -1) + topSixthScore;
+
+      setPsychoResults(resultArray);
+      const pieData = {
+        labels: topThreeScores.map(([categoryName, score]) => categoryName),
+        datasets: [
+          {
+            data: topThreeScores.map(([categoryName, score]) => score),
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+            ],
+            borderWidth: 5,
+            radius: 100,
           },
-        });
-        const { allResults } = response.data;
-        const userResults = allResults.filter((result) => result.user === auth.user._id);
-        if (userResults.length > 0) {
-          const latestScore = userResults[userResults.length - 1].score;
-          setTotalScore(latestScore);
-        }
-
-        // Process the category-wise results
-        const categoryCounts = {};
-        userResults.forEach((result) => {
-          const categoryId = result.categoryId;
-          if (categoryCounts[categoryId]) {
-            categoryCounts[categoryId]++;
-          } else {
-            categoryCounts[categoryId] = 1;
-          }
-        });
-        setCategoryData(categoryCounts);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchLatestScore();
-  }, [auth]);
-
-  useEffect(() => {
-  const fetchSubject = () => {
-    const subject = careerChoices.permutations.find(
-      (permutation) => permutation.code === topThreeScoresString
-    )?.subcategories[categoryScoresPre];
-
-    // Check if subject is undefined
-if (subject === undefined) {
-      const updatedSubject = careerChoices.permutations.find(
-        (permutation) => permutation.code === updatedTopThreeScoresString
-      )?.subcategories[categoryScoresPre];
-
-if (updatedSubject===undefined){
-  const updatedSubject2= careerChoices.permutations.find(
-    (permutation)=> permutation.code=== updatedTopThreeScoresString2
-  )?.subcategories[categoryScoresPre];
-
-  if (updatedSubject2===undefined){
-    const updatedSubject3= careerChoices.permutations.find(
-      (permutation)=>permutation.code===updatedTopThreeScoresString3
-    )?.subcategories[categoryScoresPre];
-    setCareerList(updatedSubject3);
-    console.log(updatedSubject3);
-  }else{
-    setCareerList(updatedSubject2);
-    console.log(updatedSubject2);
-  }
-}else{
-  setCareerList(updatedSubject);
-  console.log(updatedSubject);
-}
-    } else{
-      setCareerList(subject);
-      console.log(subject);
+        ],
+      };
+      // Update the pieData state with the updated pieData object
+      setPieData(pieData);
+    } catch (error) {
+      console.error(error);
+      // Handle error if needed
     }
   };
 
-  fetchSubject();
-}, [topThreeScoresString, categoryScoresPre, careerChoices, updatedTopThreeScoresString,updatedTopThreeScoresString2,updatedTopThreeScoresString3]);
+  // Call the function to fetch psychometric results
+  fetchPsychometricResults();
+}, [auth]);
 
 
-useEffect(() => {
-  const ans = subjectChoices.permutations.find(
-    (permutation) => permutation.code === topThreeScoresString
-  )?.subcategories;
 
-  if (ans === undefined) {
-    const updatedAns = subjectChoices.permutations.find(
-      (permutation) => permutation.code === updatedTopThreeScoresString
-    )?.subcategories;
+const [data, setData] = useState({
+  labels: ['Language and Communication', 'Verbal and Non-verbal', 'Arithmetic'],
+  datasets: [
+    {
+      label: 'Scores',
+      data: [],
+      backgroundColor: 'rgba(75, 192, 192, 1)',
+    },
+  ],
+});
 
-    if(updatedAns===undefined){
-      const updatedAns2 = subjectChoices.permutations.find(
-        (permutation) => permutation.code === updatedTopThreeScoresString2
-      )?.subcategories;
+const options = {
+  scales: {
+    y: {
+      beginAtZero: true,
+      max: 36,
+      stepSize: 6,
+    },
+  },
+};
 
-      if(updatedAns2===undefined){
-        const updatedAns3= subjectChoices.permutations.find(
-          (permutation) => permutation.code === updatedTopThreeScoresString3
-        )?.subcategories;
-        setSubjectList(updatedAns3);
-    console.log(updatedAns3);
-      }else{
-        setSubjectList(updatedAns2);
-    console.log(updatedAns2);
-      }
-    }else{
-      setSubjectList(updatedAns);
-    console.log(updatedAns);
+useEffect(()=> {
+  const fetchAptitudeResults = async () => {
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_API}/api/question/get-apti-score`);
+      const resultArray = response.data.allResults;
+      console.log(response);
+      
+      // Find the object with user === auth?.user?.email
+      const userResult = resultArray.find(result => result.user === auth?.user?.email);
+      console.log(userResult);
+  
+      // Extract scores from the userResult.categoryNameandScore object
+      const scores = Object.values(userResult.categoryNameandScore);
+      console.log(scores)
+  
+      // Update the data object with the extracted scores
+      setData({
+        ...data,
+        datasets: [
+          {
+            ...data.datasets[0],
+            data: scores,
+          },
+        ],
+      });
+  
+      // Update the state with the aptitude results
+      setAptitudeResults(resultArray);
+    } catch (error) {
+      console.error(error);
+      // Handle error if needed
     }
-  } else{
-    setSubjectList(ans);
-    console.log(ans);
-  }
-}, [topThreeScoresString, updatedTopThreeScoresString, subjectChoices,updatedTopThreeScoresString2,updatedTopThreeScoresString3]);
+  };
+  fetchAptitudeResults();
+}, []);
 
+  
+ 
+
+  const matchCareerChoices = () => {
+    if (careerList && subjectList) {
+      const matchedCareers = careerChoices.permutations.find((permutation) => {
+        return permutation.code === careerList && permutation.subcategories[subjectList];
+      });
+
+      if (matchedCareers) {
+        return matchedCareers.subcategories[subjectList];
+      }
+    }
+    return [];
+  };
+
+  const matchSubjectChoices = () => {
+    if (careerList && subjectList) {
+      const matchedSubjects = subjectChoices.permutations.find((permutation) => {
+        return permutation.code === careerList && permutation.subcategories[subjectList];
+      });
+
+      if (matchedSubjects) {
+        return matchedSubjects.subcategories[subjectList];
+      }
+    }
+    return [];
+  };
 
   return (
     <Layout>
@@ -227,8 +246,8 @@ useEffect(() => {
               </div>
               <div className="card-body">
                 <ul>
-                  {careerList && careerList.map((subject, index) => (
-                    <li key={index}>{subject}</li>
+                {matchCareerChoices().map((career, index) => (
+                    <li key={index}>{career}</li>
                   ))}
                 </ul>
               </div>
@@ -249,14 +268,25 @@ useEffect(() => {
               </div>
               <div className="card-body">
                 <ul>
-                  {subjectList && subjectList.map((subject, index) => (
-                    <li key={index}>{subject}</li>
+                {matchSubjectChoices().map((career, index) => (
+                    <li key={index}>{career}</li>
                   ))}
+                </ul>
+              </div>
+            </div>
+            <div className="card result-card mb-4">
+              <div className="card-header">
+                <h4 className="text-center">CONVENTIONAL SUBJECTS</h4>
+              </div>
+              <div className="card-body">
+                <ul>
+                 
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </Layout>
   );

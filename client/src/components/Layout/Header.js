@@ -44,7 +44,7 @@ const Header = () => {
               Home
             </NavLink>
           </li>
-          {auth?.user && (
+          {auth?.user && auth?.user?.role===0 && (
             <li className="nav-item">
               <NavLink to="/test" className="nav-link">
                 Test

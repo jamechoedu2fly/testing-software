@@ -6,6 +6,7 @@ import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast";
 import "../styles/psychoStyles.css"
+
 import CircularLoader from "./CircularLoader";
 const PsychometricPage = () => {
   const [questionsLoaded, setQuestionsLoaded] = useState(false);
@@ -13,6 +14,16 @@ const PsychometricPage = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
   const [timer, setTimer] = useState(30 * 60);
+  const handleNewAttempt = () => {
+    localStorage.removeItem('categoryScoresPsycho');
+    localStorage.removeItem('topThreeScoresString');
+    localStorage.removeItem('SixthScore');
+    localStorage.removeItem('FifthScore');
+    localStorage.removeItem('FourthScore');
+    // Add code to clear other relevant data if needed
+    // ...
+  };
+
     const [auth, setAuth] = useAuth();
     const urls = [
     {
@@ -43,6 +54,7 @@ const PsychometricPage = () => {
     const [categoryScoresPsycho, setCategoryScoresPsycho] = useState({});
     const navigate = useNavigate();
     const getAllQuestion = async () => {
+     
       try {
         const allQuestions = [];
     
@@ -86,6 +98,16 @@ const PsychometricPage = () => {
 
   
   const handleCalculateScores = async () => {
+    handleNewAttempt();
+     const attemptedQuestions = Object.keys(selectedAnswers).length;
+     if (attemptedQuestions === 0) {
+      await axios.post(`${process.env.REACT_APP_API}/api/question/post-psycho-score`, {
+        categoryNameandSCore: [], // Set an empty array or default value for categoryNameandSCore
+        user: auth?.user.email,
+        userID: auth?.user?._id,
+      });
+      navigate('/result');
+    }
     const categoryScoresPsycho = {};
   
     for (const { url, categoryName } of urls) {
@@ -114,11 +136,19 @@ const PsychometricPage = () => {
         console.log(`Error fetching data from ${url}:`, error);
       }
     }
+
+     const TopSixScores = Object.entries(categoryScoresPsycho)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 6);
+        const sixthans = TopSixScores[5][0];
+        console.log(typeof(TopSixScores))
   
     // Get the top three scores
     const topScores = Object.entries(categoryScoresPsycho)
       .sort((a, b) => b[1] - a[1]) // Sort scores in descending order
       .slice(0, 3); // Get the top three scores
+
+      console.log(topScores)
       console.log(topScores[0][1])
       console.log(topScores[1][1])
       console.log(topScores[2][1])
@@ -126,11 +156,6 @@ const PsychometricPage = () => {
       const secondd=topScores[1][1]
       const thirdd= topScores[2][1]
 
-
-      if (firstt === 0 && secondd === 0 && thirdd === 0) {
-        console.log("Top three scores are 0. Data will not be saved in local storage.");
-        navigate('/result');
-      } else {
         const TopFourScores = Object.entries(categoryScoresPsycho)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 4);
@@ -142,11 +167,12 @@ const PsychometricPage = () => {
           .slice(0, 5);
         const fifthans = TopFiveScores[4][0];
         localStorage.setItem('FifthScore', JSON.stringify(fifthans));
-    
-        const TopSixScores = Object.entries(categoryScoresPsycho)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, 6);
-        const sixthans = TopSixScores[5][0];
+        
+        await axios.post(`${process.env.REACT_APP_API}/api/question/post-psycho-score`,{
+          categoryNameandSCore:TopSixScores,
+          user: auth?.user.email,
+          userID: auth?.user?._id
+        })
         localStorage.setItem('SixthScore', JSON.stringify(sixthans));
     
         const topThreeScores = {};
@@ -162,9 +188,12 @@ const PsychometricPage = () => {
     
         localStorage.setItem('categoryScoresPsycho', JSON.stringify(topThreeScores));
         localStorage.setItem('topThreeScoresString', JSON.stringify(topThreeScoresString));
+        console.log(categoryScoresPsycho)
+        console.log(topThreeScoresString)
         setCategoryScoresPsycho(topThreeScores);
+        toast.success("Thankyou for taking the test");
         navigate('/result');
-      }
+      
   };
   
   const formatTime = (time) => {

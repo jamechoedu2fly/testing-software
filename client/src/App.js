@@ -19,6 +19,7 @@ import ErrorPage from "./components/Layout/ErrorPage";
 import Chart from 'chart.js/auto';
 import {useAuth} from "./context/auth"
 import Sidebar from "./components/Layout/Sidebar";
+import StudentData from "./components/Layout/StudentData"
 function App() {
   const [auth] = useAuth();
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="admin/create-aptitude" element={<CreateAptitude />} />
           <Route path="admin/create-preassessment" element={<CreatePreassessment />} />
           <Route path="admin/create-psycho" element={<CreatePsycho />} />
+          <Route path="admin/student-data" element={<StudentData />} />
           <Route />
         </Route>
         {!auth?.user && (
@@ -42,7 +44,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </>
         )}
-        {auth?.user && (
+        {auth?.user && auth?.user?.role === 0 && (
           <>
         <Route path="/test" element={<TestPage />} />
         <Route path="/home-page" element={< Sidebar/>} />

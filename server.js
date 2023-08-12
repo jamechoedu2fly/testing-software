@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 });
 
 // PORT
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 8080;
 
 //listening
 app.listen(PORT, () => {

@@ -10,12 +10,17 @@ import {
     preAssessmenQuestionController,
     updatePsychometricQuestionController,
     updateQuestionController,
-    showResultController,
-    getResultController,
     getUserList,
     deleteApti,
     deletepreAssessmentQuestionsController,
-    updatePreassessmentQuestionController
+    updatePreassessmentQuestionController,
+    postAptiResultController,
+    getAptiResultController,
+    postPreassessmentResultController,
+    getPreResultController,
+    postPsychoResultController,
+    getPsychoResultController,
+    deleteUserController
 }
     from '../controllers/questionController.js';
 
@@ -33,13 +38,36 @@ router.delete("/delete-question/:qid", deleteQuestionController);
 // get all questions
 router.get("/get-all-question/:categoryId/:subCategoryId", getAllQuestionController);
 
-//post all score
-router.post("/post-apti-score",showResultController);
 
-//get all api
-router.get('/get-apti-score',getResultController)
+
+
+
+//post apti score
+router.post("/post-apti-score",postAptiResultController);
+
+//get apti core
+router.get('/get-apti-score',getAptiResultController);
+
+//post pre score
+router.post("/post-pre-score",postPreassessmentResultController);
+
+//get pre score
+router.get('/get-pre-score',getPreResultController);
+
+//post psycho score
+router.post("/post-psycho-score",postPsychoResultController);
+
+//get psycho score
+router.get('/get-psycho-score',getPsychoResultController);
+
+
+
+
+
 router.delete("/delete-apti-data", deleteApti);
 router.get('/get-user',getUserList);
+router.delete('/detele-user/:USERid',deleteUserController);
+
 
 // preAssessmen-Question
 // create  question

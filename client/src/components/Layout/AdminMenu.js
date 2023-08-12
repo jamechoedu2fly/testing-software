@@ -24,6 +24,12 @@ const AdminMenu = () => {
           >
             Create Psychometric Question
           </NavLink>
+          <NavLink
+            to="/dashboard/admin/student-data"
+            className="list-group-item list-group-item-action"
+          >
+            See student's result
+          </NavLink>
         </div>
       </div>
     </>

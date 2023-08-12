@@ -1,0 +1,57 @@
+{
+    "permutations": [
+      {
+        "career": "humanities",
+        "subcategories": [
+          "Tourism",
+          "Beauty & Wellness",
+          "Media",
+          "Textile Design",
+          "Design",
+          "Music Production",
+          "Fashion Studies",
+          "Shorthand (English)",
+          "Shorthand (Hindi)",
+          "Mass Media Studies"
+        ]
+      },
+      {
+        "career": "commerce",
+        "subcategories": [
+          "Retail",
+          "Financial Markets Management",
+          "Front Office Operations",
+          "Banking",
+          "Marketing",
+          "Insurance",
+          "Taxation",
+          "Cost Accounting",
+          "Office Procedures & Practices"
+        ]
+      },
+      {
+        "career": "science",
+        "subcategories": [
+          "Information Technology",
+          "Web Application",
+          "Automotive",
+          "Agriculture",
+          "Food Production",
+          "Health Care",
+          "X-Ray Technician",
+          "Horticulture",
+          "Geospatial Technology",
+          "Electrical Technology",
+          "Electronic Technology",
+          "Applied Physics",
+          "Applied Chemistry",
+          "Applied Mathematics",
+          "Library & Information Science",
+          "Food Nutrition & Dietetics",
+          "Air-conditioning & Refrigeration",
+          "Medical Diagnostics"
+        ]
+      }
+    ]
+  }
+  

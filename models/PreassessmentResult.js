@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const aptitudeResultSchema = new mongoose.Schema({
+const PreassessmentResultSchema = new mongoose.Schema({
   categoryName:{
     type: [String],
     required: true,
@@ -19,7 +19,6 @@ const aptitudeResultSchema = new mongoose.Schema({
     required: true,
   },
 
-
-});
-
-export default mongoose.model('Result', aptitudeResultSchema);
+  });
+  
+  export default mongoose.model('PreAssessmentResult', PreassessmentResultSchema);
