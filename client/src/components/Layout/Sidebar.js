@@ -42,7 +42,6 @@ const Sidebar = () => {
               <h3>Welcome {auth?.user?.name}</h3>
               <h6>CREDENTIALS</h6>
               <h6>Email: {auth?.user?.email}</h6>
-              <button>Show result</button>
             </div>
             <div className="card vertical-card">
               <h4>Jamecho TalentAssess Test</h4>

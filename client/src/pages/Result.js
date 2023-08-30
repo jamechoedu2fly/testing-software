@@ -274,16 +274,6 @@ useEffect(()=> {
                 </ul>
               </div>
             </div>
-            <div className="card result-card mb-4">
-              <div className="card-header">
-                <h4 className="text-center">CONVENTIONAL SUBJECTS</h4>
-              </div>
-              <div className="card-body">
-                <ul>
-                 
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
         

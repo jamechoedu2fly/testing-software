@@ -72,7 +72,7 @@ const StudentData = () => {
         <ul>
             {aptitudeResults
             .slice()
-            .sort((a, b) => a._id.localeCompare(b._id))
+            .sort((a, b) => (a?._id || '').localeCompare(b?._id || ''))
             .map((result) => (
                 <li key={result._id}>
                 <h6>{result.user}</h6>
@@ -95,7 +95,7 @@ const StudentData = () => {
         <ul>
             {PreResults
             .slice()
-            .sort((a, b) => a._id.localeCompare(b._id))
+            .sort((a, b) => (a?._id || '').localeCompare(b?._id || ''))
             .map((result) => (
                 <li key={result._id}>
                 <h6>{result.user}</h6>
@@ -116,7 +116,7 @@ const StudentData = () => {
           <ul>
             {psychoResults
               .slice()
-              .sort((a, b) => a._id.localeCompare(b._id))
+              .sort((a, b) => (a?._id || '').localeCompare(b?._id || ''))
               .map((result) => (
                 <li key={result._id}>
                   <h6>{result.user}</h6>
